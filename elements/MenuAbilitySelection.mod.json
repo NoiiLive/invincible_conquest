@@ -1,0 +1,482 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "menu_empty.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection1",
+          "text": {
+            "fixedValue": "Ability Selection"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 52,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ability_selection",
+          "text": {
+            "fixedValue": "Ability Selection"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 51,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 216,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 242,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 268,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 216,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 242,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_random",
+          "text": {
+            "fixedValue": "Random"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_human",
+          "text": {
+            "fixedValue": "Human"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_viltrumite",
+          "text": {
+            "fixedValue": "Viltrumite"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_speedster",
+          "text": {
+            "fixedValue": "Speedster"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 216,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spider",
+          "text": {
+            "fixedValue": "Spider"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 242,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cloning",
+          "text": {
+            "fixedValue": "Cloning"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 268,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_explode",
+          "text": {
+            "fixedValue": "Explode"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_portal",
+          "text": {
+            "fixedValue": "Portal"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_beast",
+          "text": {
+            "fixedValue": "Beast"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_atom",
+          "text": {
+            "fixedValue": "Atom"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 216,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_robot",
+          "text": {
+            "fixedValue": "Robot"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 242,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_question",
+          "image": "icon_question.png",
+          "hoveredImage": "",
+          "x": 139,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_human",
+          "image": "icon_human.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityHuman"
+          },
+          "x": 165,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_viltrumite",
+          "image": "icon_viltrumite.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityViltrumite"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_speedster",
+          "image": "icon_speedster.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilitySpeedster"
+          },
+          "x": 219,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_spider",
+          "image": "icon_spider.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilitySpider"
+          },
+          "x": 245,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_clone",
+          "image": "icon_clone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityCloning"
+          },
+          "x": 271,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_explode",
+          "image": "icon_explode.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityExplode"
+          },
+          "x": 139,
+          "y": 100,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_portal",
+          "image": "icon_portal.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityPortal"
+          },
+          "x": 165,
+          "y": 100,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_battlebeast",
+          "image": "icon_battlebeast.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityBeast"
+          },
+          "x": 191,
+          "y": 100,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_atomeve",
+          "image": "icon_atomeve.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityAtom"
+          },
+          "x": 219,
+          "y": 100,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_robot",
+          "image": "icon_robot.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SelectAbilityRobot"
+          },
+          "x": 245,
+          "y": 100,
+          "locked": true
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "CloseAbilitySelection"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

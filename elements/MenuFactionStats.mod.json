@@ -1,0 +1,304 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "menu_faction.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_top_edge.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 9,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_top_unselected",
+          "image": "tab_top_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenGUIAbilityBasic"
+          },
+          "x": 150,
+          "y": 11,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stat_menu",
+          "text": {
+            "fixedValue": "Stat Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ability_menu",
+          "text": {
+            "fixedValue": "Ability Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_bottom_unselected",
+          "image": "tab_bottom_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "KeybindStatMenu"
+          },
+          "x": 125,
+          "y": 200,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_bottom_fill.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 200,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_player_stats",
+          "text": {
+            "fixedValue": "Player Stats"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 203,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_bottom_middle.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 199,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_faction_stats",
+          "text": {
+            "fixedValue": "Faction Stats"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 203,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_factions.png",
+          "spritesCount": 5,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnFactionSprite"
+          },
+          "x": 133,
+          "y": 83,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_reputation1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionReputation"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 256,
+          "y": 108,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_reputation",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionReputation"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 255,
+          "y": 107,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_rank1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionRank"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 157,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_rank",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionRank"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 156,
+          "y": 87,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_reputation2",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionName"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 66,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_name",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 65,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_attempt_takeover",
+          "text": {
+            "fixedValue": "Attempt Takeover"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 274,
+          "y": 175,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_icon_flag",
+          "image": "icon_flag.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenTakeoverGUI"
+          },
+          "x": 276,
+          "y": 177,
+          "locked": true
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnPlayerEntity"
+          },
+          "scale": 40,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 150,
+          "y": 172,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

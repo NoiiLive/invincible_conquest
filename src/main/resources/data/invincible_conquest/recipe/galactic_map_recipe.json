@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "invincible_conquest:moon_stone"
+    },
+    {
+      "item": "minecraft:map"
+    }
+  ],
+  "result": {
+    "id": "invincible_conquest:galactic_map",
+    "count": 1
+  }
+}

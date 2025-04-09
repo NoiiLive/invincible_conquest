@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "invincible_conquest:block/blood",
+    "particle": "invincible_conquest:block/blood"
+  },
+  "render_type": "solid"
+}

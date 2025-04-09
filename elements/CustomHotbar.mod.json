@@ -1,0 +1,191 @@
+{
+  "_fv": 73,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "overlay_hotbar.png",
+          "use1Xscale": false,
+          "anchorPoint": "TOP_LEFT",
+          "x": -5,
+          "y": 1,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_health.png",
+          "spritesCount": 10,
+          "displayCondition": {
+            "name": "ReturnShowHealth"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSpriteHealth"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -5,
+          "y": 1,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "sprite_stamina.png",
+          "spritesCount": 9,
+          "displayCondition": {
+            "name": "ReturnShowStamina"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSpriteStamina"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": -5,
+          "y": 1,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_armor_value1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnArmorValue"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 50,
+          "y": 30,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_armor_value",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnArmorValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 49,
+          "y": 29,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hunger_value1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHungerValue"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 75,
+          "y": 30,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hunger_value",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHungerValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 74,
+          "y": 29,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_oxygen_value1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnOxygenValue"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 100,
+          "y": 30,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_oxygen_value",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnOxygenValue"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 99,
+          "y": 29,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "icons_sprite.png",
+          "spritesCount": 11,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnPlayerAbilityIcon"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 12,
+          "y": 12,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "HideOverlayF1"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

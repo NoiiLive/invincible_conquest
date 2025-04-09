@@ -1,0 +1,889 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "mainmenu_stats.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_1",
+          "image": "arrow_1.png",
+          "hoveredImage": "arrow_2.png",
+          "onClick": {
+            "name": "RemoveSkillPoints"
+          },
+          "x": 253,
+          "y": 136,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_arrow_3",
+          "image": "arrow_3.png",
+          "hoveredImage": "arrow_4.png",
+          "onClick": {
+            "name": "AddSkillPoints"
+          },
+          "x": 281,
+          "y": 136,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointStrength"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointStrength"
+          },
+          "x": 178,
+          "y": 153,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint1",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointDurability"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointDurability"
+          },
+          "x": 178,
+          "y": 168,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint2",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointAgility"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointAgility"
+          },
+          "x": 178,
+          "y": 183,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint3",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointStamina"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointStamina"
+          },
+          "x": 239,
+          "y": 138,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint4",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointVitality"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointVitality"
+          },
+          "x": 239,
+          "y": 153,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint5",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointFocus"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointFocus"
+          },
+          "x": 239,
+          "y": 168,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_skillpoint6",
+          "image": "button_skillpoint.png",
+          "hoveredImage": "button_skillpoint_s.png",
+          "onClick": {
+            "name": "AddPointIntelligence"
+          },
+          "displayCondition": {
+            "name": "ReturnAddPointIntelligence"
+          },
+          "x": 239,
+          "y": 183,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "icons_sprite.png",
+          "spritesCount": 11,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnPlayerAbilityIcon"
+          },
+          "x": 133,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnPlayerEntity"
+          },
+          "scale": 17,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 141,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_name1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerName"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 177,
+          "y": 64,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_name",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 176,
+          "y": 63,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_age1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerAge"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 200,
+          "y": 84,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_age",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerAge"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 199,
+          "y": 83,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_ability1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerAbility"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 157,
+          "y": 102,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_ability",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerAbility"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 156,
+          "y": 101,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_player_exp",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerEXP"
+          },
+          "width": 162,
+          "height": 9,
+          "x": 132,
+          "y": 116,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_ability_mastery",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbilityMastery"
+          },
+          "width": 162,
+          "height": 9,
+          "x": 132,
+          "y": 127,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_skill_points1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerSkillPoints"
+          },
+          "color": {
+            "value": -14664184,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 142,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_player_skill_points",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnPlayerSkillPoints"
+          },
+          "color": {
+            "value": -8455136,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 141,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_add_player_skill_poi",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAddPlayerSkillPoints"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 265,
+          "y": 141,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_strength1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStrength"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 157,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_strength",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStrength"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 156,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_durability1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatDurability"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 172,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_durability",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatDurability"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 171,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_agility1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatAgility"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 187,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_agility",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatAgility"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 158,
+          "y": 186,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_stamina1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStamina"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 220,
+          "y": 142,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_stamina",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatStamina"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 219,
+          "y": 141,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_vitality1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatVitality"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 220,
+          "y": 157,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_vitality",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatVitality"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 219,
+          "y": 156,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_focus1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatFocus"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 220,
+          "y": 172,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_focus",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatFocus"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 219,
+          "y": 171,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_intelligence1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatIntelligence"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 220,
+          "y": 187,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_stat_intelligence",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnStatIntelligence"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 219,
+          "y": 186,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "exp_bar.png",
+          "spritesCount": 16,
+          "displayCondition": {
+            "name": "ReturnShowEXP"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSpriteEXP"
+          },
+          "x": 133,
+          "y": 117,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "mastery_bar.png",
+          "spritesCount": 16,
+          "displayCondition": {
+            "name": "ReturnShowMastery"
+          },
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSpriteMastery"
+          },
+          "x": 133,
+          "y": 128,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stat_menu",
+          "text": {
+            "fixedValue": "Stat Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ability_menu",
+          "text": {
+            "fixedValue": "Ability Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_birthday_time",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnBirthdayTime"
+          },
+          "width": 54,
+          "height": 15,
+          "x": 172,
+          "y": 79,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_strength",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionStrength"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 132,
+          "y": 153,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_durability",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionDurability"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 132,
+          "y": 168,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionAgility"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 132,
+          "y": 183,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stamina",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionStamina"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 193,
+          "y": 138,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_vitality",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionVitality"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 193,
+          "y": 153,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_focus",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionFocus"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 193,
+          "y": 168,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_intelligence",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnDescriptionIntelligence"
+          },
+          "width": 59,
+          "height": 13,
+          "x": 193,
+          "y": 183,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_top_edge.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 9,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_top_unselected",
+          "image": "tab_top_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenGUIAbilityBasic"
+          },
+          "x": 150,
+          "y": 11,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_bottom_edge.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 199,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_player_stats",
+          "text": {
+            "fixedValue": "Player Stats"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 203,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_bottom_unselected",
+          "image": "tab_bottom_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenFactionMenu"
+          },
+          "displayCondition": {
+            "name": "ReturnHasFaction"
+          },
+          "x": 150,
+          "y": 200,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_faction_stats",
+          "text": {
+            "fixedValue": "Faction Stats"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 203,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

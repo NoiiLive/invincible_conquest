@@ -1,0 +1,7 @@
+{
+  "parent": "invincible_conquest:custom/flaxan_gun",
+  "textures": {
+    "0": "invincible_conquest:block/flaxan_gun",
+    "particle": "invincible_conquest:item/flaxan_gun"
+  }
+}

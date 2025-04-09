@@ -1,0 +1,9 @@
+{
+  "_fv": 73,
+  "_type": "function",
+  "definition": {
+    "code": "gamerule sendCommandFeedback false\nparticle slsb:circle_large ^ ^1.5 ^ 0.01 0.01 0.01 0 1 force\nparticle slsb:circle_medium ^ ^0.5 ^ 0.01 0.01 0.01 0 1 force\nparticle slsb:circle_small ^ ^-0.5 ^ 0.01 0.01 0.01 0 1 force",
+    "name": "slam_function",
+    "namespace": "mod"
+  }
+}

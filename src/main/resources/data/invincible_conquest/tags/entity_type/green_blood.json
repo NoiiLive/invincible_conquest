@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "invincible_conquest:flaxan",
+    "invincible_conquest:flaxan_gunman",
+    "invincible_conquest:martian",
+    "invincible_conquest:martian_spearman",
+    "bee",
+    "cave_spider",
+    "creeper",
+    "slime",
+    "spider",
+    "silverfish"
+  ]
+}

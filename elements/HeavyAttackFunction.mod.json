@@ -1,0 +1,9 @@
+{
+  "_fv": 73,
+  "_type": "function",
+  "definition": {
+    "code": "gamerule sendCommandFeedback false\nparticle invincible_conquest:circle_large ^ ^1.5 ^1.5 0.01 0.01 0.01 0 1 force\nparticle invincible_conquest:circle_medium ^ ^1.5 ^2 0.01 0.01 0.01 0 1 force\nparticle invincible_conquest:circle_small ^ ^1.5 ^2.5 0.01 0.01 0.01 0 1 force",
+    "name": "heavy_attack_function",
+    "namespace": "mod"
+  }
+}

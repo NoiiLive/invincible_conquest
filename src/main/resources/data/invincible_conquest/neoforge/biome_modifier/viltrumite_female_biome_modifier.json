@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "invincible_conquest:viltrum_plains",
+  "spawners": {
+    "type": "invincible_conquest:viltrumite_female",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

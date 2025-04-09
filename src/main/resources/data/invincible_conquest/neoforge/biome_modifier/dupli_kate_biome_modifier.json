@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible_conquest:dupli_kate",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

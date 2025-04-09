@@ -1,0 +1,634 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "menu_empty.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_top_unselected",
+          "image": "tab_top_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "KeybindStatMenu"
+          },
+          "x": 125,
+          "y": 11,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_top_fill.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 11,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_top_middle.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 9,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stat_menu",
+          "text": {
+            "fixedValue": "Stat Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ability_menu",
+          "text": {
+            "fixedValue": "Ability Menu"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 13,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot_abilities.png",
+          "use1Xscale": false,
+          "x": 303,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_bottom_fill.png",
+          "use1Xscale": false,
+          "x": 125,
+          "y": 200,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_tab_bottom_unselected",
+          "image": "tab_bottom_unselected.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenGUIAbilityBasic"
+          },
+          "x": 125,
+          "y": 200,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tab_bottom_middle.png",
+          "use1Xscale": false,
+          "x": 150,
+          "y": 199,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_1",
+          "text": {
+            "fixedValue": "Slot 1"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 308,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_2",
+          "text": {
+            "fixedValue": "Slot 2"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 308,
+          "y": 97,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_3",
+          "text": {
+            "fixedValue": "Slot 3"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 308,
+          "y": 118,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_4",
+          "text": {
+            "fixedValue": "Slot 4"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 308,
+          "y": 139,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_5",
+          "text": {
+            "fixedValue": "Slot 5"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 308,
+          "y": 160,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_6",
+          "text": {
+            "fixedValue": "Slot 6"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 329,
+          "y": 87,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_7",
+          "text": {
+            "fixedValue": "Slot 7"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 329,
+          "y": 108,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_8",
+          "text": {
+            "fixedValue": "Slot 8"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 329,
+          "y": 129,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_9",
+          "text": {
+            "fixedValue": "Slot 9"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 329,
+          "y": 150,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_slot_10",
+          "text": {
+            "fixedValue": "Slot 10"
+          },
+          "width": 18,
+          "height": 18,
+          "x": 329,
+          "y": 171,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_basic_abilities",
+          "text": {
+            "fixedValue": "Basic Abilities"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 126,
+          "y": 203,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_return_ability_tab_name",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbilityTabName"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 151,
+          "y": 203,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot1a"
+          },
+          "x": 309,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x1",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot2a"
+          },
+          "x": 309,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x2",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot3a"
+          },
+          "x": 309,
+          "y": 119,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x3",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot4a"
+          },
+          "x": 309,
+          "y": 140,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x4",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot5a"
+          },
+          "x": 309,
+          "y": 161,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x5",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot1b"
+          },
+          "x": 330,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x6",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot2b"
+          },
+          "x": 330,
+          "y": 109,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x7",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot3b"
+          },
+          "x": 330,
+          "y": 130,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x8",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot4b"
+          },
+          "x": 330,
+          "y": 151,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank16x9",
+          "image": "blank16x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GUISkillSlot5b"
+          },
+          "x": 330,
+          "y": 172,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ability_tab_name1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbilityTabName"
+          },
+          "color": {
+            "value": -11252677,
+            "falpha": 0.0
+          },
+          "x": 137,
+          "y": 52,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_ability_tab_name",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnAbilityTabName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 136,
+          "y": 51,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot1"
+          },
+          "x": 309,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot2"
+          },
+          "x": 309,
+          "y": 98,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot3"
+          },
+          "x": 309,
+          "y": 119,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot4"
+          },
+          "x": 309,
+          "y": 140,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot5"
+          },
+          "x": 309,
+          "y": 161,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot6"
+          },
+          "x": 330,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot7"
+          },
+          "x": 330,
+          "y": 109,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot8"
+          },
+          "x": 330,
+          "y": 130,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot9"
+          },
+          "x": 330,
+          "y": 151,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 6,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnSlot10"
+          },
+          "x": 330,
+          "y": 172,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "GUISelectedReset"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

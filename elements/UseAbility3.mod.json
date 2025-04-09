@@ -1,0 +1,15 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Use Ability 3",
+    "keyBindingCategoryKey": "invincible_conquest",
+    "onKeyPressed": {
+      "name": "KeybindAbility3"
+    },
+    "onKeyReleased": {
+      "name": "KeybindAbility3"
+    }
+  }
+}

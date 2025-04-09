@@ -1,0 +1,133 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "galactic_map.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_map_coords",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnMapCoords"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 207,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun_x0_z0",
+          "text": {
+            "fixedValue": "Sun : x0, z0"
+          },
+          "width": 12,
+          "height": 12,
+          "x": 145,
+          "y": 53,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_earth_x135_y135",
+          "text": {
+            "fixedValue": "Earth : x135, y135"
+          },
+          "width": 8,
+          "height": 8,
+          "x": 162,
+          "y": 68,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon_x150_y150",
+          "text": {
+            "fixedValue": "Moon : x150, y150"
+          },
+          "width": 4,
+          "height": 4,
+          "x": 170,
+          "y": 66,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mars_x200_y200",
+          "text": {
+            "fixedValue": "Mars : x200, y200"
+          },
+          "width": 8,
+          "height": 8,
+          "x": 155,
+          "y": 79,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_viltrum_x1000_y1000",
+          "text": {
+            "fixedValue": "Viltrum : x1000, y1000"
+          },
+          "width": 8,
+          "height": 8,
+          "x": 268,
+          "y": 180,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_talescria_x700_z900",
+          "text": {
+            "fixedValue": "Talescria : x700, z900"
+          },
+          "width": 8,
+          "height": 8,
+          "x": 244,
+          "y": 139,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

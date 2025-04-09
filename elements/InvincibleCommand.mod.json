@@ -1,0 +1,10 @@
+{
+  "_fv": 73,
+  "_type": "command",
+  "definition": {
+    "commandName": "invconquest",
+    "type": "STANDARD",
+    "permissionLevel": "2",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">stat</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">level</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">amount</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CMDSetLevel</field></block></statement></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">skillpoints</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">amount</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CMDSetSkillPoints</field></block></statement></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">age</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">amount</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CMDSetAge</field></block></statement></block></statement></block></statement></block></next></block></next></block></statement><next><block type=\"literal\"><field name=\"name\">regenspace</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CMDRegenerateSpace</field></block></statement></block></next></block></next></block></xml>"
+  }
+}

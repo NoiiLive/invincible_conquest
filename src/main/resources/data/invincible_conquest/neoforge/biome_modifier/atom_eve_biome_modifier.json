@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible_conquest:atom_eve",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

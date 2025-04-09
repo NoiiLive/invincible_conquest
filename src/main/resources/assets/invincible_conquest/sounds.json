@@ -1,0 +1,29 @@
+{
+  "blood_explosion": {
+    "subtitle": "subtitles.blood_explosion",
+    "sounds": [
+      {
+        "name": "invincible_conquest:blood_explosion",
+        "stream": false
+      }
+    ]
+  },
+  "basic_hit": {
+    "subtitle": "subtitles.basic_hit",
+    "sounds": [
+      {
+        "name": "invincible_conquest:basic_hit",
+        "stream": false
+      }
+    ]
+  },
+  "whoosh": {
+    "subtitle": "subtitles.whoosh",
+    "sounds": [
+      {
+        "name": "invincible_conquest:whoosh",
+        "stream": false
+      }
+    ]
+  }
+}

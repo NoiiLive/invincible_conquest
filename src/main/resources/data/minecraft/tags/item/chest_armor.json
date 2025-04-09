@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "invincible_conquest:atom_eve_suit_chestplate",
+    "invincible_conquest:omnivincible_suit_chestplate",
+    "invincible_conquest:invincible_suit_mohawk_chestplate",
+    "invincible_conquest:invincible_suit_dark_chestplate",
+    "invincible_conquest:invincible_suit_veil_chestplate",
+    "invincible_conquest:invincible_suit_sinister_chestplate",
+    "invincible_conquest:flaxan_armor_chestplate",
+    "invincible_conquest:mauler_twin_suit_chestplate",
+    "invincible_conquest:multi_paul_suit_chestplate",
+    "invincible_conquest:dupli_kate_suit_chestplate",
+    "invincible_conquest:angstrom_outfit_chestplate",
+    "invincible_conquest:rex_splode_suit_chestplate",
+    "invincible_conquest:viltrumite_uniform_chestplate",
+    "invincible_conquest:omni_man_suit_chestplate",
+    "invincible_conquest:invincible_suit_blue_chestplate",
+    "invincible_conquest:invincible_suit_chestplate"
+  ]
+}

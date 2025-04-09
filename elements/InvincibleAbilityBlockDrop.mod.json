@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Invincible Ability Block Drop",
+    "description": "If ability destruction is on, enables/disables blocks dropping from the destruction in Invincible: Conquest",
+    "category": "DROPS",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

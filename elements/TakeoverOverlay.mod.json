@@ -1,0 +1,219 @@
+{
+  "_fv": 73,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_takeover_score1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnTakeoverScore"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 58,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_takeover_score",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnTakeoverScore"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 5,
+          "y": 57,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_kills1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileKills"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_kills",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileKills"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 5,
+          "y": 72,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_break1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileBreak"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 88,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_break",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileBreak"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 5,
+          "y": 87,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_time1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileTime"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 103,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_hostile_time",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnHostileTime"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ShowHostileGoals"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 5,
+          "y": 102,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_battle1",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionBattle"
+          },
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 43,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_faction_battle",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnFactionBattle"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 5,
+          "y": 42,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ShowTakeoverBar"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

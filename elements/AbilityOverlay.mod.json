@@ -1,0 +1,135 @@
+{
+  "_fv": 73,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGH",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_bar.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 8,
+          "y": 206,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_bar_selected.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilityBar1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 108,
+          "y": 210,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_bar_selected.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilityBar2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 108,
+          "y": 218,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 7,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnBarSlot1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 13,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 7,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnBarSlot2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 31,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 7,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnBarSlot3"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 49,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 7,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnBarSlot4"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 67,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "sprite",
+        "data": {
+          "sprite": "abilities_sprite.png",
+          "spritesCount": 7,
+          "spriteIndex": {
+            "fixedValue": 0.0,
+            "name": "ReturnBarSlot5"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 85,
+          "y": 211,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "HideOverlayF1"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

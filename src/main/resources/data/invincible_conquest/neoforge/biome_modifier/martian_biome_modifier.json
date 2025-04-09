@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "invincible_conquest:mars_biome",
+  "spawners": {
+    "type": "invincible_conquest:martian",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Flaxan Time Dilation",
+    "description": "The multiplier of time in the Flaxan Dimension",
+    "category": "UPDATES",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 2
+  }
+}

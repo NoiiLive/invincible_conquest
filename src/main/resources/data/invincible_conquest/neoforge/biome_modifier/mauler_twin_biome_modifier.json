@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible_conquest:mauler_twin",
+    "weight": 1,
+    "minCount": 2,
+    "maxCount": 2
+  }
+}

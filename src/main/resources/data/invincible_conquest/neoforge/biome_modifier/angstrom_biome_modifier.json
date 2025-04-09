@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible_conquest:angstrom",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

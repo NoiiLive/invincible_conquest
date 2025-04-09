@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "plains",
+  "spawners": {
+    "type": "invincible_conquest:invincible_maskless",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

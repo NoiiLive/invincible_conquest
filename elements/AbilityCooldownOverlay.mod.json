@@ -1,0 +1,91 @@
+{
+  "_fv": 73,
+  "_type": "overlay",
+  "definition": {
+    "priority": "LOW",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_cooldown.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCooldownOverlay1"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 13,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_cooldown.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCooldownOverlay2"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 31,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_cooldown.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCooldownOverlay3"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 49,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_cooldown.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCooldownOverlay4"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 67,
+          "y": 211,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_cooldown.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnCooldownOverlay5"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 85,
+          "y": 211,
+          "locked": true
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "HideOverlayF1"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

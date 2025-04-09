@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "invincible_conquest:block/moon_sand",
+    "up": "invincible_conquest:block/moon_sand",
+    "north": "invincible_conquest:block/moon_sand",
+    "east": "invincible_conquest:block/moon_sand",
+    "south": "invincible_conquest:block/moon_sand",
+    "west": "invincible_conquest:block/moon_sand",
+    "particle": "invincible_conquest:block/moon_sand"
+  },
+  "render_type": "solid"
+}
