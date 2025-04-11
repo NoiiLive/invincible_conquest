@@ -8252,6 +8252,7 @@
       "ViltrumiteMark",
       "Omnivincible",
       "OmniMan",
+      "Conquest",
       "BattleBeast",
       "Angstrom",
       "RexSplode",
@@ -8265,8 +8266,7 @@
       "MartianSpearman",
       "Flaxan",
       "FlaxanGunman",
-      "Dinosaur",
-      "Conquest"
+      "Dinosaur"
     ]
   },
   "language_map": {
@@ -8294,8 +8294,8 @@
       "item.invincible_conquest.invincible_suit_mohawk_chestplate": "Invincible\u0027s Suit (Mohawk)",
       "gui.invincible_conquest.menu_planet_takeover.button_passive": "Passive",
       "item.invincible_conquest.invincible_suit_veil_leggings": "Invincible\u0027s Pants (Veil)",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
       "key.invincible_conquest.follow_up": "Follow Up",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",
