@@ -38,6 +38,7 @@ import net.clozynoii.invincibleconquest.client.renderer.FlaxanGunmanRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
@@ -77,5 +78,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.VILTRUM.get(), ViltrumRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.SUN.get(), SunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.TALESCRIA.get(), TalescriaRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.CONQUEST.get(), ConquestRenderer::new);
 	}
 }

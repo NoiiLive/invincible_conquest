@@ -7204,6 +7204,23 @@
         ]
       },
       "path": "~/Procedures/Abilities/Basic"
+    },
+    {
+      "name": "Conquest",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "conquest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ConquestRenderer.java",
+          "src/main/resources/assets/invincible_conquest/models/item/conquest_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/ConquestEntity.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/conquest_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/ConquestModel.java"
+        ]
+      },
+      "path": "~/Entities/NPCs"
     }
   ],
   "variable_elements": [
@@ -8250,7 +8267,8 @@
       "MartianSpearman",
       "Flaxan",
       "FlaxanGunman",
-      "Dinosaur"
+      "Dinosaur",
+      "Conquest"
     ]
   },
   "language_map": {
@@ -8345,6 +8363,7 @@
       "entity.invincible_conquest.sun": "Sun",
       "item.invincible_conquest.talescria_spawn_egg": "Talescria Spawn Egg",
       "gui.invincible_conquest.menu_ability_basic.tooltip_barrage": "Barrage - 1 SP",
+      "item.invincible_conquest.conquest_spawn_egg": "Conquest Spawn Egg",
       "item.invincible_conquest.rex_splode_suit_helmet": "Rex-Splode\u0027s Mask",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_ability_menu": "Ability Menu",
       "item_group.invincible_conquest.invincible_armor": "Invincible: Armor",
@@ -8454,6 +8473,7 @@
       "block.invincible_conquest.moon_sand": "Moon Sand",
       "key.invincible_conquest.flight": "Flight",
       "item.invincible_conquest.galactic_map": "Galactic Map",
+      "entity.invincible_conquest.conquest": "Conquest",
       "gui.invincible_conquest.menu_ability_basic.tooltip_basic_abilities": "Basic Abilities",
       "gui.invincible_conquest.menu_ability_atom.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_basic_abilities": "Basic Abilities",

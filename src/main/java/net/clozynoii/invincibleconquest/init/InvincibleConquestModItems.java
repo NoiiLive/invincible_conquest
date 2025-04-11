@@ -122,6 +122,7 @@ public class InvincibleConquestModItems {
 	public static final DeferredItem<Item> MOON_SAND = block(InvincibleConquestModBlocks.MOON_SAND);
 	public static final DeferredItem<Item> MOON_STONE = block(InvincibleConquestModBlocks.MOON_STONE);
 	public static final DeferredItem<Item> GALACTIC_MAP = REGISTRY.register("galactic_map", GalacticMapItem::new);
+	public static final DeferredItem<Item> CONQUEST_SPAWN_EGG = REGISTRY.register("conquest_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.CONQUEST, -1576451, -6245708, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
