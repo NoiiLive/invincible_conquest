@@ -37,6 +37,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
@@ -50,6 +51,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.clozynoii.invincibleconquest.procedures.ViltrumiteFemaleRandomProcedure;
 import net.clozynoii.invincibleconquest.procedures.SpawnSurfaceOnlyProcedure;
+import net.clozynoii.invincibleconquest.procedures.DontAttackViltrumiteProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModItems;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
@@ -93,7 +95,27 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = ViltrumiteFemaleEntity.this.getX();
+				double y = ViltrumiteFemaleEntity.this.getY();
+				double z = ViltrumiteFemaleEntity.this.getZ();
+				Entity entity = ViltrumiteFemaleEntity.this;
+				Level world = ViltrumiteFemaleEntity.this.level();
+				return super.canUse() && DontAttackViltrumiteProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = ViltrumiteFemaleEntity.this.getX();
+				double y = ViltrumiteFemaleEntity.this.getY();
+				double z = ViltrumiteFemaleEntity.this.getZ();
+				Entity entity = ViltrumiteFemaleEntity.this;
+				Level world = ViltrumiteFemaleEntity.this.level();
+				return super.canContinueToUse() && DontAttackViltrumiteProcedure.execute(entity);
+			}
+		});
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
@@ -183,7 +205,7 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(InvincibleConquestModEntities.VILTRUMITE_FEMALE.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+		event.register(InvincibleConquestModEntities.VILTRUMITE_FEMALE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
@@ -199,6 +221,8 @@ public class ViltrumiteFemaleEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.2);
 		return builder;
 	}
 

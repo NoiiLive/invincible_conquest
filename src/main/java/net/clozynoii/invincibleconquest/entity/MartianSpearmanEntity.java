@@ -125,7 +125,7 @@ public class MartianSpearmanEntity extends Monster implements GeoEntity {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(InvincibleConquestModEntities.MARTIAN_SPEARMAN.get(), SpawnPlacementTypes.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+		event.register(InvincibleConquestModEntities.MARTIAN_SPEARMAN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();

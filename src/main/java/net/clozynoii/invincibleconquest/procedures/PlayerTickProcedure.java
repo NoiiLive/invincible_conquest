@@ -88,6 +88,13 @@ public class PlayerTickProcedure {
 				_player.displayClientMessage(Component.literal(("Level Up " + new java.text.DecimalFormat("##").format(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerLevel - 1) + " > "
 						+ new java.text.DecimalFormat("##").format(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerLevel))), true);
 		}
+		if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerSkillPoints > 999) {
+			{
+				InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
+				_vars.PlayerSkillPoints = 999;
+				_vars.syncPlayerVariables(entity);
+			}
+		}
 		if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite")) {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAge - 18 > (double) InvincibleConfigConfiguration.VILTRUMITEMAXBONUS.get()) {
 				{
@@ -153,7 +160,7 @@ public class PlayerTickProcedure {
 			if (entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.ARMOR_TOUGHNESS))
 				_livingEntity22.getAttribute(Attributes.ARMOR_TOUGHNESS)
 						.setBaseValue(Math.round((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost)
-								/ (100 / (double) InvincibleConfigConfiguration.DURDMGRESISTANCE.get())));
+								/ (200 / (double) InvincibleConfigConfiguration.DURDMGRESISTANCE.get())));
 			if (entity instanceof LivingEntity _livingEntity24 && _livingEntity24.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
 				_livingEntity24.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue((((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost)
 						/ (100 / (double) InvincibleConfigConfiguration.DURKBRESISTANCE.get())) * outputModifier));
@@ -173,20 +180,24 @@ public class PlayerTickProcedure {
 				_livingEntity34.getAttribute(Attributes.MAX_HEALTH)
 						.setBaseValue((20 + Math.round((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerVitality + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost)
 								/ (100 / (double) InvincibleConfigConfiguration.VITHEALTHBOOST.get()))));
+			if (entity instanceof LivingEntity _livingEntity35 && _livingEntity35.getAttributes().hasAttribute(Attributes.STEP_HEIGHT))
+				_livingEntity35.getAttribute(Attributes.STEP_HEIGHT).setBaseValue(1);
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
+			} else if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStamina == 100) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false));
 			}
-			if (Math.round((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost)
-					/ (100 / (double) InvincibleConfigConfiguration.DURDMGRESISTANCE.get())) >= 2) {
+			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost >= 200) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 2, false, false));
-			} else {
+			} else if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost >= 100) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20,
-							(int) Math.round((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost)
-									/ (100 / (double) InvincibleConfigConfiguration.DURDMGRESISTANCE.get())),
-							false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 1, false, false));
+			} else if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost >= 50) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 0, false, false));
 			}
 		}
 		if (!(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFaction).equals("None")) {
@@ -218,7 +229,7 @@ public class PlayerTickProcedure {
 					if ((entityiterator.getStringUUID()).equals(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).GrabbedEntity)) {
 						if (entityiterator.isAlive()) {
 							if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying == true && entity.isSprinting()) {
-								if (entity instanceof LivingEntity _livEnt44 && _livEnt44.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
+								if (entity instanceof LivingEntity _livEnt45 && _livEnt45.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
 									{
 										Entity _ent = entityiterator;
 										_ent.teleportTo(

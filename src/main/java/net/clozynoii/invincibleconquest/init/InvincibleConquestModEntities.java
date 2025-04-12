@@ -76,11 +76,11 @@ public class InvincibleConquestModEntities {
 
 					.sized(3.5f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MartianEntity>> MARTIAN = register("martian",
-			EntityType.Builder.<MartianEntity>of(MartianEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<MartianEntity>of(MartianEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MartianSpearmanEntity>> MARTIAN_SPEARMAN = register("martian_spearman",
-			EntityType.Builder.<MartianSpearmanEntity>of(MartianSpearmanEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<MartianSpearmanEntity>of(MartianSpearmanEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FlaxanEntity>> FLAXAN = register("flaxan",
@@ -122,9 +122,9 @@ public class InvincibleConquestModEntities {
 
 					.sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ViltrumiteMaleEntity>> VILTRUMITE_MALE = register("viltrumite_male",
-			EntityType.Builder.<ViltrumiteMaleEntity>of(ViltrumiteMaleEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<ViltrumiteMaleEntity>of(ViltrumiteMaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ViltrumiteFemaleEntity>> VILTRUMITE_FEMALE = register("viltrumite_female",
-			EntityType.Builder.<ViltrumiteFemaleEntity>of(ViltrumiteFemaleEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<ViltrumiteFemaleEntity>of(ViltrumiteFemaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EarthEntity>> EARTH = register("earth",
 			EntityType.Builder.<EarthEntity>of(EarthEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(5f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MoonEntity>> MOON = register("moon",

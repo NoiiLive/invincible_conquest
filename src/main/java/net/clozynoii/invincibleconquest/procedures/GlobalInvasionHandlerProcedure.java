@@ -5,15 +5,24 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
 
 import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
+import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 
 import javax.annotation.Nullable;
 
@@ -51,12 +60,67 @@ public class GlobalInvasionHandlerProcedure {
 						if ((entityiterator.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("invincible_conquest:mars_world"))) {
 							InvincibleConquestModVariables.MapVariables.get(world).PlanetOccupied = true;
 							InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							if (InvincibleConquestModVariables.MapVariables.get(world).WaveTimer == 0) {
+								if ((InvincibleConquestModVariables.MapVariables.get(world).HomeFaction).equals("Martians")) {
+									for (int index0 = 0; index0 < 5; index0++) {
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = InvincibleConquestModEntities.MARTIAN.get().spawn(_level,
+													BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+													MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+											}
+										}
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = InvincibleConquestModEntities.MARTIAN_SPEARMAN.get().spawn(_level,
+													BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+													MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+											}
+										}
+									}
+								}
+								InvincibleConquestModVariables.MapVariables.get(world).WaveTimer = 6000;
+								InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							}
 						}
 					}
 					if ((InvincibleConquestModVariables.MapVariables.get(world).PlanetTakeover).equals("Viltrum")) {
 						if ((entityiterator.level().dimension()) == ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("invincible_conquest:viltrum_world"))) {
 							InvincibleConquestModVariables.MapVariables.get(world).PlanetOccupied = true;
 							InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							if (InvincibleConquestModVariables.MapVariables.get(world).WaveTimer == 0) {
+								if ((InvincibleConquestModVariables.MapVariables.get(world).HomeFaction).equals("Viltrum Empire")) {
+									for (int index1 = 0; index1 < 5; index1++) {
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = InvincibleConquestModEntities.VILTRUMITE_MALE.get().spawn(_level,
+													BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+													MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+											}
+										}
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = InvincibleConquestModEntities.VILTRUMITE_FEMALE.get().spawn(_level,
+													BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+													MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+											}
+										}
+										if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 75) {
+											if (!(!world.getEntitiesOfClass(ConquestEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 100, 100, 100), e -> true).isEmpty())) {
+												if (world instanceof ServerLevel _level) {
+													Entity entityToSpawn = InvincibleConquestModEntities.CONQUEST.get().spawn(_level,
+															BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+															MobSpawnType.MOB_SUMMONED);
+													if (entityToSpawn != null) {
+													}
+												}
+											}
+										}
+									}
+								}
+								InvincibleConquestModVariables.MapVariables.get(world).WaveTimer = 6000;
+								InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							}
 						}
 					}
 					if ((InvincibleConquestModVariables.MapVariables.get(world).PlanetTakeover).equals("Talescria")) {
@@ -108,6 +172,10 @@ public class GlobalInvasionHandlerProcedure {
 				InvincibleConquestModVariables.MapVariables.get(world).UnoccupiedTimer = 0;
 				InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
 				InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore = InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore - 2;
+				InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+			}
+			if (InvincibleConquestModVariables.MapVariables.get(world).WaveTimer > 0) {
+				InvincibleConquestModVariables.MapVariables.get(world).WaveTimer = InvincibleConquestModVariables.MapVariables.get(world).WaveTimer - 1;
 				InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
 			}
 			if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 100) {

@@ -7221,6 +7221,58 @@
         ]
       },
       "path": "~/Entities/NPCs"
+    },
+    {
+      "name": "ConquestSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "conquest_spawn",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ConquestSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "DontAttackViltrumite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_attack_viltrumite",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DontAttackViltrumiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
     }
   ],
   "variable_elements": [
@@ -7666,7 +7718,7 @@
       "name": "FactionIndex",
       "type": "string",
       "scope": "map",
-      "value": "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, "
+      "value": "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, The Order, "
     },
     {
       "name": "FactionInvites",
@@ -7691,6 +7743,12 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": ""
+    },
+    {
+      "name": "WaveTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -7885,6 +7943,8 @@
       "EntitySilverfish"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.AIR",
+      "~Blocks.END_STONE",
       "~Blocks.SAND#1",
       "~Blocks.RED_SANDSTONE#0",
       "~CUSTOM:MoonStone",
@@ -8294,8 +8354,8 @@
       "item.invincible_conquest.invincible_suit_mohawk_chestplate": "Invincible\u0027s Suit (Mohawk)",
       "gui.invincible_conquest.menu_planet_takeover.button_passive": "Passive",
       "item.invincible_conquest.invincible_suit_veil_leggings": "Invincible\u0027s Pants (Veil)",
-      "key.invincible_conquest.follow_up": "Follow Up",
       "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
+      "key.invincible_conquest.follow_up": "Follow Up",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",

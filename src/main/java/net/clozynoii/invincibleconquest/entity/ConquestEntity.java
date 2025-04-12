@@ -23,7 +23,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -40,12 +40,12 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -55,6 +55,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.clozynoii.invincibleconquest.procedures.DontAttackViltrumiteProcedure;
+import net.clozynoii.invincibleconquest.procedures.ConquestSpawnProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModItems;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
@@ -98,16 +100,37 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false) {
+			@Override
+			public boolean canUse() {
+				double x = ConquestEntity.this.getX();
+				double y = ConquestEntity.this.getY();
+				double z = ConquestEntity.this.getZ();
+				Entity entity = ConquestEntity.this;
+				Level world = ConquestEntity.this.level();
+				return super.canUse() && DontAttackViltrumiteProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = ConquestEntity.this.getX();
+				double y = ConquestEntity.this.getY();
+				double z = ConquestEntity.this.getZ();
+				Entity entity = ConquestEntity.this;
+				Level world = ConquestEntity.this.level();
+				return super.canContinueToUse() && DontAttackViltrumiteProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
@@ -243,9 +266,12 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(InvincibleConquestModEntities.CONQUEST.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(InvincibleConquestModEntities.CONQUEST.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return ConquestSpawnProcedure.execute(world, x, y, z);
+		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
