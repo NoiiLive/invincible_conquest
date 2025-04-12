@@ -11,6 +11,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.clozynoii.invincibleconquest.client.renderer.WhiteSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteMarkRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteMaleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteFemaleRenderer;
@@ -19,6 +20,8 @@ import net.clozynoii.invincibleconquest.client.renderer.TheHammerRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TalescriaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.SunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.RexSplodeRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.RedSunRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.OrangeSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.OmnivincibleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.OmniManRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.MultiPaulRenderer;
@@ -41,6 +44,7 @@ import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
@@ -83,5 +87,9 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.CONQUEST.get(), ConquestRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.FLAXAN_PORTAL.get(), FlaxanPortalRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.THE_HAMMER.get(), TheHammerRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.RED_SUN.get(), RedSunRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ORANGE_SUN.get(), OrangeSunRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.WHITE_SUN.get(), WhiteSunRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.BLUE_SUN.get(), BlueSunRenderer::new);
 	}
 }

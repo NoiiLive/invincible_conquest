@@ -16,6 +16,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
+import net.clozynoii.invincibleconquest.entity.WhiteSunEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteMarkEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteMaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteFemaleEntity;
@@ -24,6 +25,8 @@ import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
 import net.clozynoii.invincibleconquest.entity.RexSplodeEntity;
+import net.clozynoii.invincibleconquest.entity.RedSunEntity;
+import net.clozynoii.invincibleconquest.entity.OrangeSunEntity;
 import net.clozynoii.invincibleconquest.entity.OmnivincibleEntity;
 import net.clozynoii.invincibleconquest.entity.OmniManEntity;
 import net.clozynoii.invincibleconquest.entity.MultiPaulEntity;
@@ -47,6 +50,7 @@ import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
@@ -145,6 +149,14 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.7f, 3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TheHammerEntity>> THE_HAMMER = register("the_hammer",
 			EntityType.Builder.<TheHammerEntity>of(TheHammerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2f, 10f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RedSunEntity>> RED_SUN = register("red_sun",
+			EntityType.Builder.<RedSunEntity>of(RedSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<OrangeSunEntity>> ORANGE_SUN = register("orange_sun",
+			EntityType.Builder.<OrangeSunEntity>of(OrangeSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<WhiteSunEntity>> WHITE_SUN = register("white_sun",
+			EntityType.Builder.<WhiteSunEntity>of(WhiteSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BlueSunEntity>> BLUE_SUN = register("blue_sun",
+			EntityType.Builder.<BlueSunEntity>of(BlueSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -187,6 +199,10 @@ public class InvincibleConquestModEntities {
 		ConquestEntity.init(event);
 		FlaxanPortalEntity.init(event);
 		TheHammerEntity.init(event);
+		RedSunEntity.init(event);
+		OrangeSunEntity.init(event);
+		WhiteSunEntity.init(event);
+		BlueSunEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -224,5 +240,9 @@ public class InvincibleConquestModEntities {
 		event.put(CONQUEST.get(), ConquestEntity.createAttributes().build());
 		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
 		event.put(THE_HAMMER.get(), TheHammerEntity.createAttributes().build());
+		event.put(RED_SUN.get(), RedSunEntity.createAttributes().build());
+		event.put(ORANGE_SUN.get(), OrangeSunEntity.createAttributes().build());
+		event.put(WHITE_SUN.get(), WhiteSunEntity.createAttributes().build());
+		event.put(BLUE_SUN.get(), BlueSunEntity.createAttributes().build());
 	}
 }
