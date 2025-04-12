@@ -15,6 +15,9 @@
               "blocks": [
                 {
                   "Name": "minecraft:structure_block"
+                },
+                {
+                  "Name": "minecraft:air"
                 }
               ]
             }
