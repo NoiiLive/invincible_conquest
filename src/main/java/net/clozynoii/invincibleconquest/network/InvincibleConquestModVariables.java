@@ -207,7 +207,7 @@ public class InvincibleConquestModVariables {
 		public double HOSTILETimeOccupied = 0.0;
 		public double UnoccupiedTimer = 0.0;
 		public boolean PlanetOccupied = false;
-		public String FactionIndex = "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, The Order, ";
+		public String FactionIndex = "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, ";
 		public String TalescriaOwner = "Coalition of Planets";
 		public double BreakPoints = 0.0;
 		public double WaveTimer = 0.0;

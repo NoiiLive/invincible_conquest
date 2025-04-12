@@ -7223,6 +7223,26 @@
       "path": "~/Entities/NPCs"
     },
     {
+      "name": "DontAttackViltrumite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_attack_viltrumite",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DontAttackViltrumiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
       "name": "ConquestSpawn",
       "type": "procedure",
       "compiles": true,
@@ -7255,15 +7275,88 @@
       "path": "~/Procedures/Entities"
     },
     {
-      "name": "DontAttackViltrumite",
+      "name": "StrongFlyingMobTick",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "dont_attack_viltrumite",
+      "registry_name": "strong_flying_mob_tick",
       "metadata": {
-        "return_type": "logic",
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/DontAttackViltrumiteProcedure.java"
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StrongFlyingMobTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "StrongFlyingMobsCombat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_flying_mobs_combat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StrongFlyingMobsCombatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "HardStunOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hard_stun_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/HardStunOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -7272,7 +7365,284 @@
           }
         ]
       },
-      "path": "~/Procedures/Entities"
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "HardStun",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hard_stun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/HardStunMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "StrongPunchMobKnockback",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_punch_mob_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StrongPunchMobKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "StrongPunchPlayerKnockback",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_punch_player_knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StrongPunchPlayerKnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "GlassBreak",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glass_break",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/GlassBreakMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "DamageDestructionOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_destruction_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DamageDestructionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "FallingBlocksOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_blocks_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FallingBlocksOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "FallingBlocks",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/FallingBlocksMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "GlassBreakOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glass_break_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/GlassBreakOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "ViltrumitePunches",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_punches",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ViltrumitePunchesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "FollowUpOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "follow_up_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FollowUpOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "DamageDestruction",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_destruction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/DamageDestructionMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
     }
   ],
   "variable_elements": [
@@ -7718,7 +8088,7 @@
       "name": "FactionIndex",
       "type": "string",
       "scope": "map",
-      "value": "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, The Order, "
+      "value": "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, "
     },
     {
       "name": "FactionInvites",
@@ -7775,6 +8145,14 @@
       ],
       "category": "player",
       "subtitle": "Attack whooshes"
+    },
+    {
+      "name": "strongwoosh",
+      "files": [
+        "superman-flying-take-off-breaking-the-sound-barrier-sound-effect-2-ezmp3c_ahst5thc"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -7943,8 +8321,6 @@
       "EntitySilverfish"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.AIR",
-      "~Blocks.END_STONE",
       "~Blocks.SAND#1",
       "~Blocks.RED_SANDSTONE#0",
       "~CUSTOM:MoonStone",
@@ -8633,6 +9009,7 @@
       "key.invincible_conquest.switch_bars": "Switch Ability Bar",
       "key.invincible_conquest.use_ability_5": "Use Ability 5",
       "item.invincible_conquest.invincible_suit_dark_boots": "Invincible\u0027s Boots (Dark)",
+      "subtitles.strongwoosh": "",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_10": "Slot 10",
       "item.invincible_conquest.omnivincible_suit_boots": "Invincible\u0027s Boots (Omni)",
       "gui.invincible_conquest.menu_ability_beast.tooltip_ability_menu": "Ability Menu",
@@ -8676,156 +9053,7 @@
     "name": "~",
     "children": [
       {
-        "name": "Procedures",
-        "children": [
-          {
-            "name": "Player",
-            "children": []
-          },
-          {
-            "name": "GUI",
-            "children": [
-              {
-                "name": "Stats",
-                "children": [
-                  {
-                    "name": "Return",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "Overlay",
-                "children": []
-              },
-              {
-                "name": "Selection",
-                "children": []
-              },
-              {
-                "name": "Abilities",
-                "children": [
-                  {
-                    "name": "Basic",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "Faction",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Keybinds",
-            "children": []
-          },
-          {
-            "name": "Abilities",
-            "children": [
-              {
-                "name": "Basic",
-                "children": []
-              },
-              {
-                "name": "Viltrumite",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Effects",
-            "children": []
-          },
-          {
-            "name": "Items",
-            "children": []
-          },
-          {
-            "name": "Commands",
-            "children": [
-              {
-                "name": "Admin",
-                "children": []
-              },
-              {
-                "name": "Common",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Projectiles",
-            "children": []
-          },
-          {
-            "name": "Entities",
-            "children": []
-          },
-          {
-            "name": "Dimension",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Structures",
-        "children": []
-      },
-      {
-        "name": "Dimensions",
-        "children": []
-      },
-      {
-        "name": "Items",
-        "children": []
-      },
-      {
         "name": "Armor",
-        "children": []
-      },
-      {
-        "name": "Entities",
-        "children": [
-          {
-            "name": "NPCs",
-            "children": []
-          },
-          {
-            "name": "Planets",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Blocks",
-        "children": []
-      },
-      {
-        "name": "GUI",
-        "children": [
-          {
-            "name": "Abilities",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Overlays",
-        "children": []
-      },
-      {
-        "name": "Particles",
-        "children": [
-          {
-            "name": "Functions",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Effects",
         "children": []
       },
       {
@@ -8844,11 +9072,11 @@
             "children": []
           },
           {
-            "name": "Damage",
+            "name": "Gamerules",
             "children": []
           },
           {
-            "name": "Gamerules",
+            "name": "Damage",
             "children": []
           },
           {
@@ -8858,7 +9086,156 @@
         ]
       },
       {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "GUI",
+            "children": [
+              {
+                "name": "Faction",
+                "children": []
+              },
+              {
+                "name": "Selection",
+                "children": []
+              },
+              {
+                "name": "Stats",
+                "children": [
+                  {
+                    "name": "Return",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Overlay",
+                "children": []
+              },
+              {
+                "name": "Abilities",
+                "children": [
+                  {
+                    "name": "Basic",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Entities",
+            "children": []
+          },
+          {
+            "name": "Abilities",
+            "children": [
+              {
+                "name": "Viltrumite",
+                "children": []
+              },
+              {
+                "name": "Basic",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Effects",
+            "children": []
+          },
+          {
+            "name": "Items",
+            "children": []
+          },
+          {
+            "name": "Dimension",
+            "children": []
+          },
+          {
+            "name": "Commands",
+            "children": [
+              {
+                "name": "Admin",
+                "children": []
+              },
+              {
+                "name": "Common",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Player",
+            "children": []
+          },
+          {
+            "name": "Keybinds",
+            "children": []
+          },
+          {
+            "name": "Projectiles",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": [
+          {
+            "name": "Abilities",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": []
+      },
+      {
         "name": "Projectiles",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": [
+          {
+            "name": "Functions",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Entities",
+        "children": [
+          {
+            "name": "NPCs",
+            "children": []
+          },
+          {
+            "name": "Planets",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "Effects",
         "children": []
       }
     ]

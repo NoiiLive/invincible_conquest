@@ -24,6 +24,7 @@ import net.clozynoii.invincibleconquest.network.UseAbility1Message;
 import net.clozynoii.invincibleconquest.network.ToggleOutputMessage;
 import net.clozynoii.invincibleconquest.network.SwitchBarsMessage;
 import net.clozynoii.invincibleconquest.network.StatMenuMessage;
+import net.clozynoii.invincibleconquest.network.FollowUpMessage;
 import net.clozynoii.invincibleconquest.network.FlightMessage;
 import net.clozynoii.invincibleconquest.network.FlightBoostMessage;
 
@@ -151,7 +152,19 @@ public class InvincibleConquestModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping FOLLOW_UP = new KeyMapping("key.invincible_conquest.follow_up", GLFW.GLFW_KEY_R, "key.categories.invincible_conquest");
+	public static final KeyMapping FOLLOW_UP = new KeyMapping("key.invincible_conquest.follow_up", GLFW.GLFW_KEY_R, "key.categories.invincible_conquest") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PacketDistributor.sendToServer(new FollowUpMessage(0, 0));
+				FollowUpMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	public static final KeyMapping FLIGHT = new KeyMapping("key.invincible_conquest.flight", GLFW.GLFW_KEY_N, "key.categories.invincible_conquest") {
 		private boolean isDownOld = false;
 
@@ -242,6 +255,7 @@ public class InvincibleConquestModKeyMappings {
 				USE_ABILITY_5.consumeClick();
 				SWITCH_BARS.consumeClick();
 				STAT_MENU.consumeClick();
+				FOLLOW_UP.consumeClick();
 				FLIGHT.consumeClick();
 				TOGGLE_OUTPUT.consumeClick();
 				FLIGHT_BOOST.consumeClick();

@@ -1,71 +1,22 @@
 
 package net.clozynoii.invincibleconquest.entity;
 
-import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.animation.RawAnimation;
-import software.bernie.geckolib.animation.PlayState;
-import software.bernie.geckolib.animation.AnimationState;
-import software.bernie.geckolib.animation.AnimationController;
-import software.bernie.geckolib.animation.AnimatableManager;
-import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
-import software.bernie.geckolib.animatable.GeoEntity;
-
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.event.EventHooks;
-
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.SpawnEggItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 
-import net.clozynoii.invincibleconquest.procedures.DontAttackViltrumiteProcedure;
-import net.clozynoii.invincibleconquest.procedures.ConquestSpawnProcedure;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModItems;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
+import javax.annotation.Nullable;
 
-import java.util.List;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationState;
 
 public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(ConquestEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(ConquestEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(ConquestEntity.class, EntityDataSerializers.STRING);
+
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -76,9 +27,11 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(InvincibleConquestModItems.VILTRUMITE_UNIFORM_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(InvincibleConquestModItems.VILTRUMITE_UNIFORM_LEGGINGS.get()));
 		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(InvincibleConquestModItems.VILTRUMITE_UNIFORM_BOOTS.get()));
+
 	}
 
 	@Override
@@ -100,6 +53,7 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false) {
 			@Override
 			public boolean canUse() {
@@ -108,7 +62,11 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 				double z = ConquestEntity.this.getZ();
 				Entity entity = ConquestEntity.this;
 				Level world = ConquestEntity.this.level();
-				return super.canUse() && DontAttackViltrumiteProcedure.execute(entity);
+				return super.canUse() &&
+
+						DontAttackViltrumiteProcedure.execute(entity)
+
+				;
 			}
 
 			@Override
@@ -118,19 +76,26 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 				double z = ConquestEntity.this.getZ();
 				Entity entity = ConquestEntity.this;
 				Level world = ConquestEntity.this.level();
-				return super.canContinueToUse() && DontAttackViltrumiteProcedure.execute(entity);
+				return super.canContinueToUse() &&
+
+						DontAttackViltrumiteProcedure.execute(entity)
+
+				;
 			}
 		});
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
+
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
+
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
+
 	}
 
 	@Override
@@ -195,6 +160,7 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
@@ -225,6 +191,7 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 				} else {
 					this.level().broadcastEntityEvent(this, (byte) 6);
 				}
+
 				this.setPersistenceRequired();
 				retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 			} else {
@@ -233,6 +200,7 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 					this.setPersistenceRequired();
 			}
 		}
+
 		return retval;
 	}
 
@@ -270,7 +238,11 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return ConquestSpawnProcedure.execute(world, x, y, z);
+			return
+
+			ConquestSpawnProcedure.execute(world, x, y, z)
+
+			;
 		}, RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
@@ -282,8 +254,11 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 45);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.7);
+
 		return builder;
 	}
 
@@ -348,6 +323,7 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 		if (this.deathTime == 20) {
 			this.remove(ConquestEntity.RemovalReason.KILLED);
 			this.dropExperience(this);
+
 		}
 	}
 
@@ -370,4 +346,5 @@ public class ConquestEntity extends TamableAnimal implements GeoEntity {
 	public AnimatableInstanceCache getAnimatableInstanceCache() {
 		return this.cache;
 	}
+
 }

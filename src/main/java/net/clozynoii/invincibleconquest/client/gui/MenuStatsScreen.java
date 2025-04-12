@@ -1,5 +1,6 @@
 package net.clozynoii.invincibleconquest.client.gui;
 
+
 import org.joml.Vector3f;
 import org.joml.Quaternionf;
 
@@ -17,7 +18,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.MenuStatsMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnStatVitalityProcedure;
@@ -57,16 +57,15 @@ import net.clozynoii.invincibleconquest.procedures.ReturnAddPointAgilityProcedur
 import net.clozynoii.invincibleconquest.procedures.ReturnAddPlayerSkillPointsProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnAbilityMasteryProcedure;
 import net.clozynoii.invincibleconquest.network.MenuStatsButtonMessage;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
-
-import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> implements WidgetScreen {
+public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> {
 	private final static HashMap<String, Object> guistate = MenuStatsMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -94,21 +93,9 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		this.imageHeight = 0;
 	}
 
-	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
-		HashMap<String, String> textstate = new HashMap<>();
-		if (Minecraft.getInstance().screen instanceof MenuStatsScreen sc) {
-
-		}
-		return textstate;
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
-	}
-
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/menu_stats.png");
-
-	@Override
+	
+	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
@@ -314,8 +301,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_arrow_1 = new ImageButton(this.leftPos + 39, this.topPos + 16, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/arrow_1.png"), ResourceLocation.parse("invincible_conquest:textures/screens/arrow_2.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(0, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
@@ -328,8 +315,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_arrow_3 = new ImageButton(this.leftPos + 67, this.topPos + 16, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/arrow_3.png"), ResourceLocation.parse("invincible_conquest:textures/screens/arrow_4.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(1, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -342,8 +329,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint = new ImageButton(this.leftPos + -36, this.topPos + 33, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointStrengthProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(2, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -357,8 +344,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint1 = new ImageButton(this.leftPos + -36, this.topPos + 48, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointDurabilityProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(3, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 3, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(3, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
@@ -372,8 +359,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint2 = new ImageButton(this.leftPos + -36, this.topPos + 63, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointAgilityProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(4, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 4, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(4, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
@@ -387,8 +374,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint3 = new ImageButton(this.leftPos + 25, this.topPos + 18, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointStaminaProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(5, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 5, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(5, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
@@ -402,8 +389,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint4 = new ImageButton(this.leftPos + 25, this.topPos + 33, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointVitalityProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(6, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
@@ -417,8 +404,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint5 = new ImageButton(this.leftPos + 25, this.topPos + 48, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointFocusProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(7, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 7, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(7, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -432,8 +419,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_button_skillpoint6 = new ImageButton(this.leftPos + 25, this.topPos + 63, 13, 13,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint.png"), ResourceLocation.parse("invincible_conquest:textures/screens/button_skillpoint_s.png")), e -> {
 					if (ReturnAddPointIntelligenceProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(8, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 8, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(8, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -447,8 +434,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_tab_top_unselected = new ImageButton(this.leftPos + -64, this.topPos + -109, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(9, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 9, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(9, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
 			@Override
@@ -461,8 +448,8 @@ public class MenuStatsScreen extends AbstractContainerScreen<MenuStatsMenu> impl
 		imagebutton_tab_bottom_unselected = new ImageButton(this.leftPos + -64, this.topPos + 80, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png")), e -> {
 					if (ReturnHasFactionProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuStatsButtonMessage(10, x, y, z, getEditBoxAndCheckBoxValues()));
-						MenuStatsButtonMessage.handleButtonAction(entity, 10, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new MenuStatsButtonMessage(10, x, y, z));
+						MenuStatsButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override

@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "R",
     "keyBindingName": "Follow Up",
-    "keyBindingCategoryKey": "invincible_conquest"
+    "keyBindingCategoryKey": "invincible_conquest",
+    "onKeyPressed": {
+      "name": "FollowUpOnKeyPressed"
+    }
   }
 }
