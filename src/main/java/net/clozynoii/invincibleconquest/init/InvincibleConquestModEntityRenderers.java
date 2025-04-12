@@ -15,6 +15,7 @@ import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteMarkRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteMaleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteFemaleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.TheHammerRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TalescriaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.SunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.RexSplodeRenderer;
@@ -81,5 +82,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.TALESCRIA.get(), TalescriaRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.CONQUEST.get(), ConquestRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.FLAXAN_PORTAL.get(), FlaxanPortalRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.THE_HAMMER.get(), TheHammerRenderer::new);
 	}
 }

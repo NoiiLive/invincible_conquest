@@ -8,6 +8,7 @@ import net.clozynoii.invincibleconquest.entity.ViltrumiteMarkEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteMaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteFemaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumEntity;
+import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
 import net.clozynoii.invincibleconquest.entity.RexSplodeEntity;
@@ -260,6 +261,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof FlaxanPortalEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TheHammerEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

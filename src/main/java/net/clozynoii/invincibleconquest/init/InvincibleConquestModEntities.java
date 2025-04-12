@@ -20,6 +20,7 @@ import net.clozynoii.invincibleconquest.entity.ViltrumiteMarkEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteMaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteFemaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumEntity;
+import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
 import net.clozynoii.invincibleconquest.entity.RexSplodeEntity;
@@ -142,6 +143,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<ConquestEntity>of(ConquestEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal",
 			EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.7f, 3f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TheHammerEntity>> THE_HAMMER = register("the_hammer",
+			EntityType.Builder.<TheHammerEntity>of(TheHammerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2f, 10f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -183,6 +186,7 @@ public class InvincibleConquestModEntities {
 		TalescriaEntity.init(event);
 		ConquestEntity.init(event);
 		FlaxanPortalEntity.init(event);
+		TheHammerEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -219,5 +223,6 @@ public class InvincibleConquestModEntities {
 		event.put(TALESCRIA.get(), TalescriaEntity.createAttributes().build());
 		event.put(CONQUEST.get(), ConquestEntity.createAttributes().build());
 		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
+		event.put(THE_HAMMER.get(), TheHammerEntity.createAttributes().build());
 	}
 }

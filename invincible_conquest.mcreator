@@ -7685,7 +7685,7 @@
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanPortalModel.java"
         ]
       },
-      "path": "~/Entities"
+      "path": "~/Entities/Misc"
     },
     {
       "name": "FlaxanPortalTick",
@@ -7883,6 +7883,75 @@
         ]
       },
       "path": "~/Structures/Viltrum"
+    },
+    {
+      "name": "TheHammer",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/TheHammerRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/TheHammerModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/TheHammerEntity.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "TheHammerSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TheHammerSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "TheHammerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TheHammerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
     }
   ],
   "variable_elements": [
@@ -9086,6 +9155,7 @@
       "item.invincible_conquest.omni_man_suit_boots": "Omni-Man\u0027s Boots",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_6": "Slot 6",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_5": "Slot 5",
+      "item.invincible_conquest.the_hammer_spawn_egg": "The Hammer Spawn Egg",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_ability_menu": "Ability Menu",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_4": "Slot 4",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_9": "Slot 9",
@@ -9257,6 +9327,7 @@
       "key.invincible_conquest.switch_bars": "Switch Ability Bar",
       "key.invincible_conquest.use_ability_5": "Use Ability 5",
       "item.invincible_conquest.invincible_suit_dark_boots": "Invincible\u0027s Boots (Dark)",
+      "entity.invincible_conquest.the_hammer": "The Hammer",
       "subtitles.strongwoosh": "",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_10": "Slot 10",
       "item.invincible_conquest.omnivincible_suit_boots": "Invincible\u0027s Boots (Omni)",
@@ -9483,6 +9554,10 @@
           },
           {
             "name": "Planets",
+            "children": []
+          },
+          {
+            "name": "Misc",
             "children": []
           }
         ]
