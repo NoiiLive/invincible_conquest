@@ -1,7 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.entity.Entity;
+import net.neoforged.bus.api.Event;
 
 public class HardStunOnEffectActiveTickProcedure {
 	public static void execute(Entity entity) {

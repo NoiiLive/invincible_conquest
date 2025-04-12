@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "invincible_conquest:viltrum_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 50,
+    "separation": 30,
+    "salt": 2035498067
+  }
+}

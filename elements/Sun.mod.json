@@ -102,6 +102,9 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "onMobTickUpdate": {
+      "name": "SunTick"
+    },
     "onPlayerCollidesWith": {
       "name": "CollideSun"
     },

@@ -23,6 +23,9 @@
         "amount": -0.025,
         "operation": "ADD_VALUE"
       }
-    ]
+    ],
+    "onActiveTick": {
+      "name": "StunEffect"
+    }
   }
 }

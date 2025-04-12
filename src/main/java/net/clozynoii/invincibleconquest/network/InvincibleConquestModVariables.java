@@ -210,6 +210,7 @@ public class InvincibleConquestModVariables {
 		public String FactionIndex = "None, Global Defense Agency, Guardians of the Globe, Coalition of Planets, Viltrum Empire, Martians, Flaxans, Teen Team, Lizard League, ";
 		public String TalescriaOwner = "Coalition of Planets";
 		public double BreakPoints = 0.0;
+		public double WaveTimer = 0.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -236,6 +237,7 @@ public class InvincibleConquestModVariables {
 			FactionIndex = nbt.getString("FactionIndex");
 			TalescriaOwner = nbt.getString("TalescriaOwner");
 			BreakPoints = nbt.getDouble("BreakPoints");
+			WaveTimer = nbt.getDouble("WaveTimer");
 		}
 
 		@Override
@@ -258,6 +260,7 @@ public class InvincibleConquestModVariables {
 			nbt.putString("FactionIndex", FactionIndex);
 			nbt.putString("TalescriaOwner", TalescriaOwner);
 			nbt.putDouble("BreakPoints", BreakPoints);
+			nbt.putDouble("WaveTimer", WaveTimer);
 			return nbt;
 		}
 

@@ -13,12 +13,16 @@ import net.minecraft.core.BlockPos;
 
 import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
+import net.clozynoii.invincibleconquest.entity.WhiteSunEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
+import net.clozynoii.invincibleconquest.entity.RedSunEntity;
+import net.clozynoii.invincibleconquest.entity.OrangeSunEntity;
 import net.clozynoii.invincibleconquest.entity.MoonEntity;
 import net.clozynoii.invincibleconquest.entity.MarsEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
+import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 
 public class CMDRegenerateSpaceProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -28,6 +32,22 @@ public class CMDRegenerateSpaceProcedure {
 			if (world instanceof ServerLevel _server) {
 				for (Entity entityiterator : _server.getAllEntities()) {
 					if (entityiterator instanceof SunEntity) {
+						if (!entityiterator.level().isClientSide())
+							entityiterator.discard();
+					}
+					if (entityiterator instanceof RedSunEntity) {
+						if (!entityiterator.level().isClientSide())
+							entityiterator.discard();
+					}
+					if (entityiterator instanceof OrangeSunEntity) {
+						if (!entityiterator.level().isClientSide())
+							entityiterator.discard();
+					}
+					if (entityiterator instanceof WhiteSunEntity) {
+						if (!entityiterator.level().isClientSide())
+							entityiterator.discard();
+					}
+					if (entityiterator instanceof BlueSunEntity) {
 						if (!entityiterator.level().isClientSide())
 							entityiterator.discard();
 					}
@@ -57,6 +77,16 @@ public class CMDRegenerateSpaceProcedure {
 			InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = InvincibleConquestModEntities.SUN.get().spawn(_level, new BlockPos(0, 75, 0), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = InvincibleConquestModEntities.WHITE_SUN.get().spawn(_level, new BlockPos(1100, 75, 1100), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = InvincibleConquestModEntities.ORANGE_SUN.get().spawn(_level, new BlockPos(800, 75, 800), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 				}
 			}

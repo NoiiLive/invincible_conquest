@@ -1,0 +1,38 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.the_hammer",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "beam",
+					"pivot": [0, 10, 0],
+					"cubes": [
+						{"origin": [-24, 0, -24], "size": [48, 20, 48], "uv": [0, 128]}
+					]
+				},
+				{
+					"name": "shockwave1",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-64, 0, -64], "size": [128, 0, 128], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shockwave2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-64, 0, -64], "size": [128, 0, 128], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -12,6 +12,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.MenuAbilityBasicMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnUnlockUppercutProcedure;
@@ -39,12 +40,13 @@ import net.clozynoii.invincibleconquest.procedures.ReturnLockBarrageProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnHasAbilityProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnAbilityTabNameProcedure;
 import net.clozynoii.invincibleconquest.network.MenuAbilityBasicButtonMessage;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityBasicMenu> {
+public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityBasicMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = MenuAbilityBasicMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -77,6 +79,18 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
+	}
+
+	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
+		HashMap<String, String> textstate = new HashMap<>();
+		if (Minecraft.getInstance().screen instanceof MenuAbilityBasicScreen sc) {
+
+		}
+		return textstate;
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/menu_ability_basic.png");
@@ -240,8 +254,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_tab_top_unselected = new ImageButton(this.leftPos + -89, this.topPos + -109, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(0, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 0, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -254,8 +268,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_tab_bottom_unselected = new ImageButton(this.leftPos + -64, this.topPos + 80, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png")), e -> {
 					if (ReturnHasAbilityProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(1, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -269,8 +283,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x = new ImageButton(this.leftPos + 95, this.topPos + -43, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(2, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -283,8 +297,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x1 = new ImageButton(this.leftPos + 95, this.topPos + -22, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(3, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 3, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(3, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 3, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -297,8 +311,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x2 = new ImageButton(this.leftPos + 95, this.topPos + -1, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(4, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 4, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(4, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 4, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -311,8 +325,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x3 = new ImageButton(this.leftPos + 95, this.topPos + 20, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(5, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 5, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(5, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 5, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -325,8 +339,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x4 = new ImageButton(this.leftPos + 95, this.topPos + 41, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(6, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 6, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -339,8 +353,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x5 = new ImageButton(this.leftPos + 116, this.topPos + -32, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(7, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(7, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 7, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -353,8 +367,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x6 = new ImageButton(this.leftPos + 116, this.topPos + -11, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(8, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(8, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 8, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -367,8 +381,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x7 = new ImageButton(this.leftPos + 116, this.topPos + 10, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(9, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 9, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(9, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 9, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -381,8 +395,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x8 = new ImageButton(this.leftPos + 116, this.topPos + 31, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(10, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 10, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(10, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 10, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -395,8 +409,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank16x9 = new ImageButton(this.leftPos + 116, this.topPos + 52, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank16x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(11, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 11, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(11, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 11, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -409,8 +423,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x = new ImageButton(this.leftPos + -78, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(12, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 12, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(12, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 12, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -423,8 +437,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x1 = new ImageButton(this.leftPos + -52, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(13, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 13, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(13, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 13, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -437,8 +451,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x2 = new ImageButton(this.leftPos + -26, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(14, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 14, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(14, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 14, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -451,8 +465,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x3 = new ImageButton(this.leftPos + 1, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(15, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 15, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(15, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 15, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -465,8 +479,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x4 = new ImageButton(this.leftPos + 27, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(16, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 16, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(16, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 16, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -479,8 +493,8 @@ public class MenuAbilityBasicScreen extends AbstractContainerScreen<MenuAbilityB
 		imagebutton_blank22x5 = new ImageButton(this.leftPos + 53, this.topPos + -47, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(17, x, y, z));
-						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 17, x, y, z);
+						PacketDistributor.sendToServer(new MenuAbilityBasicButtonMessage(17, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuAbilityBasicButtonMessage.handleButtonAction(entity, 17, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override

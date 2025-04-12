@@ -37,7 +37,7 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "piglinSafe": false,
-    "hasRaids": true,
+    "hasRaids": false,
     "minMonsterSpawnLightLimit": 0,
     "maxMonsterSpawnLightLimit": 7,
     "monsterSpawnBlockLightLimit": 0,

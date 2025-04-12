@@ -5,11 +5,13 @@ import net.neoforged.neoforge.common.EffectCure;
 
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.resources.ResourceLocation;
 
+import net.clozynoii.invincibleconquest.procedures.StunEffectProcedure;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 import java.util.Set;
@@ -22,5 +24,16 @@ public class StunMobEffect extends MobEffect {
 
 	@Override
 	public void fillEffectCures(Set<EffectCure> cures, MobEffectInstance effectInstance) {
+	}
+
+	@Override
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+		return true;
+	}
+
+	@Override
+	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
+		StunEffectProcedure.execute(entity);
+		return super.applyEffectTick(entity, amplifier);
 	}
 }

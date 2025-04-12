@@ -1,8 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "invincible_conquest:block/blood",
-    "particle": "invincible_conquest:block/blood"
-  },
-  "render_type": "solid"
-}

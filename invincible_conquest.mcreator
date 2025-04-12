@@ -1923,14 +1923,14 @@
       "registry_name": "blood",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/blockstates/blood.json",
-          "src/main/resources/assets/invincible_conquest/models/block/blood_post.json",
           "src/main/java/net/clozynoii/invincibleconquest/block/BloodBlock.java",
-          "src/main/resources/assets/invincible_conquest/models/block/blood_inventory.json",
           "src/main/resources/assets/invincible_conquest/models/block/blood.json",
+          "src/main/resources/assets/invincible_conquest/models/block/blood_inventory.json",
+          "src/main/resources/assets/invincible_conquest/models/block/blood_post.json",
+          "src/main/resources/assets/invincible_conquest/models/item/blood.json",
           "src/main/resources/assets/invincible_conquest/models/block/blood_side_tall.json",
           "src/main/resources/data/invincible_conquest/loot_table/blocks/blood.json",
-          "src/main/resources/assets/invincible_conquest/models/item/blood.json"
+          "src/main/resources/assets/invincible_conquest/blockstates/blood.json"
         ]
       },
       "path": "~/Blocks"
@@ -2108,9 +2108,9 @@
       "registry_name": "menu_ability_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySelectionButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilitySelectionScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilitySelectionMenu.java"
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilitySelectionMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -2399,8 +2399,8 @@
       "registry_name": "selection_book",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/selection_book.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/SelectionBookItem.java"
+          "src/main/java/net/clozynoii/invincibleconquest/item/SelectionBookItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/selection_book.json"
         ]
       },
       "path": "~/Items"
@@ -2425,9 +2425,9 @@
       "registry_name": "menu_ability_basic",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityBasicButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityBasicMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityBasicScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityBasicButtonMessage.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityBasicScreen.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -2592,11 +2592,11 @@
       "registry_name": "invincible_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_chestplate.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_leggings.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_boots.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_helmet.json"
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_leggings.json",
+          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitItem.java"
         ]
       },
       "path": "~/Armor"
@@ -2610,10 +2610,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_chestplate.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitBlueItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_helmet.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_helmet.json"
+          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitBlueItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_blue_boots.json"
         ]
       },
       "path": "~/Armor"
@@ -2627,9 +2627,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/item/OmniManSuitItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/omni_man_suit_boots.json",
           "src/main/resources/assets/invincible_conquest/models/item/omni_man_suit_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/omni_man_suit_chestplate.json"
+          "src/main/resources/assets/invincible_conquest/models/item/omni_man_suit_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/omni_man_suit_boots.json"
         ]
       },
       "path": "~/Armor"
@@ -2642,10 +2642,10 @@
       "registry_name": "viltrumite_uniform",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_uniform_boots.json",
           "src/main/resources/assets/invincible_conquest/models/item/viltrumite_uniform_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_uniform_chestplate.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/ViltrumiteUniformItem.java"
+          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_uniform_boots.json",
+          "src/main/java/net/clozynoii/invincibleconquest/item/ViltrumiteUniformItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_uniform_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -2658,10 +2658,10 @@
       "registry_name": "rex_splode_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_helmet.json",
-          "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_boots.json",
           "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_chestplate.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/RexSplodeSuitItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_boots.json",
           "src/main/resources/assets/invincible_conquest/models/item/rex_splode_suit_leggings.json"
         ]
       },
@@ -2675,10 +2675,10 @@
       "registry_name": "angstrom_outfit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_boots.json",
           "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_boots.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/AngstromOutfitItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_leggings.json",
           "src/main/resources/assets/invincible_conquest/models/item/angstrom_outfit_chestplate.json"
         ]
       },
@@ -2692,10 +2692,10 @@
       "registry_name": "dupli_kate_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_chestplate.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/DupliKateSuitItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_boots.json"
+          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_suit_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -2708,10 +2708,10 @@
       "registry_name": "multi_paul_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/multi_paul_suit_boots.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/MultiPaulSuitItem.java",
           "src/main/resources/assets/invincible_conquest/models/item/multi_paul_suit_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/multi_paul_suit_chestplate.json"
+          "src/main/resources/assets/invincible_conquest/models/item/multi_paul_suit_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/multi_paul_suit_chestplate.json",
+          "src/main/java/net/clozynoii/invincibleconquest/item/MultiPaulSuitItem.java"
         ]
       },
       "path": "~/Armor"
@@ -2724,9 +2724,9 @@
       "registry_name": "mauler_twin_suit",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/item/MaulerTwinSuitItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/mauler_twin_suit_chestplate.json",
           "src/main/resources/assets/invincible_conquest/models/item/mauler_twin_suit_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/mauler_twin_suit_chestplate.json"
+          "src/main/java/net/clozynoii/invincibleconquest/item/MaulerTwinSuitItem.java"
         ]
       },
       "path": "~/Armor"
@@ -2739,10 +2739,10 @@
       "registry_name": "flaxan_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_boots.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/FlaxanArmorItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_chestplate.json"
+          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/flaxan_armor_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -2769,10 +2769,10 @@
       "registry_name": "invincible_suit_sinister",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_chestplate.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_boots.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_leggings.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_sinister_leggings.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitSinisterItem.java"
         ]
       },
@@ -2786,8 +2786,8 @@
       "registry_name": "large_smoke",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/particles/large_smoke.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/particle/LargeSmokeParticle.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/LargeSmokeParticle.java",
+          "src/main/resources/assets/invincible_conquest/particles/large_smoke.json"
         ]
       },
       "path": "~/Particles"
@@ -2980,11 +2980,11 @@
       "registry_name": "invincible_suit_dark",
       "metadata": {
         "files": [
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_boots.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitDarkItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_helmet.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_chestplate.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_leggings.json",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_boots.json"
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_dark_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -2997,10 +2997,10 @@
       "registry_name": "invincible_suit_mohawk",
       "metadata": {
         "files": [
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_mohawk_chestplate.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_mohawk_leggings.json",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_mohawk_boots.json",
-          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitMohawkItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_suit_mohawk_chestplate.json"
+          "src/main/java/net/clozynoii/invincibleconquest/item/InvincibleSuitMohawkItem.java"
         ]
       },
       "path": "~/Armor"
@@ -3013,10 +3013,10 @@
       "registry_name": "invincible",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleModel.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleEntity.java",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_spawn_egg.json"
         ]
       },
@@ -3030,11 +3030,11 @@
       "registry_name": "invincible_blue",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_blue_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleBlueRenderer.java",
           "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_blue_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleBlueEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleBlueModel.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleBlueEntity.java"
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_blue_spawn_egg.json"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3047,10 +3047,10 @@
       "registry_name": "invincible_sinister",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_sinister_biome_modifier.json",
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_sinister_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleSinisterEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleSinisterRenderer.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_sinister_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_sinister_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleSinisterModel.java"
         ]
       },
@@ -3064,11 +3064,11 @@
       "registry_name": "invincible_mohawk",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_mohawk_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleMohawkEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleMohawkRenderer.java",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_mohawk_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_mohawk_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleMohawkModel.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleMohawkEntity.java"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleMohawkModel.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3082,10 +3082,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleMasklessModel.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_maskless_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleMasklessEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleMasklessRenderer.java",
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_maskless_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_maskless_biome_modifier.json"
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_maskless_spawn_egg.json"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3098,11 +3098,11 @@
       "registry_name": "invincible_veil",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/invincible_veil_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleVeilRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleVeilModel.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_veil_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleVeilEntity.java"
+          "src/main/resources/assets/invincible_conquest/models/item/invincible_veil_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleVeilEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleVeilRenderer.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_veil_biome_modifier.json"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3116,9 +3116,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/entity/InvincibleDarkEntity.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_dark_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/InvincibleDarkModel.java",
           "src/main/resources/assets/invincible_conquest/models/item/invincible_dark_spawn_egg.json",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/invincible_dark_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/InvincibleDarkRenderer.java"
         ]
       },
@@ -3132,11 +3132,11 @@
       "registry_name": "viltrumite_mark",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_mark_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/ViltrumiteMarkModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumiteMarkEntity.java",
           "src/main/resources/assets/invincible_conquest/models/item/viltrumite_mark_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumiteMarkRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumiteMarkEntity.java"
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_mark_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumiteMarkRenderer.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3149,11 +3149,11 @@
       "registry_name": "omnivincible_suit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_helmet.json",
-          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_chestplate.json",
-          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_leggings.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/OmnivincibleSuitItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_boots.json"
+          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_leggings.json",
+          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_suit_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -3166,11 +3166,11 @@
       "registry_name": "omnivincible",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/OmnivincibleRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/OmnivincibleEntity.java",
           "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/omnivincible_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/OmnivincibleModel.java",
-          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_spawn_egg.json"
+          "src/main/resources/assets/invincible_conquest/models/item/omnivincible_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/OmnivincibleEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/OmnivincibleRenderer.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3511,8 +3511,8 @@
       "registry_name": "dirty_smoke",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/particle/DirtySmokeParticle.java",
-          "src/main/resources/assets/invincible_conquest/particles/dirty_smoke.json"
+          "src/main/resources/assets/invincible_conquest/particles/dirty_smoke.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/DirtySmokeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3547,8 +3547,8 @@
         "files": [
           "src/main/resources/assets/invincible_conquest/models/item/atom_eve_suit_leggings.json",
           "src/main/java/net/clozynoii/invincibleconquest/item/AtomEveSuitItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_suit_boots.json",
-          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_suit_chestplate.json"
+          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_suit_chestplate.json",
+          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_suit_boots.json"
         ]
       },
       "path": "~/Armor"
@@ -3573,10 +3573,10 @@
       "registry_name": "dinosaur",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/DinosaurModel.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/DinosaurEntity.java",
-          "src/main/resources/assets/invincible_conquest/models/item/dinosaur_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/DinosaurRenderer.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/DinosaurRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/DinosaurModel.java",
+          "src/main/resources/assets/invincible_conquest/models/item/dinosaur_spawn_egg.json"
         ]
       },
       "path": "~/Entities"
@@ -3612,11 +3612,11 @@
       "registry_name": "martian",
       "metadata": {
         "files": [
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/martian_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/MartianEntity.java",
           "src/main/resources/assets/invincible_conquest/models/item/martian_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MartianRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/MartianModel.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/martian_biome_modifier.json"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MartianRenderer.java"
         ]
       },
       "path": "~/Entities"
@@ -3629,11 +3629,11 @@
       "registry_name": "martian_spearman",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/MartianSpearmanModel.java",
-          "src/main/resources/assets/invincible_conquest/models/item/martian_spearman_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/martian_spearman_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/MartianSpearmanEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MartianSpearmanRenderer.java"
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/martian_spearman_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/MartianSpearmanModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MartianSpearmanRenderer.java",
+          "src/main/resources/assets/invincible_conquest/models/item/martian_spearman_spawn_egg.json"
         ]
       },
       "path": "~/Entities"
@@ -3646,10 +3646,10 @@
       "registry_name": "flaxan",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanModel.java",
           "src/main/resources/assets/invincible_conquest/models/item/flaxan_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanModel.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -3662,10 +3662,10 @@
       "registry_name": "flaxan_gunman",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanGunmanEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanGunmanRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanGunmanModel.java",
-          "src/main/resources/assets/invincible_conquest/models/item/flaxan_gunman_spawn_egg.json"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanGunmanRenderer.java",
+          "src/main/resources/assets/invincible_conquest/models/item/flaxan_gunman_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanGunmanEntity.java"
         ]
       },
       "path": "~/Entities"
@@ -3805,11 +3805,11 @@
       "registry_name": "omni_man",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/omni_man_spawn_egg.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/OmniManModel.java",
           "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/omni_man_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/OmniManEntity.java",
+          "src/main/resources/assets/invincible_conquest/models/item/omni_man_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/OmniManRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/OmniManEntity.java"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/OmniManModel.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3822,11 +3822,11 @@
       "registry_name": "angstrom",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/AngstromEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AngstromRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/AngstromModel.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/angstrom_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/AngstromEntity.java",
           "src/main/resources/assets/invincible_conquest/models/item/angstrom_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/angstrom_biome_modifier.json"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AngstromRenderer.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3839,10 +3839,10 @@
       "registry_name": "rex_splode",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/RexSplodeEntity.java",
           "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/rex_splode_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/RexSplodeRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/RexSplodeEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/RexSplodeModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/RexSplodeRenderer.java",
           "src/main/resources/assets/invincible_conquest/models/item/rex_splode_spawn_egg.json"
         ]
       },
@@ -3856,11 +3856,11 @@
       "registry_name": "atom_eve",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomEveRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/AtomEveEntity.java",
+          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomEveRenderer.java",
           "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/atom_eve_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AtomEveModel.java",
-          "src/main/resources/assets/invincible_conquest/models/item/atom_eve_spawn_egg.json"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AtomEveModel.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3873,11 +3873,11 @@
       "registry_name": "dupli_kate",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/DupliKateModel.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/DupliKateEntity.java",
-          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/DupliKateRenderer.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/dupli_kate_biome_modifier.json"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/DupliKateModel.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/dupli_kate_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/DupliKateEntity.java",
+          "src/main/resources/assets/invincible_conquest/models/item/dupli_kate_spawn_egg.json"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3890,11 +3890,11 @@
       "registry_name": "multi_paul",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/multi_paul_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MultiPaulRenderer.java",
           "src/main/resources/assets/invincible_conquest/models/item/multi_paul_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/MultiPaulModel.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/MultiPaulEntity.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MultiPaulRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/MultiPaulEntity.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/multi_paul_biome_modifier.json"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3907,10 +3907,10 @@
       "registry_name": "battle_beast",
       "metadata": {
         "files": [
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/battle_beast_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/BattleBeastEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/BattleBeastModel.java",
           "src/main/resources/assets/invincible_conquest/models/item/battle_beast_spawn_egg.json",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/battle_beast_biome_modifier.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/BattleBeastRenderer.java"
         ]
       },
@@ -3925,10 +3925,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/entity/MaulerTwinEntity.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/mauler_twin_biome_modifier.json",
           "src/main/resources/assets/invincible_conquest/models/item/mauler_twin_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MaulerTwinRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/MaulerTwinModel.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/mauler_twin_biome_modifier.json"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/MaulerTwinModel.java"
         ]
       },
       "path": "~/Entities/NPCs"
@@ -3941,11 +3941,11 @@
       "registry_name": "viltrumite_male",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumiteMaleRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumiteMaleEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumiteMaleRenderer.java",
+          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_male_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/ViltrumiteMaleModel.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_male_biome_modifier.json",
-          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_male_spawn_egg.json"
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_male_biome_modifier.json"
         ]
       },
       "path": "~/Entities"
@@ -3958,11 +3958,11 @@
       "registry_name": "viltrumite_female",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_female_spawn_egg.json",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumiteFemaleRenderer.java",
+          "src/main/resources/assets/invincible_conquest/models/item/viltrumite_female_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumiteFemaleEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/ViltrumiteFemaleModel.java",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_female_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumiteFemaleEntity.java"
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/viltrumite_female_biome_modifier.json"
         ]
       },
       "path": "~/Entities"
@@ -4013,8 +4013,8 @@
       "registry_name": "red_sand_smoke",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/particles/red_sand_smoke.json",
-          "src/main/java/net/clozynoii/invincibleconquest/client/particle/RedSandSmokeParticle.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/RedSandSmokeParticle.java",
+          "src/main/resources/assets/invincible_conquest/particles/red_sand_smoke.json"
         ]
       },
       "path": "~/Particles"
@@ -4108,8 +4108,8 @@
       "registry_name": "circle_small",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/particle/CircleSmallParticle.java",
-          "src/main/resources/assets/invincible_conquest/particles/circle_small.json"
+          "src/main/resources/assets/invincible_conquest/particles/circle_small.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/CircleSmallParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -4122,8 +4122,8 @@
       "registry_name": "circle_medium",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/particle/CircleMediumParticle.java",
-          "src/main/resources/assets/invincible_conquest/particles/circle_medium.json"
+          "src/main/resources/assets/invincible_conquest/particles/circle_medium.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/CircleMediumParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -4200,8 +4200,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityViltrumiteButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityViltrumiteScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityViltrumiteMenu.java"
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityViltrumiteMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityViltrumiteScreen.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4823,9 +4823,9 @@
       "registry_name": "menu_ability_speedster",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilitySpeedsterScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySpeedsterButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilitySpeedsterMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySpeedsterButtonMessage.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilitySpeedsterScreen.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4838,9 +4838,9 @@
       "registry_name": "menu_ability_spider",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilitySpiderMenu.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilitySpiderScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySpiderButtonMessage.java"
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilitySpiderButtonMessage.java",
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilitySpiderMenu.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4853,9 +4853,9 @@
       "registry_name": "menu_ability_cloning",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityCloningScreen.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityCloningMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityCloningButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityCloningScreen.java"
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityCloningButtonMessage.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4868,9 +4868,9 @@
       "registry_name": "menu_ability_explode",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityExplodeMenu.java",
           "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityExplodeButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityExplodeScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityExplodeMenu.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityExplodeScreen.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4883,9 +4883,9 @@
       "registry_name": "menu_ability_portal",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityPortalMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityPortalScreen.java",
           "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityPortalButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityPortalScreen.java"
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityPortalMenu.java"
         ]
       },
       "path": "~/GUI/Abilities"
@@ -4928,8 +4928,8 @@
       "registry_name": "menu_ability_robot",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityRobotButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuAbilityRobotScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuAbilityRobotButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuAbilityRobotMenu.java"
         ]
       },
@@ -5025,9 +5025,9 @@
       "registry_name": "earth",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/EarthRenderer.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/EarthModel.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/EarthEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/EarthRenderer.java"
+          "src/main/java/net/clozynoii/invincibleconquest/entity/EarthEntity.java"
         ]
       },
       "path": "~/Entities/Planets"
@@ -5150,8 +5150,8 @@
       "registry_name": "mars",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/MarsEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/model/MarsModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/MarsEntity.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/renderer/MarsRenderer.java"
         ]
       },
@@ -5165,9 +5165,9 @@
       "registry_name": "viltrum",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/ViltrumModel.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/ViltrumEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/ViltrumModel.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/ViltrumRenderer.java"
         ]
       },
       "path": "~/Entities/Planets"
@@ -5210,10 +5210,10 @@
       "registry_name": "moon_sand",
       "metadata": {
         "files": [
+          "src/main/resources/assets/invincible_conquest/blockstates/moon_sand.json",
+          "src/main/resources/assets/invincible_conquest/models/item/moon_sand.json",
           "src/main/java/net/clozynoii/invincibleconquest/block/MoonSandBlock.java",
           "src/main/resources/data/invincible_conquest/loot_table/blocks/moon_sand.json",
-          "src/main/resources/assets/invincible_conquest/models/item/moon_sand.json",
-          "src/main/resources/assets/invincible_conquest/blockstates/moon_sand.json",
           "src/main/resources/assets/invincible_conquest/models/block/moon_sand.json"
         ]
       },
@@ -5227,10 +5227,10 @@
       "registry_name": "moon_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/invincible_conquest/models/block/moon_stone.json",
-          "src/main/resources/assets/invincible_conquest/models/item/moon_stone.json",
           "src/main/resources/assets/invincible_conquest/blockstates/moon_stone.json",
+          "src/main/resources/assets/invincible_conquest/models/block/moon_stone.json",
           "src/main/resources/data/invincible_conquest/loot_table/blocks/moon_stone.json",
+          "src/main/resources/assets/invincible_conquest/models/item/moon_stone.json",
           "src/main/java/net/clozynoii/invincibleconquest/block/MoonStoneBlock.java"
         ]
       },
@@ -5893,8 +5893,8 @@
       "registry_name": "faction_join_viltrum",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/network/FactionJoinViltrumButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/client/gui/FactionJoinViltrumScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/FactionJoinViltrumButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/FactionJoinViltrumMenu.java"
         ]
       },
@@ -6020,9 +6020,9 @@
       "registry_name": "faction_join_gda",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/FactionJoinGDAScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/FactionJoinGDAButtonMessage.java",
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/FactionJoinGDAMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/FactionJoinGDAButtonMessage.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/FactionJoinGDAScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -6073,9 +6073,9 @@
       "registry_name": "faction_join_cop",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/FactionJoinCOPMenu.java",
           "src/main/java/net/clozynoii/invincibleconquest/network/FactionJoinCOPButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/FactionJoinCOPScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/FactionJoinCOPMenu.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/FactionJoinCOPScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -6169,8 +6169,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuFactionStatsMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuFactionStatsButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuFactionStatsScreen.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuFactionStatsScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuFactionStatsButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -6183,9 +6183,9 @@
       "registry_name": "menu_planet_takeover",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuPlanetTakeoverMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuPlanetTakeoverScreen.java",
           "src/main/java/net/clozynoii/invincibleconquest/network/MenuPlanetTakeoverButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuPlanetTakeoverScreen.java"
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuPlanetTakeoverMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -6791,8 +6791,8 @@
       "registry_name": "galactic_map_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/GalacticMapGUIMenu.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/gui/GalacticMapGUIScreen.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/GalacticMapGUIScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/GalacticMapGUIMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -6840,8 +6840,8 @@
       "registry_name": "galactic_map",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/item/GalacticMapItem.java",
-          "src/main/resources/assets/invincible_conquest/models/item/galactic_map.json"
+          "src/main/resources/assets/invincible_conquest/models/item/galactic_map.json",
+          "src/main/java/net/clozynoii/invincibleconquest/item/GalacticMapItem.java"
         ]
       },
       "path": "~/Items"
@@ -7088,9 +7088,9 @@
       "registry_name": "talescria",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/TalescriaModel.java",
           "src/main/java/net/clozynoii/invincibleconquest/entity/TalescriaEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/TalescriaRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/TalescriaModel.java"
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/TalescriaRenderer.java"
         ]
       },
       "path": "~/Entities/Planets"
@@ -7591,6 +7591,481 @@
         ]
       },
       "path": "~/Entities/NPCs"
+    },
+    {
+      "name": "FlaxanPortalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FlaxanPortalTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "FlaxanPlains",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_plains",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/biome/flaxan_plains.json"
+        ]
+      },
+      "path": "~/Dimensions/Dimensions"
+    },
+    {
+      "name": "WhiteSun",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_sun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/WhiteSunRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/WhiteSunEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/WhiteSunModel.java"
+        ]
+      },
+      "path": "~/Entities/Planets"
+    },
+    {
+      "name": "ConquestSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "conquest_spawn",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ConquestSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "TheHammer",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/TheHammerRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/TheHammerEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/TheHammerModel.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "TheHammerTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TheHammerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "FlaxanPortal",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanPortalEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanPortalRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanPortalModel.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "DontAttackViltrumite",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dont_attack_viltrumite",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DontAttackViltrumiteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "TheHammerSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_hammer_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TheHammerSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "FlaxanDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_dimension",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/dimension/flaxan_dimension.json",
+          "src/main/java/net/clozynoii/invincibleconquest/world/dimension/FlaxanDimensionDimension.java",
+          "src/main/resources/data/invincible_conquest/dimension_type/flaxan_dimension.json"
+        ]
+      },
+      "path": "~/Dimensions/Dimensions"
+    },
+    {
+      "name": "Flaxan4",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_4.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan5",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_5.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_5.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_5.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_2.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan3",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_3.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan1",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_1.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "SunTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sun_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SunTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dimension"
+    },
+    {
+      "name": "OrangeSun",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_sun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/OrangeSunRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/OrangeSunModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/OrangeSunEntity.java"
+        ]
+      },
+      "path": "~/Entities/Planets"
+    },
+    {
+      "name": "RedSun",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_sun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/RedSunRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/RedSunEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/RedSunModel.java"
+        ]
+      },
+      "path": "~/Entities/Planets"
+    },
+    {
+      "name": "Viltrum4",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_4.json"
+        ]
+      },
+      "path": "~/Structures/Viltrum"
+    },
+    {
+      "name": "Viltrum3",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_3.json"
+        ]
+      },
+      "path": "~/Structures/Viltrum"
+    },
+    {
+      "name": "Viltrum2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_2.json"
+        ]
+      },
+      "path": "~/Structures/Viltrum"
+    },
+    {
+      "name": "BlueSun",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_sun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/BlueSunModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/BlueSunEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/BlueSunRenderer.java"
+        ]
+      },
+      "path": "~/Entities/Planets"
+    },
+    {
+      "name": "FlaxanPortalSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FlaxanPortalSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "Viltrum1",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_1.json"
+        ]
+      },
+      "path": "~/Structures/Viltrum"
+    },
+    {
+      "name": "StunEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StunEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
     }
   ],
   "variable_elements": [
@@ -8061,6 +8536,12 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": ""
+    },
+    {
+      "name": "WaveTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -8263,13 +8744,15 @@
       "EntitySilverfish"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.DIRT#0",
+      "~Blocks.GRASS",
       "~Blocks.SAND#1",
       "~Blocks.RED_SANDSTONE#0",
       "~CUSTOM:MoonStone",
       "~CUSTOM:MoonSand",
       "~Blocks.STONE#0",
-      "~Blocks.DIRT#0",
-      "~Blocks.GRASS"
+      "~Blocks.AIR",
+      "~Blocks.END_STONE"
     ],
     "BLOCKS:mod:natural": [
       "Blocks.STONE#0",
@@ -9140,7 +9623,16 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "Dimensions",
+            "children": []
+          },
+          {
+            "name": "Planets",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Items",
@@ -9173,12 +9665,25 @@
           {
             "name": "Planets",
             "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
           }
         ]
       },
       {
         "name": "Structures",
-        "children": []
+        "children": [
+          {
+            "name": "Viltrum",
+            "children": []
+          },
+          {
+            "name": "Flaxan",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Effects",

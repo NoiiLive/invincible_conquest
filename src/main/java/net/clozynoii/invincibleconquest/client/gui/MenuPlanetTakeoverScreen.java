@@ -10,16 +10,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.MenuPlanetTakeoverMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnOwnedPlanetProcedure;
 import net.clozynoii.invincibleconquest.network.MenuPlanetTakeoverButtonMessage;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MenuPlanetTakeoverScreen extends AbstractContainerScreen<MenuPlanetTakeoverMenu> {
+public class MenuPlanetTakeoverScreen extends AbstractContainerScreen<MenuPlanetTakeoverMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = MenuPlanetTakeoverMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -37,6 +39,18 @@ public class MenuPlanetTakeoverScreen extends AbstractContainerScreen<MenuPlanet
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
+	}
+
+	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
+		HashMap<String, String> textstate = new HashMap<>();
+		if (Minecraft.getInstance().screen instanceof MenuPlanetTakeoverScreen sc) {
+
+		}
+		return textstate;
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/menu_planet_takeover.png");
@@ -81,8 +95,8 @@ public class MenuPlanetTakeoverScreen extends AbstractContainerScreen<MenuPlanet
 		super.init();
 		button_hostile = Button.builder(Component.translatable("gui.invincible_conquest.menu_planet_takeover.button_hostile"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new MenuPlanetTakeoverButtonMessage(0, x, y, z));
-				MenuPlanetTakeoverButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				PacketDistributor.sendToServer(new MenuPlanetTakeoverButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
+				MenuPlanetTakeoverButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 			}
 		}).bounds(this.leftPos + -77, this.topPos + 1, 49, 20).build();
 		guistate.put("button:button_hostile", button_hostile);
@@ -93,8 +107,8 @@ public class MenuPlanetTakeoverScreen extends AbstractContainerScreen<MenuPlanet
 		this.addRenderableWidget(button_passive);
 		button_decline = Button.builder(Component.translatable("gui.invincible_conquest.menu_planet_takeover.button_decline"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new MenuPlanetTakeoverButtonMessage(2, x, y, z));
-				MenuPlanetTakeoverButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				PacketDistributor.sendToServer(new MenuPlanetTakeoverButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
+				MenuPlanetTakeoverButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
 			}
 		}).bounds(this.leftPos + -25, this.topPos + 1, 49, 20).build();
 		guistate.put("button:button_decline", button_decline);

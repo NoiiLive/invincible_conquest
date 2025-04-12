@@ -21,6 +21,16 @@ public class GenerateSpaceProcedure {
 				}
 			}
 			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = InvincibleConquestModEntities.WHITE_SUN.get().spawn(_level, new BlockPos(1100, 75, 1100), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = InvincibleConquestModEntities.ORANGE_SUN.get().spawn(_level, new BlockPos(800, 75, 800), MobSpawnType.MOB_SUMMONED);
+				if (entityToSpawn != null) {
+				}
+			}
+			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = InvincibleConquestModEntities.EARTH.get().spawn(_level, new BlockPos(135, 75, 135), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 				}

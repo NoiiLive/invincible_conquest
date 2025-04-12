@@ -3,7 +3,7 @@
   "biomes": "invincible_conquest:mars_biome",
   "spawners": {
     "type": "invincible_conquest:martian",
-    "weight": 20,
+    "weight": 1,
     "minCount": 1,
     "maxCount": 3
   }
