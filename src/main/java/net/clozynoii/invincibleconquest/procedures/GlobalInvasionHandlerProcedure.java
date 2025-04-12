@@ -48,6 +48,19 @@ public class GlobalInvasionHandlerProcedure {
 						if ((entityiterator.level().dimension()) == Level.OVERWORLD) {
 							InvincibleConquestModVariables.MapVariables.get(world).PlanetOccupied = true;
 							InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							if (InvincibleConquestModVariables.MapVariables.get(world).WaveTimer == 0) {
+								if ((InvincibleConquestModVariables.MapVariables.get(world).HomeFaction).equals("Global Defense Agency")) {
+									if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 75) {
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = InvincibleConquestModEntities.THE_HAMMER.get().spawn(_level, BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()), MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+											}
+										}
+									}
+								}
+								InvincibleConquestModVariables.MapVariables.get(world).WaveTimer = 6000;
+								InvincibleConquestModVariables.MapVariables.get(world).syncData(world);
+							}
 						}
 					}
 					if ((InvincibleConquestModVariables.MapVariables.get(world).PlanetTakeover).equals("Moon")) {
@@ -105,14 +118,14 @@ public class GlobalInvasionHandlerProcedure {
 											if (entityToSpawn != null) {
 											}
 										}
-										if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 75) {
-											if (!(!world.getEntitiesOfClass(ConquestEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 100, 100, 100), e -> true).isEmpty())) {
-												if (world instanceof ServerLevel _level) {
-													Entity entityToSpawn = InvincibleConquestModEntities.CONQUEST.get().spawn(_level,
-															BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
-															MobSpawnType.MOB_SUMMONED);
-													if (entityToSpawn != null) {
-													}
+									}
+									if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 75) {
+										if (!(!world.getEntitiesOfClass(ConquestEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 100, 100, 100), e -> true).isEmpty())) {
+											if (world instanceof ServerLevel _level) {
+												Entity entityToSpawn = InvincibleConquestModEntities.CONQUEST.get().spawn(_level,
+														BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+														MobSpawnType.MOB_SUMMONED);
+												if (entityToSpawn != null) {
 												}
 											}
 										}
