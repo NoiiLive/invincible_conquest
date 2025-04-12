@@ -1,23 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
+import net.neoforged.bus.api.Event;
 
 public class DamageDestructionOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -55,9 +38,9 @@ public class DamageDestructionOnEffectActiveTickProcedure {
 								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 15, 2, false, false));
 								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.FALLING_BLOCKS, 2, 0, false, false));
+									_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DELETED_MOD_ELEMENT, 2, 0, false, false));
 								if (entity instanceof LivingEntity _entity)
-									_entity.removeEffect(InvincibleConquestModMobEffects.DAMAGE_DESTRUCTION);
+									_entity.removeEffect(InvincibleConquestModMobEffects.DELETED_MOD_ELEMENT);
 							}
 						}
 					}

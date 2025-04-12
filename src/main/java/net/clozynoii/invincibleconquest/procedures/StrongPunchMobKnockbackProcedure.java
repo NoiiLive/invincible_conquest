@@ -1,8 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.entity.Entity;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.neoforged.bus.api.Event;
 
 public class StrongPunchMobKnockbackProcedure {
 	public static void execute(Entity entity, Entity sourceentity) {

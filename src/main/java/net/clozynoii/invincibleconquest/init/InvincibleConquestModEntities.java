@@ -44,6 +44,7 @@ import net.clozynoii.invincibleconquest.entity.FlaxanBulletEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
+import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
@@ -115,7 +116,7 @@ public class InvincibleConquestModEntities {
 
 					.sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BattleBeastEntity>> BATTLE_BEAST = register("battle_beast",
-			EntityType.Builder.<BattleBeastEntity>of(BattleBeastEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.8f, 2.4f));
+			EntityType.Builder.<BattleBeastEntity>of(BattleBeastEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.8f, 3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MaulerTwinEntity>> MAULER_TWIN = register("mauler_twin",
 			EntityType.Builder.<MaulerTwinEntity>of(MaulerTwinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -136,6 +137,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<SunEntity>of(SunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TalescriaEntity>> TALESCRIA = register("talescria",
 			EntityType.Builder.<TalescriaEntity>of(TalescriaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(5f, 5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ConquestEntity>> CONQUEST = register("conquest",
+			EntityType.Builder.<ConquestEntity>of(ConquestEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 3f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -175,6 +178,7 @@ public class InvincibleConquestModEntities {
 		ViltrumEntity.init(event);
 		SunEntity.init(event);
 		TalescriaEntity.init(event);
+		ConquestEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -209,5 +213,6 @@ public class InvincibleConquestModEntities {
 		event.put(VILTRUM.get(), ViltrumEntity.createAttributes().build());
 		event.put(SUN.get(), SunEntity.createAttributes().build());
 		event.put(TALESCRIA.get(), TalescriaEntity.createAttributes().build());
+		event.put(CONQUEST.get(), ConquestEntity.createAttributes().build());
 	}
 }

@@ -2,9 +2,9 @@
   "_fv": 73,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Battle Beast",
+    "mobName": "Conquest",
     "mobLabel": "",
-    "mobModelTexture": "battle_beast.png",
+    "mobModelTexture": "conquest.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,7 +13,7 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.7999999999999999,
+    "modelWidth": 0.6,
     "modelHeight": 3.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
@@ -24,7 +24,7 @@
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -14013905,
+      "value": -6245708,
       "falpha": 0.0
     },
     "creativeTabs": [
@@ -45,24 +45,24 @@
       "value": ""
     },
     "equipmentBody": {
-      "value": ""
+      "value": "CUSTOM:ViltrumiteUniform.body"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "CUSTOM:ViltrumiteUniform.legs"
     },
     "equipmentBoots": {
-      "value": ""
+      "value": "CUSTOM:ViltrumiteUniform.boots"
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 30,
-    "attackKnockback": 0.5,
-    "knockbackResistance": 0.5,
+    "attackStrength": 45,
+    "attackKnockback": 0.7000000000000001,
+    "knockbackResistance": 1.0,
     "movementSpeed": 0.30000000000000004,
-    "armorBaseValue": 30.0,
+    "armorBaseValue": 50.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 500,
+    "health": 1000,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -109,7 +109,7 @@
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "battle_beast.geo.json",
+    "model": "conquest.geo.json",
     "groupName": "head",
     "animation1": "idle",
     "animation2": "walk",
@@ -166,7 +166,7 @@
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
-        "value": "plains"
+        "value": "CUSTOM:ViltrumPlains"
       }
     ],
     "spawnInDungeons": false
