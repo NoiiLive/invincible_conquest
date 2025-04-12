@@ -53,7 +53,7 @@ import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 public class InvincibleConquestModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, InvincibleConquestMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<InvincibleEntity>> INVINCIBLE = register("invincible",
-			EntityType.Builder.<InvincibleEntity>of(InvincibleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<InvincibleEntity>of(InvincibleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<InvincibleBlueEntity>> INVINCIBLE_BLUE = register("invincible_blue",
 			EntityType.Builder.<InvincibleBlueEntity>of(InvincibleBlueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<InvincibleSinisterEntity>> INVINCIBLE_SINISTER = register("invincible_sinister",

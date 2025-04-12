@@ -14,6 +14,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -24,11 +25,14 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.navigation.PathNavigation;
+import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.ai.control.FlyingMoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.TamableAnimal;
@@ -54,6 +58,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModItems;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
@@ -77,6 +82,7 @@ public class InvincibleMasklessEntity extends TamableAnimal implements GeoEntity
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(InvincibleConquestModItems.INVINCIBLE_SUIT_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(InvincibleConquestModItems.INVINCIBLE_SUIT_LEGGINGS.get()));
 		this.setItemSlot(EquipmentSlot.FEET, new ItemStack(InvincibleConquestModItems.INVINCIBLE_SUIT_BOOTS.get()));
+		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
@@ -93,6 +99,11 @@ public class InvincibleMasklessEntity extends TamableAnimal implements GeoEntity
 
 	public String getTexture() {
 		return this.entityData.get(TEXTURE);
+	}
+
+	@Override
+	protected PathNavigation createNavigation(Level world) {
+		return new FlyingPathNavigation(this, world);
 	}
 
 	@Override
@@ -118,6 +129,11 @@ public class InvincibleMasklessEntity extends TamableAnimal implements GeoEntity
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
+	}
+
+	@Override
+	public boolean causeFallDamage(float l, float d, DamageSource source) {
+		return false;
 	}
 
 	@Override
@@ -237,9 +253,19 @@ public class InvincibleMasklessEntity extends TamableAnimal implements GeoEntity
 	}
 
 	@Override
+	protected void checkFallDamage(double y, boolean onGroundIn, BlockState state, BlockPos pos) {
+	}
+
+	@Override
+	public void setNoGravity(boolean ignored) {
+		super.setNoGravity(true);
+	}
+
+	@Override
 	public void aiStep() {
 		super.aiStep();
 		this.updateSwingTime();
+		this.setNoGravity(true);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
@@ -258,6 +284,7 @@ public class InvincibleMasklessEntity extends TamableAnimal implements GeoEntity
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.3);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.3);
+		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
 

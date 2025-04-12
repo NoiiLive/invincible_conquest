@@ -25,5 +25,13 @@
         "stream": false
       }
     ]
+  },
+  "strongwoosh": {
+    "sounds": [
+      {
+        "name": "invincible_conquest:superman-flying-take-off-breaking-the-sound-barrier-sound-effect-2-ezmp3c_ahst5thc",
+        "stream": false
+      }
+    ]
   }
 }
