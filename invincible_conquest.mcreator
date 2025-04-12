@@ -7837,7 +7837,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_1.json"
         ]
       },
-      "path": "~/Structures/Flaxan"
+      "path": "~/Structures/Viltrum"
     },
     {
       "name": "Viltrum2",
@@ -7852,7 +7852,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_2.json"
         ]
       },
-      "path": "~/Structures/Flaxan"
+      "path": "~/Structures/Viltrum"
     },
     {
       "name": "Viltrum3",
@@ -7867,7 +7867,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_3.json"
         ]
       },
-      "path": "~/Structures/Flaxan"
+      "path": "~/Structures/Viltrum"
     },
     {
       "name": "Viltrum4",
@@ -7882,7 +7882,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_4.json"
         ]
       },
-      "path": "~/Structures/Flaxan"
+      "path": "~/Structures/Viltrum"
     }
   ],
   "variable_elements": [
@@ -8960,9 +8960,9 @@
       "item.invincible_conquest.flaxan_armor_leggings": "Flaxan Pants",
       "item.invincible_conquest.omnivincible_suit_helmet": "Invincible\u0027s Mask (Omni)",
       "gui.invincible_conquest.menu_faction_stats.button_empty": " ",
-      "entity.invincible_conquest.invincible_veil": "Invincible (Veil)",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_portal": "Portal",
       "effect.invincible_conquest.no_fall": "No Fall",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_portal": "Portal",
+      "entity.invincible_conquest.invincible_veil": "Invincible (Veil)",
       "block.invincible_conquest.blood": "Blood",
       "item.invincible_conquest.mars_spawn_egg": "Mars Spawn Egg",
       "gui.invincible_conquest.menu_stats.tooltip_ability_menu": "Ability Menu",
@@ -9492,6 +9492,10 @@
         "children": [
           {
             "name": "Flaxan",
+            "children": []
+          },
+          {
+            "name": "Viltrum",
             "children": []
           }
         ]
