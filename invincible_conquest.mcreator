@@ -5200,7 +5200,7 @@
           "src/main/resources/data/invincible_conquest/dimension_type/viltrum_world.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "MoonSand",
@@ -5247,7 +5247,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/biome/moon_biome.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "MoonWorld",
@@ -5262,7 +5262,7 @@
           "src/main/resources/data/invincible_conquest/dimension_type/moon_world.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "MarsBiome",
@@ -5275,7 +5275,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/biome/mars_biome.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "MarsWorld",
@@ -5290,7 +5290,7 @@
           "src/main/resources/data/invincible_conquest/dimension_type/mars_world.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "CollideSun",
@@ -6999,7 +6999,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/biome/viltrum_plains.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "SpawnSurfaceOnly",
@@ -7044,7 +7044,7 @@
           "src/main/resources/data/invincible_conquest/worldgen/biome/talescria_plains.json"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "TalescriaWorld",
@@ -7059,7 +7059,7 @@
           "src/main/java/net/clozynoii/invincibleconquest/world/dimension/TalescriaWorldDimension.java"
         ]
       },
-      "path": "~/Dimensions"
+      "path": "~/Dimensions/Planets"
     },
     {
       "name": "EnterTalescria",
@@ -7643,6 +7643,246 @@
         ]
       },
       "path": "~/Effects"
+    },
+    {
+      "name": "FlaxanPlains",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_plains",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/biome/flaxan_plains.json"
+        ]
+      },
+      "path": "~/Dimensions/Dimensions"
+    },
+    {
+      "name": "FlaxanDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/world/dimension/FlaxanDimensionDimension.java",
+          "src/main/resources/data/invincible_conquest/dimension_type/flaxan_dimension.json",
+          "src/main/resources/data/invincible_conquest/dimension/flaxan_dimension.json"
+        ]
+      },
+      "path": "~/Dimensions/Dimensions"
+    },
+    {
+      "name": "FlaxanPortal",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FlaxanPortalRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FlaxanPortalEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/FlaxanPortalModel.java"
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "FlaxanPortalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FlaxanPortalTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "FlaxanPortalSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_portal_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FlaxanPortalSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "Flaxan1",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_1.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_2.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan3",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_3.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan4",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_4.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Flaxan5",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flaxan_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/flaxan_5.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/flaxan_5.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/flaxan_5.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Viltrum1",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_1.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_1.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Viltrum2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_2.json",
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_2.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Viltrum3",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_3.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_3.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
+    },
+    {
+      "name": "Viltrum4",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrum_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/worldgen/template_pool/viltrum_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure/viltrum_4.json",
+          "src/main/resources/data/invincible_conquest/worldgen/structure_set/viltrum_4.json"
+        ]
+      },
+      "path": "~/Structures/Flaxan"
     }
   ],
   "variable_elements": [
@@ -8252,7 +8492,8 @@
       "CUSTOM:OmniMan",
       "CUSTOM:RexSplode",
       "CUSTOM:ViltrumiteFemale",
-      "CUSTOM:ViltrumiteMale"
+      "CUSTOM:ViltrumiteMale",
+      "CUSTOM:Conquest"
     ],
     "ENTITIES:mod:non_targetable": [
       "EntityAreaEffectCloud",
@@ -8730,8 +8971,9 @@
       "item.invincible_conquest.invincible_suit_mohawk_chestplate": "Invincible\u0027s Suit (Mohawk)",
       "gui.invincible_conquest.menu_planet_takeover.button_passive": "Passive",
       "item.invincible_conquest.invincible_suit_veil_leggings": "Invincible\u0027s Pants (Veil)",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
+      "item.invincible_conquest.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
       "key.invincible_conquest.follow_up": "Follow Up",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",
@@ -8781,6 +9023,7 @@
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_8": "Slot 8",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_7": "Slot 7",
       "biome.invincible_conquest.talescria_plains": "Viltrum Plains",
+      "effect.invincible_conquest.damage_destruction": "Damage Destruction",
       "item.invincible_conquest.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "item.invincible_conquest.battle_beast_spawn_egg": "Battle Beast Spawn Egg",
       "entity.invincible_conquest.earth": "Earth",
@@ -8790,7 +9033,9 @@
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_basic_abilities": "Basic Abilities",
       "item.invincible_conquest.viltrumite_uniform_leggings": "Viltrumite Pants",
       "item.invincible_conquest.invincible_suit_dark_chestplate": "Invincible\u0027s Suit (Dark)",
+      "biome.invincible_conquest.flaxan_plains": "Flaxan Plains",
       "item.invincible_conquest.invincible_suit_blue_boots": "Invincible\u0027s Boots (Blue)",
+      "effect.invincible_conquest.falling_blocks": "Falling Blocks",
       "gamerule.invincibleAbilityDestruction.description": "Enables/Disables Block Destruction for Abilities from Invincible: Conquest",
       "entity.invincible_conquest.invincible_maskless": "Invincible (Maskless)",
       "item.invincible_conquest.atom_eve_suit_leggings": "Atom-Eve\u0027s Shorts",
@@ -8828,6 +9073,7 @@
       "entity.invincible_conquest.mauler_twin": "Mauler Twin",
       "gamerule.spawnInvincibleMobs": "Spawn Invincible Mobs",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_1": "Slot 1",
+      "effect.invincible_conquest.glass_break": "Glass Break",
       "gui.invincible_conquest.menu_ability_selection.tooltip_speedster": "Speedster",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_stat_menu": "Stat Menu",
       "entity.invincible_conquest.invincible_blue": "Invincible (Blue)",
@@ -8935,6 +9181,7 @@
       "entity.invincible_conquest.mars": "Mars",
       "gui.invincible_conquest.menu_ability_spider.tooltip_stat_menu": "Stat Menu",
       "gamerule.invincibleAbilityBlockDrop.description": "If ability destruction is on, enables/disables blocks dropping from the destruction in Invincible: Conquest",
+      "entity.invincible_conquest.flaxan_portal": "Flaxan Portal",
       "gui.invincible_conquest.menu_ability_selection.tooltip_human": "Human",
       "gui.invincible_conquest.faction_join_viltrum.button_decline": "Decline",
       "entity.invincible_conquest.invincible": "Invincible",
@@ -8970,6 +9217,7 @@
       "item.invincible_conquest.viltrumite_uniform_chestplate": "Viltrumite Uniform",
       "gui.invincible_conquest.menu_ability_explode.tooltip_basic_abilities": "Basic Abilities",
       "gui.invincible_conquest.galactic_map_gui.tooltip_earth_x135_y135": "Earth : x135, y135",
+      "effect.invincible_conquest.hard_stun": "Hard Stun",
       "item.invincible_conquest.angstrom_outfit_leggings": "Angstrom\u0027s Pants",
       "item.invincible_conquest.flaxan_spawn_egg": "Flaxan Spawn Egg",
       "item.invincible_conquest.multi_paul_suit_boots": "Multi-Paul\u0027s Shoes",
@@ -9194,7 +9442,16 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "Planets",
+            "children": []
+          },
+          {
+            "name": "Dimensions",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Items",
@@ -9232,7 +9489,12 @@
       },
       {
         "name": "Structures",
-        "children": []
+        "children": [
+          {
+            "name": "Flaxan",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Effects",

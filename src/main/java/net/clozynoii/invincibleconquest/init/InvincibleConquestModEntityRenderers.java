@@ -34,6 +34,7 @@ import net.clozynoii.invincibleconquest.client.renderer.InvincibleMasklessRender
 import net.clozynoii.invincibleconquest.client.renderer.InvincibleDarkRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.InvincibleBlueRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.FlaxanPortalRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanGunmanRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
@@ -79,5 +80,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.SUN.get(), SunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.TALESCRIA.get(), TalescriaRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.CONQUEST.get(), ConquestRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.FLAXAN_PORTAL.get(), FlaxanPortalRenderer::new);
 	}
 }

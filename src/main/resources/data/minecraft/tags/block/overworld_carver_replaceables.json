@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:air",
-    "minecraft:end_stone",
     "minecraft:red_sand",
     "minecraft:red_sandstone",
     "invincible_conquest:moon_stone",

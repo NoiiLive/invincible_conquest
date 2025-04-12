@@ -38,6 +38,7 @@ import net.clozynoii.invincibleconquest.entity.InvincibleMasklessEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleDarkEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleBlueEntity;
+import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanGunmanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanBulletEntity;
@@ -139,6 +140,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<TalescriaEntity>of(TalescriaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(5f, 5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ConquestEntity>> CONQUEST = register("conquest",
 			EntityType.Builder.<ConquestEntity>of(ConquestEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 3f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FlaxanPortalEntity>> FLAXAN_PORTAL = register("flaxan_portal",
+			EntityType.Builder.<FlaxanPortalEntity>of(FlaxanPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.7f, 3f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -179,6 +182,7 @@ public class InvincibleConquestModEntities {
 		SunEntity.init(event);
 		TalescriaEntity.init(event);
 		ConquestEntity.init(event);
+		FlaxanPortalEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -214,5 +218,6 @@ public class InvincibleConquestModEntities {
 		event.put(SUN.get(), SunEntity.createAttributes().build());
 		event.put(TALESCRIA.get(), TalescriaEntity.createAttributes().build());
 		event.put(CONQUEST.get(), ConquestEntity.createAttributes().build());
+		event.put(FLAXAN_PORTAL.get(), FlaxanPortalEntity.createAttributes().build());
 	}
 }

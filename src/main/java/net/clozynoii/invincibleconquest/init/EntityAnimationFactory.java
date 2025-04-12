@@ -26,6 +26,7 @@ import net.clozynoii.invincibleconquest.entity.InvincibleMasklessEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleDarkEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleBlueEntity;
+import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanGunmanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
@@ -252,6 +253,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof ConquestEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FlaxanPortalEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
