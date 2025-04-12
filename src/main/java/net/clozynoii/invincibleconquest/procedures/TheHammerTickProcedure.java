@@ -39,7 +39,7 @@ public class TheHammerTickProcedure {
 				}
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 20, Level.ExplosionInteraction.MOB);
+				_level.explode(null, x, y, z, 15, Level.ExplosionInteraction.MOB);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
@@ -48,7 +48,7 @@ public class TheHammerTickProcedure {
 				if (!(entityiterator == entity)) {
 					if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("invincible_conquest:non_targetable")))) {
 						entityiterator.invulnerableTime = 0;
-						entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.IN_FIRE)), 10);
+						entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.IN_FIRE)), 7);
 					}
 				}
 			}
