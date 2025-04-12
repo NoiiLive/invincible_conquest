@@ -42,6 +42,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import net.clozynoii.invincibleconquest.procedures.SunTickProcedure;
 import net.clozynoii.invincibleconquest.procedures.CollideSunProcedure;
 
 public class SunEntity extends Monster implements GeoEntity {
@@ -166,6 +167,7 @@ public class SunEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		SunTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
