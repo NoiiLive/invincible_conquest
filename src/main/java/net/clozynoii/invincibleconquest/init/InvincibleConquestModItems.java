@@ -36,7 +36,6 @@ import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 public class InvincibleConquestModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(InvincibleConquestMod.MODID);
-	public static final DeferredItem<Item> BLOOD = block(InvincibleConquestModBlocks.BLOOD);
 	public static final DeferredItem<Item> SELECTION_BOOK = REGISTRY.register("selection_book", SelectionBookItem::new);
 	public static final DeferredItem<Item> INVINCIBLE_SUIT_HELMET = REGISTRY.register("invincible_suit_helmet", InvincibleSuitItem.Helmet::new);
 	public static final DeferredItem<Item> INVINCIBLE_SUIT_CHESTPLATE = REGISTRY.register("invincible_suit_chestplate", InvincibleSuitItem.Chestplate::new);

@@ -39,11 +39,11 @@ public class TheHammerTickProcedure {
 				}
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 10, Level.ExplosionInteraction.MOB);
+				_level.explode(null, x, y, z, 20, Level.ExplosionInteraction.MOB);
 		}
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entityiterator == entity)) {
 					if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("invincible_conquest:non_targetable")))) {

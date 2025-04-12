@@ -1916,26 +1916,6 @@
       "path": "~/Misc/Damage"
     },
     {
-      "name": "Blood",
-      "type": "block",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/block/BloodBlock.java",
-          "src/main/resources/assets/invincible_conquest/models/block/blood.json",
-          "src/main/resources/assets/invincible_conquest/models/block/blood_inventory.json",
-          "src/main/resources/assets/invincible_conquest/models/block/blood_post.json",
-          "src/main/resources/assets/invincible_conquest/models/item/blood.json",
-          "src/main/resources/assets/invincible_conquest/models/block/blood_side_tall.json",
-          "src/main/resources/data/invincible_conquest/loot_table/blocks/blood.json",
-          "src/main/resources/assets/invincible_conquest/blockstates/blood.json"
-        ]
-      },
-      "path": "~/Blocks"
-    },
-    {
       "name": "AbilityOverlay",
       "type": "overlay",
       "compiles": true,
@@ -8616,7 +8596,9 @@
       "CUSTOM:Mars",
       "CUSTOM:Moon",
       "CUSTOM:Sun",
-      "CUSTOM:Viltrum"
+      "CUSTOM:Viltrum",
+      "CUSTOM:TheHammer",
+      "CUSTOM:FlaxanPortal"
     ],
     "ENTITIES:mod:green_blood": [
       "CUSTOM:Flaxan",
@@ -8916,9 +8898,6 @@
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:MoonStone"
     ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:Blood"
-    ],
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:MoonSand"
     ],
@@ -9029,10 +9008,9 @@
       "item.invincible_conquest.flaxan_armor_leggings": "Flaxan Pants",
       "item.invincible_conquest.omnivincible_suit_helmet": "Invincible\u0027s Mask (Omni)",
       "gui.invincible_conquest.menu_faction_stats.button_empty": " ",
-      "entity.invincible_conquest.invincible_veil": "Invincible (Veil)",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_portal": "Portal",
       "effect.invincible_conquest.no_fall": "No Fall",
-      "block.invincible_conquest.blood": "Blood",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_portal": "Portal",
+      "entity.invincible_conquest.invincible_veil": "Invincible (Veil)",
       "item.invincible_conquest.mars_spawn_egg": "Mars Spawn Egg",
       "gui.invincible_conquest.menu_stats.tooltip_ability_menu": "Ability Menu",
       "gui.invincible_conquest.menu_ability_selection.tooltip_robot": "Robot",
