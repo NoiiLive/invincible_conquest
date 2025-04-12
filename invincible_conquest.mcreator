@@ -7348,19 +7348,6 @@
       "path": "~/Procedures/Effects"
     },
     {
-      "name": "HardStun",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hard_stun",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/potion/HardStunMobEffect.java"
-        ]
-      },
-      "path": "~/Effects"
-    },
-    {
       "name": "StrongPunchMobKnockback",
       "type": "procedure",
       "compiles": true,
@@ -7932,6 +7919,25 @@
         ]
       },
       "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "StunEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StunEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
     }
   ],
   "variable_elements": [
@@ -9265,7 +9271,6 @@
       "item.invincible_conquest.viltrumite_uniform_chestplate": "Viltrumite Uniform",
       "gui.invincible_conquest.menu_ability_explode.tooltip_basic_abilities": "Basic Abilities",
       "gui.invincible_conquest.galactic_map_gui.tooltip_earth_x135_y135": "Earth : x135, y135",
-      "effect.invincible_conquest.hard_stun": "Hard Stun",
       "item.invincible_conquest.angstrom_outfit_leggings": "Angstrom\u0027s Pants",
       "item.invincible_conquest.flaxan_spawn_egg": "Flaxan Spawn Egg",
       "item.invincible_conquest.multi_paul_suit_boots": "Multi-Paul\u0027s Shoes",

@@ -33,9 +33,9 @@ public class FollowUpOnKeyPressedProcedure {
 					for (Entity entityiterator : _entfound) {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.HARD_STUN, 25, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.STUN, 25, 9, false, false));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.HARD_STUN, 25, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.STUN, 25, 9, false, false));
 							{
 								InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
 								_vars.PlayerCurrentStamina = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerCurrentStamina - 1;
@@ -102,7 +102,7 @@ public class FollowUpOnKeyPressedProcedure {
 					for (Entity entityiterator : _entfound) {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.HARD_STUN, 25, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.STUN, 25, 9, false, false));
 							{
 								InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
 								_vars.PlayerCurrentStamina = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerCurrentStamina - 1;
@@ -141,9 +141,9 @@ public class FollowUpOnKeyPressedProcedure {
 					for (Entity entityiterator : _entfound) {
 						if ((entityiterator.getPersistentData().getString("target")).equals(entity.getDisplayName().getString())) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.HARD_STUN, 25, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.STUN, 25, 9, false, false));
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.HARD_STUN, 25, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.STUN, 25, 9, false, false));
 							{
 								InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
 								_vars.PlayerCurrentStamina = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerCurrentStamina - 1;

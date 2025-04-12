@@ -50,9 +50,9 @@ public class ViltrumitePunchesProcedure {
 			if (sourceentity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerOutput >= 100) {
 				if (sourceentity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength >= 10) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.removeEffect(InvincibleConquestModMobEffects.HARD_STUN);
+						_entity.removeEffect(InvincibleConquestModMobEffects.STUN);
 					if (sourceentity instanceof LivingEntity _entity)
-						_entity.removeEffect(InvincibleConquestModMobEffects.HARD_STUN);
+						_entity.removeEffect(InvincibleConquestModMobEffects.STUN);
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.BURST_CIRCLE_SMALL.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 1, 0.1, 1, 0.1, 0);
 					if (world instanceof ServerLevel _level)
