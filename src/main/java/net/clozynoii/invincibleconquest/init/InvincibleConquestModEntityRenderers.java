@@ -44,6 +44,7 @@ import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.CecilRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
@@ -93,5 +94,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.WHITE_SUN.get(), WhiteSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.BLUE_SUN.get(), BlueSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.ANISSA.get(), AnissaRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.CECIL.get(), CecilRenderer::new);
 	}
 }

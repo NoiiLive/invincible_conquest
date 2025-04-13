@@ -8082,6 +8082,22 @@
         ]
       },
       "path": "~/Entities/NPCs"
+    },
+    {
+      "name": "Cecil",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cecil",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/models/item/cecil_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/CecilModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/CecilEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/CecilRenderer.java"
+        ]
+      },
+      "path": "~/Entities/NPCs"
     }
   ],
   "variable_elements": [
@@ -9138,6 +9154,7 @@
       "AtomEve",
       "DupliKate",
       "MultiPaul",
+      "Cecil",
       "MaulerTwin",
       "ViltrumiteMale",
       "ViltrumiteFemale",
@@ -9263,6 +9280,7 @@
       "entity.invincible_conquest.white_sun": "Sun",
       "entity.invincible_conquest.omni_man": "Omni-Man",
       "item.invincible_conquest.moon_spawn_egg": "Moon Spawn Egg",
+      "item.invincible_conquest.cecil_spawn_egg": "Cecil Spawn Egg",
       "gui.invincible_conquest.menu_stats.tooltip_stat_menu": "Stat Menu",
       "death.attack.bleed.player": "%1$s bled out to %2$s",
       "item.invincible_conquest.invincible_suit_sinister_chestplate": "Invincible\u0027s Suit (Sinister)",
@@ -9357,6 +9375,7 @@
       "gui.invincible_conquest.menu_ability_beast.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.faction_join_cop.button_decline": "Decline",
       "entity.invincible_conquest.viltrumite_mark": "Viltrumite Mark",
+      "entity.invincible_conquest.cecil": "Cecil",
       "gui.invincible_conquest.menu_ability_portal.tooltip_stat_menu": "Stat Menu",
       "item.invincible_conquest.angstrom_outfit_helmet": "Angstrom\u0027s Helmet",
       "gui.invincible_conquest.faction_join_gda.button_join": "Join",

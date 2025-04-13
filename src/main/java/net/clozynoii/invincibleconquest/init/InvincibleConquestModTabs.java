@@ -98,6 +98,7 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.ATOM_EVE_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.DUPLI_KATE_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.MULTI_PAUL_SPAWN_EGG.get());
+				tabData.accept(InvincibleConquestModItems.CECIL_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.MAULER_TWIN_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.VILTRUMITE_MALE_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.VILTRUMITE_FEMALE_SPAWN_EGG.get());
