@@ -1,6 +1,10 @@
 package net.clozynoii.invincibleconquest.entity.model;
 
-import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 
 public class FlaxanPortalModel extends GeoModel<FlaxanPortalEntity> {
 	@Override

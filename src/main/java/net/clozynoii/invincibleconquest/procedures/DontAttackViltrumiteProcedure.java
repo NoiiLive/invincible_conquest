@@ -1,6 +1,10 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+
+import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
 
 public class DontAttackViltrumiteProcedure {
 	public static boolean execute(Entity entity) {

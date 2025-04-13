@@ -1,6 +1,29 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
+import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
+import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
+import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+
+import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class FlaxanPortalTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -26,7 +49,7 @@ public class FlaxanPortalTickProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					if (entityiterator instanceof ServerPlayer _player && !_player.level().isClientSide()) {
-						ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("invincible_conquest:deleted_mod_element"));
+						ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, ResourceLocation.parse("invincible_conquest:flaxan_dimension"));
 						if (_player.level().dimension() == destinationType)
 							return;
 						ServerLevel nextLevel = _player.server.getLevel(destinationType);

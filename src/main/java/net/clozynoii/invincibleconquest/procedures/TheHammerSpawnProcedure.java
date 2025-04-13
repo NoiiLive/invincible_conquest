@@ -1,6 +1,8 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.entity.Entity;
+
+import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 
 public class TheHammerSpawnProcedure {
 	public static void execute(Entity entity) {
