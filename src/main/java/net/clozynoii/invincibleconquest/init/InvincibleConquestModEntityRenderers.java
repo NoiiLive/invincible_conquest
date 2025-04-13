@@ -47,6 +47,7 @@ import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.AnissaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -91,5 +92,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.ORANGE_SUN.get(), OrangeSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.WHITE_SUN.get(), WhiteSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.BLUE_SUN.get(), BlueSunRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ANISSA.get(), AnissaRenderer::new);
 	}
 }

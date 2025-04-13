@@ -53,6 +53,7 @@ import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
+import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
@@ -157,6 +158,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<WhiteSunEntity>of(WhiteSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueSunEntity>> BLUE_SUN = register("blue_sun",
 			EntityType.Builder.<BlueSunEntity>of(BlueSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<AnissaEntity>> ANISSA = register("anissa",
+			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -203,6 +206,7 @@ public class InvincibleConquestModEntities {
 		OrangeSunEntity.init(event);
 		WhiteSunEntity.init(event);
 		BlueSunEntity.init(event);
+		AnissaEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -244,5 +248,6 @@ public class InvincibleConquestModEntities {
 		event.put(ORANGE_SUN.get(), OrangeSunEntity.createAttributes().build());
 		event.put(WHITE_SUN.get(), WhiteSunEntity.createAttributes().build());
 		event.put(BLUE_SUN.get(), BlueSunEntity.createAttributes().build());
+		event.put(ANISSA.get(), AnissaEntity.createAttributes().build());
 	}
 }

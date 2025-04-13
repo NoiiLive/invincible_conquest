@@ -92,6 +92,7 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.OMNIVINCIBLE_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.OMNI_MAN_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.CONQUEST_SPAWN_EGG.get());
+				tabData.accept(InvincibleConquestModItems.ANISSA_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.BATTLE_BEAST_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.ANGSTROM_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.REX_SPLODE_SPAWN_EGG.get());
