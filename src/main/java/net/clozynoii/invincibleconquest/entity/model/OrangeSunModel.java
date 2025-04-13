@@ -1,10 +1,6 @@
 package net.clozynoii.invincibleconquest.entity.model;
 
-import software.bernie.geckolib.model.GeoModel;
-
-import net.minecraft.resources.ResourceLocation;
-
-import net.clozynoii.invincibleconquest.entity.OrangeSunEntity;
+import software.bernie.geckolib.animation.AnimationState;
 
 public class OrangeSunModel extends GeoModel<OrangeSunEntity> {
 	@Override

@@ -6,7 +6,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "invincible_conquest:flaxan_plains",
+          "biome": "invincible_conquest:deleted_mod_element",
           "parameters": {
             "temperature": 0,
             "humidity": 0,
@@ -383,7 +383,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "invincible_conquest:flaxan_plains"
+                "invincible_conquest:deleted_mod_element"
               ]
             },
             "then_run": {

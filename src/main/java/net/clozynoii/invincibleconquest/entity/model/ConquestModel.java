@@ -1,15 +1,6 @@
 package net.clozynoii.invincibleconquest.entity.model;
 
-import software.bernie.geckolib.model.data.EntityModelData;
-import software.bernie.geckolib.model.GeoModel;
-import software.bernie.geckolib.constant.DataTickets;
-import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.animation.AnimationState;
-
-import net.minecraft.util.Mth;
-import net.minecraft.resources.ResourceLocation;
-
-import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 
 public class ConquestModel extends GeoModel<ConquestEntity> {
 	@Override

@@ -1,15 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
-import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
+import net.neoforged.bus.api.Event;
 
 public class FlaxanPortalSpawnProcedure {
 	public static void execute(LevelAccessor world, double y, Entity entity) {

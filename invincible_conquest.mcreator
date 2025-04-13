@@ -8035,23 +8035,6 @@
       "path": "~/Entities/Planets"
     },
     {
-      "name": "Anissa",
-      "type": "animatedentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "anissa",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AnissaRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/AnissaEntity.java",
-          "src/main/resources/assets/invincible_conquest/models/item/anissa_spawn_egg.json",
-          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/anissa_biome_modifier.json",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AnissaModel.java"
-        ]
-      },
-      "path": "~/Entities/NPCs"
-    },
-    {
       "name": "AnissaSpawn",
       "type": "procedure",
       "compiles": true,
@@ -8082,6 +8065,56 @@
         ]
       },
       "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "Anissa",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AnissaRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/AnissaEntity.java",
+          "src/main/resources/assets/invincible_conquest/models/item/anissa_spawn_egg.json",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/anissa_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AnissaModel.java"
+        ]
+      },
+      "path": "~/Entities/NPCs"
+    },
+    {
+      "name": "HardStun",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hard_stun",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/HardStunMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Blood",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/block/BloodBlock.java",
+          "src/main/resources/assets/invincible_conquest/models/block/blood.json",
+          "src/main/resources/assets/invincible_conquest/models/block/blood_inventory.json",
+          "src/main/resources/assets/invincible_conquest/models/block/blood_post.json",
+          "src/main/resources/assets/invincible_conquest/models/item/blood.json",
+          "src/main/resources/assets/invincible_conquest/models/block/blood_side_tall.json",
+          "src/main/resources/data/invincible_conquest/loot_table/blocks/blood.json",
+          "src/main/resources/assets/invincible_conquest/blockstates/blood.json"
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [
@@ -9132,7 +9165,6 @@
       "Omnivincible",
       "OmniMan",
       "Conquest",
-      "Anissa",
       "BattleBeast",
       "Angstrom",
       "RexSplode",
@@ -9146,7 +9178,8 @@
       "MartianSpearman",
       "Flaxan",
       "FlaxanGunman",
-      "Dinosaur"
+      "Dinosaur",
+      "Anissa"
     ]
   },
   "language_map": {
@@ -9657,11 +9690,11 @@
         "name": "Dimensions",
         "children": [
           {
-            "name": "Planets",
+            "name": "Dimensions",
             "children": []
           },
           {
-            "name": "Dimensions",
+            "name": "Planets",
             "children": []
           }
         ]
@@ -9708,11 +9741,11 @@
         "name": "Structures",
         "children": [
           {
-            "name": "Flaxan",
+            "name": "Viltrum",
             "children": []
           },
           {
-            "name": "Viltrum",
+            "name": "Flaxan",
             "children": []
           }
         ]

@@ -1,28 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.tags.TagKey;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
-import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
-
-import java.util.List;
-import java.util.Comparator;
+import net.neoforged.bus.api.Event;
 
 public class TheHammerTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

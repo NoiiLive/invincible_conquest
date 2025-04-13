@@ -1,11 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.neoforged.bus.api.Event;
 
 public class ConquestSpawnProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {

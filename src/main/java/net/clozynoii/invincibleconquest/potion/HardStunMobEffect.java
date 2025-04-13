@@ -1,9 +1,27 @@
 
 package net.clozynoii.invincibleconquest.potion;
 
+import net.neoforged.neoforge.common.EffectCure;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientMobEffectExtensions;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.clozynoii.invincibleconquest.procedures.HardStunOnEffectActiveTickProcedure;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
+
+import java.util.Set;
+
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public class FallingBlocksMobEffect extends MobEffect {
-	public FallingBlocksMobEffect() {
+public class HardStunMobEffect extends MobEffect {
+	public HardStunMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
 
@@ -18,7 +36,7 @@ public class FallingBlocksMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		FallingBlocksOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		HardStunOnEffectActiveTickProcedure.execute(entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 
@@ -39,6 +57,6 @@ public class FallingBlocksMobEffect extends MobEffect {
 			public boolean isVisibleInGui(MobEffectInstance effect) {
 				return false;
 			}
-		}, InvincibleConquestModMobEffects.FALLING_BLOCKS.get());
+		}, InvincibleConquestModMobEffects.HARD_STUN.get());
 	}
 }
