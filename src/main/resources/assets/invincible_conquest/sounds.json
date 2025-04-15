@@ -33,5 +33,13 @@
         "stream": false
       }
     ]
+  },
+  "thehammer": {
+    "sounds": [
+      {
+        "name": "invincible_conquest:thehammer",
+        "stream": false
+      }
+    ]
   }
 }

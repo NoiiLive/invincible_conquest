@@ -42,6 +42,7 @@ import net.clozynoii.invincibleconquest.entity.InvincibleMasklessEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleDarkEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleBlueEntity;
+import net.clozynoii.invincibleconquest.entity.HammerSpawnerEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanGunmanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
@@ -157,6 +158,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<RedSunEntity>of(RedSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueSunEntity>> BLUE_SUN = register("blue_sun",
 			EntityType.Builder.<BlueSunEntity>of(BlueSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
+	public static final DeferredHolder<EntityType<?>, EntityType<HammerSpawnerEntity>> HAMMER_SPAWNER = register("hammer_spawner",
+			EntityType.Builder.<HammerSpawnerEntity>of(HammerSpawnerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -203,6 +206,7 @@ public class InvincibleConquestModEntities {
 		OrangeSunEntity.init(event);
 		RedSunEntity.init(event);
 		BlueSunEntity.init(event);
+		HammerSpawnerEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -244,5 +248,6 @@ public class InvincibleConquestModEntities {
 		event.put(ORANGE_SUN.get(), OrangeSunEntity.createAttributes().build());
 		event.put(RED_SUN.get(), RedSunEntity.createAttributes().build());
 		event.put(BLUE_SUN.get(), BlueSunEntity.createAttributes().build());
+		event.put(HAMMER_SPAWNER.get(), HammerSpawnerEntity.createAttributes().build());
 	}
 }

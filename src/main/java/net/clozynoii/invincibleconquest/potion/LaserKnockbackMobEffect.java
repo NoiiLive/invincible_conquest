@@ -14,14 +14,14 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.clozynoii.invincibleconquest.procedures.HardStunOnEffectActiveTickProcedure;
+import net.clozynoii.invincibleconquest.procedures.LaserKnockbackOnEffectActiveTickProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
 
 import java.util.Set;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public class HardStunMobEffect extends MobEffect {
-	public HardStunMobEffect() {
+public class LaserKnockbackMobEffect extends MobEffect {
+	public LaserKnockbackMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
 
@@ -36,7 +36,7 @@ public class HardStunMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		HardStunOnEffectActiveTickProcedure.execute(entity);
+		LaserKnockbackOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 
@@ -57,6 +57,6 @@ public class HardStunMobEffect extends MobEffect {
 			public boolean isVisibleInGui(MobEffectInstance effect) {
 				return false;
 			}
-		}, InvincibleConquestModMobEffects.HARD_STUN.get());
+		}, InvincibleConquestModMobEffects.LASER_KNOCKBACK.get());
 	}
 }

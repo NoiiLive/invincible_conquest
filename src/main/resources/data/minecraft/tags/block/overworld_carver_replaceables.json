@@ -1,14 +1,12 @@
 {
   "replace": false,
   "values": [
-    "minecraft:dirt",
-    "minecraft:grass_block",
     "minecraft:red_sand",
     "minecraft:red_sandstone",
     "invincible_conquest:moon_stone",
     "invincible_conquest:moon_sand",
     "minecraft:stone",
-    "minecraft:air",
-    "minecraft:end_stone"
+    "minecraft:dirt",
+    "minecraft:grass_block"
   ]
 }

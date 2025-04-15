@@ -37,6 +37,7 @@ import net.clozynoii.invincibleconquest.client.renderer.InvincibleMohawkRenderer
 import net.clozynoii.invincibleconquest.client.renderer.InvincibleMasklessRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.InvincibleDarkRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.InvincibleBlueRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.HammerSpawnerRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanPortalRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanGunmanRenderer;
@@ -91,5 +92,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.ORANGE_SUN.get(), OrangeSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.RED_SUN.get(), RedSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.BLUE_SUN.get(), BlueSunRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.HAMMER_SPAWNER.get(), HammerSpawnerRenderer::new);
 	}
 }

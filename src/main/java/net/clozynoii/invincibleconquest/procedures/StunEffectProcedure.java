@@ -1,6 +1,13 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+
+import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
 
 public class StunEffectProcedure {
 	public static void execute(Entity entity) {
