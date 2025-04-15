@@ -37,9 +37,11 @@ import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
+import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
 
 @EventBusSubscriber
@@ -300,6 +302,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof BlueSunEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof CecilEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AnissaEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

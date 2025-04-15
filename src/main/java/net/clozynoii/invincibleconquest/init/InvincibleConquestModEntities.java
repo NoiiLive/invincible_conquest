@@ -51,9 +51,11 @@ import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
+import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
@@ -160,6 +162,12 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<BlueSunEntity>of(BlueSunEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(6f, 6f));
 	public static final DeferredHolder<EntityType<?>, EntityType<HammerSpawnerEntity>> HAMMER_SPAWNER = register("hammer_spawner",
 			EntityType.Builder.<HammerSpawnerEntity>of(HammerSpawnerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CecilEntity>> CECIL = register("cecil",
+			EntityType.Builder.<CecilEntity>of(CecilEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<AnissaEntity>> ANISSA = register("anissa",
+			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -207,6 +215,8 @@ public class InvincibleConquestModEntities {
 		RedSunEntity.init(event);
 		BlueSunEntity.init(event);
 		HammerSpawnerEntity.init(event);
+		CecilEntity.init(event);
+		AnissaEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -249,5 +259,7 @@ public class InvincibleConquestModEntities {
 		event.put(RED_SUN.get(), RedSunEntity.createAttributes().build());
 		event.put(BLUE_SUN.get(), BlueSunEntity.createAttributes().build());
 		event.put(HAMMER_SPAWNER.get(), HammerSpawnerEntity.createAttributes().build());
+		event.put(CECIL.get(), CecilEntity.createAttributes().build());
+		event.put(ANISSA.get(), AnissaEntity.createAttributes().build());
 	}
 }

@@ -23,6 +23,7 @@ import net.minecraft.core.BlockPos;
 import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 
 import javax.annotation.Nullable;
 
@@ -119,8 +120,19 @@ public class GlobalInvasionHandlerProcedure {
 											}
 										}
 									}
+									if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 50) {
+										if (!(!world.getEntitiesOfClass(AnissaEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 250, 250, 250), e -> true).isEmpty())) {
+											if (world instanceof ServerLevel _level) {
+												Entity entityToSpawn = InvincibleConquestModEntities.ANISSA.get().spawn(_level,
+														BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),
+														MobSpawnType.MOB_SUMMONED);
+												if (entityToSpawn != null) {
+												}
+											}
+										}
+									}
 									if (InvincibleConquestModVariables.MapVariables.get(world).TakeoverScore >= 75) {
-										if (!(!world.getEntitiesOfClass(ConquestEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 100, 100, 100), e -> true).isEmpty())) {
+										if (!(!world.getEntitiesOfClass(ConquestEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 250, 250, 250), e -> true).isEmpty())) {
 											if (world instanceof ServerLevel _level) {
 												Entity entityToSpawn = InvincibleConquestModEntities.CONQUEST.get().spawn(_level,
 														BlockPos.containing(entityiterator.getX() + Mth.nextInt(RandomSource.create(), -20, 20), entityiterator.getY() + 5, entityiterator.getZ() + Mth.nextInt(RandomSource.create(), -20, 20)),

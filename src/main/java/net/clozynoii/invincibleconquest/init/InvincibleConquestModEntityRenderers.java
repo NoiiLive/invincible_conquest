@@ -45,9 +45,11 @@ import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.CecilRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.AnissaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -93,5 +95,7 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.RED_SUN.get(), RedSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.BLUE_SUN.get(), BlueSunRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.HAMMER_SPAWNER.get(), HammerSpawnerRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.CECIL.get(), CecilRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ANISSA.get(), AnissaRenderer::new);
 	}
 }

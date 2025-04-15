@@ -106,6 +106,8 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.FLAXAN_GUNMAN_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.DINOSAUR_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.CONQUEST_SPAWN_EGG.get());
+				tabData.accept(InvincibleConquestModItems.CECIL_SPAWN_EGG.get());
+				tabData.accept(InvincibleConquestModItems.ANISSA_SPAWN_EGG.get());
 			}).withTabsBefore(INVINCIBLE_ARMOR.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> INVINCIBLE_ITEMS = REGISTRY.register("invincible_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible_conquest.invincible_items")).icon(() -> new ItemStack(InvincibleConquestModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {

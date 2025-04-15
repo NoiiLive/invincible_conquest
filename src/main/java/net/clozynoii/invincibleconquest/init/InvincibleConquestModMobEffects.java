@@ -42,8 +42,8 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> GLASS_BREAK = REGISTRY.register("glass_break", () -> new GlassBreakMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FALLING_BLOCKS = REGISTRY.register("falling_blocks", () -> new FallingBlocksMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DAMAGE_DESTRUCTION = REGISTRY.register("damage_destruction", () -> new DamageDestructionMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> IMPACT_FRAME_EFFECT = REGISTRY.register("impact_frame_effect", () -> new ImpactFrameEffectMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LASER_DESTRUCTION = REGISTRY.register("laser_destruction", () -> new LaserDestructionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> IMPACT_FRAME_EFFECT = REGISTRY.register("impact_frame_effect", () -> new ImpactFrameEffectMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LASER_KNOCKBACK = REGISTRY.register("laser_knockback", () -> new LaserKnockbackMobEffect());
 
 	@SubscribeEvent

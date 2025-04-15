@@ -1,15 +1,6 @@
 
 package net.clozynoii.invincibleconquest.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
-
-import net.clozynoii.invincibleconquest.entity.HammerSpawnerEntity;
-
 public class HammerSpawnerRenderer extends HumanoidMobRenderer<HammerSpawnerEntity, HumanoidModel<HammerSpawnerEntity>> {
 	public HammerSpawnerRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel<HammerSpawnerEntity>(context.bakeLayer(ModelLayers.PLAYER)), 0f);
