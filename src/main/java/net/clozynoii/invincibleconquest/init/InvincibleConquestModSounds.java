@@ -19,4 +19,5 @@ public class InvincibleConquestModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> BASIC_HIT = REGISTRY.register("basic_hit", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("invincible_conquest", "basic_hit")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> WHOOSH = REGISTRY.register("whoosh", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("invincible_conquest", "whoosh")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> STRONGWOOSH = REGISTRY.register("strongwoosh", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("invincible_conquest", "strongwoosh")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> THEHAMMER = REGISTRY.register("thehammer", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("invincible_conquest", "thehammer")));
 }

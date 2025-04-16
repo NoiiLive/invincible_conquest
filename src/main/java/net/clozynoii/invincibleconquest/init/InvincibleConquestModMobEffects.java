@@ -6,13 +6,22 @@ package net.clozynoii.invincibleconquest.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
+import net.clozynoii.invincibleconquest.procedures.LaserDestructionEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.potion.StunMobEffect;
 import net.clozynoii.invincibleconquest.potion.SmokeCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.NoFallMobEffect;
+import net.clozynoii.invincibleconquest.potion.LaserKnockbackMobEffect;
+import net.clozynoii.invincibleconquest.potion.LaserDestructionMobEffect;
+import net.clozynoii.invincibleconquest.potion.ImpactFrameEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.GlassBreakMobEffect;
 import net.clozynoii.invincibleconquest.potion.FallingBlocksMobEffect;
 import net.clozynoii.invincibleconquest.potion.DestructiveFlightMobEffect;
@@ -21,6 +30,7 @@ import net.clozynoii.invincibleconquest.potion.CraterMobEffect;
 import net.clozynoii.invincibleconquest.potion.BleedingMobEffect;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
+@EventBusSubscriber
 public class InvincibleConquestModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(Registries.MOB_EFFECT, InvincibleConquestMod.MODID);
 	public static final DeferredHolder<MobEffect, MobEffect> STUN = REGISTRY.register("stun", () -> new StunMobEffect());
@@ -32,4 +42,29 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> GLASS_BREAK = REGISTRY.register("glass_break", () -> new GlassBreakMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FALLING_BLOCKS = REGISTRY.register("falling_blocks", () -> new FallingBlocksMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DAMAGE_DESTRUCTION = REGISTRY.register("damage_destruction", () -> new DamageDestructionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> LASER_DESTRUCTION = REGISTRY.register("laser_destruction", () -> new LaserDestructionMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> IMPACT_FRAME_EFFECT = REGISTRY.register("impact_frame_effect", () -> new ImpactFrameEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> LASER_KNOCKBACK = REGISTRY.register("laser_knockback", () -> new LaserKnockbackMobEffect());
+
+	@SubscribeEvent
+	public static void onEffectRemoved(MobEffectEvent.Remove event) {
+		MobEffectInstance effectInstance = event.getEffectInstance();
+		if (effectInstance != null) {
+			expireEffects(event.getEntity(), effectInstance);
+		}
+	}
+
+	@SubscribeEvent
+	public static void onEffectExpired(MobEffectEvent.Expired event) {
+		MobEffectInstance effectInstance = event.getEffectInstance();
+		if (effectInstance != null) {
+			expireEffects(event.getEntity(), effectInstance);
+		}
+	}
+
+	private static void expireEffects(Entity entity, MobEffectInstance effectInstance) {
+		if (effectInstance.getEffect().is(LASER_DESTRUCTION)) {
+			LaserDestructionEffectExpiresProcedure.execute(entity);
+		}
+	}
 }

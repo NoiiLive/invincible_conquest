@@ -1,12 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.neoforged.bus.api.Event;
 
 public class GlassBreakOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
