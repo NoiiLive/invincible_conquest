@@ -2916,18 +2916,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -8098,6 +8086,55 @@
         ]
       },
       "path": "~/Entities/NPCs"
+    },
+    {
+      "name": "EntityGrabTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_grab_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/EntityGrabTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "SpaceHelmet",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_helmet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/item/SpaceHelmetItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/space_helmet_helmet.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -8708,7 +8745,9 @@
       "CUSTOM:RexSplode",
       "CUSTOM:ViltrumiteFemale",
       "CUSTOM:ViltrumiteMale",
-      "CUSTOM:Conquest"
+      "CUSTOM:Conquest",
+      "CUSTOM:Anissa",
+      "CUSTOM:Cecil"
     ],
     "ENTITIES:mod:non_targetable": [
       "EntityAreaEffectCloud",
@@ -9072,6 +9111,7 @@
       "~CUSTOM:MoonSand"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:SpaceHelmet.helmet",
       "~CUSTOM:OmnivincibleSuit.helmet",
       "~CUSTOM:InvincibleSuitDark.helmet",
       "~CUSTOM:InvincibleSuitVeil.helmet",
@@ -9164,6 +9204,12 @@
       "FlaxanGunman",
       "Dinosaur",
       "Anissa"
+    ],
+    "CUSTOM:InvincibleItems": [
+      "SelectionBook",
+      "GalacticMap",
+      "SpaceHelmet",
+      "FlaxanGun"
     ]
   },
   "language_map": {
@@ -9197,6 +9243,7 @@
       "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
+      "item.invincible_conquest.space_helmet_helmet": "Space Helmet",
       "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",
       "entity.invincible_conquest.martian_spearman": "Martian Spearman",
       "gui.invincible_conquest.menu_ability_basic.tooltip_ability_menu": "Ability Menu",

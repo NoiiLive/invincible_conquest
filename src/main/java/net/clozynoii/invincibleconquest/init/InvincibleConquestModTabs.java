@@ -112,8 +112,9 @@ public class InvincibleConquestModTabs {
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> INVINCIBLE_ITEMS = REGISTRY.register("invincible_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible_conquest.invincible_items")).icon(() -> new ItemStack(InvincibleConquestModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(InvincibleConquestModItems.SELECTION_BOOK.get());
-				tabData.accept(InvincibleConquestModItems.FLAXAN_GUN.get());
 				tabData.accept(InvincibleConquestModItems.GALACTIC_MAP.get());
+				tabData.accept(InvincibleConquestModItems.SPACE_HELMET_HELMET.get());
+				tabData.accept(InvincibleConquestModItems.FLAXAN_GUN.get());
 			}).withTabsBefore(INVINCIBLE_MOBS.getId()).build());
 
 	@SubscribeEvent
