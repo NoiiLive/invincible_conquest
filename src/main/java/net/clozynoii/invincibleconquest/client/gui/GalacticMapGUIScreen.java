@@ -7,17 +7,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.GalacticMapGUIMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnMapCoordsProcedure;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class GalacticMapGUIScreen extends AbstractContainerScreen<GalacticMapGUIMenu> implements WidgetScreen {
+public class GalacticMapGUIScreen extends AbstractContainerScreen<GalacticMapGUIMenu> {
 	private final static HashMap<String, Object> guistate = GalacticMapGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -32,18 +30,6 @@ public class GalacticMapGUIScreen extends AbstractContainerScreen<GalacticMapGUI
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
-	}
-
-	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
-		HashMap<String, String> textstate = new HashMap<>();
-		if (Minecraft.getInstance().screen instanceof GalacticMapGUIScreen sc) {
-
-		}
-		return textstate;
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/galactic_map_gui.png");

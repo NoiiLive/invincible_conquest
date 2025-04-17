@@ -159,6 +159,7 @@ public class AbilityGrabProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entityiterator == entity)) {
 						if ((entityiterator.getStringUUID()).equals(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).GrabbedEntity)) {
+							entityiterator.getPersistentData().putString("target", (entity.getDisplayName().getString()));
 							entityiterator.push(vecX, vecY, vecZ);
 							entityiterator.setNoGravity(false);
 							{

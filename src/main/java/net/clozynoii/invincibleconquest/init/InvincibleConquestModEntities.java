@@ -24,6 +24,7 @@ import net.clozynoii.invincibleconquest.entity.ViltrumEntity;
 import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
+import net.clozynoii.invincibleconquest.entity.SonicClapEntity;
 import net.clozynoii.invincibleconquest.entity.RexSplodeEntity;
 import net.clozynoii.invincibleconquest.entity.RedSunEntity;
 import net.clozynoii.invincibleconquest.entity.OrangeSunEntity;
@@ -171,6 +172,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionSmallEntity>> EXPLOSION_SMALL = register("explosion_small",
 			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SonicClapEntity>> SONIC_CLAP = register("sonic_clap",
+			EntityType.Builder.<SonicClapEntity>of(SonicClapEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

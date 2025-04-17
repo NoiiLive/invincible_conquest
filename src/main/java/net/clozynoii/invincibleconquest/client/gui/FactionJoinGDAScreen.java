@@ -10,17 +10,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinGDAMenu;
 import net.clozynoii.invincibleconquest.network.FactionJoinGDAButtonMessage;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FactionJoinGDAScreen extends AbstractContainerScreen<FactionJoinGDAMenu> implements WidgetScreen {
+public class FactionJoinGDAScreen extends AbstractContainerScreen<FactionJoinGDAMenu> {
 	private final static HashMap<String, Object> guistate = FactionJoinGDAMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -37,18 +35,6 @@ public class FactionJoinGDAScreen extends AbstractContainerScreen<FactionJoinGDA
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
-	}
-
-	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
-		HashMap<String, String> textstate = new HashMap<>();
-		if (Minecraft.getInstance().screen instanceof FactionJoinGDAScreen sc) {
-
-		}
-		return textstate;
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/faction_join_gda.png");
@@ -90,16 +76,16 @@ public class FactionJoinGDAScreen extends AbstractContainerScreen<FactionJoinGDA
 		super.init();
 		button_join = Button.builder(Component.translatable("gui.invincible_conquest.faction_join_gda.button_join"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new FactionJoinGDAButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
-				FactionJoinGDAButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
+				PacketDistributor.sendToServer(new FactionJoinGDAButtonMessage(0, x, y, z));
+				FactionJoinGDAButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + -75, this.topPos + 3, 71, 20).build();
 		guistate.put("button:button_join", button_join);
 		this.addRenderableWidget(button_join);
 		button_decline = Button.builder(Component.translatable("gui.invincible_conquest.faction_join_gda.button_decline"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new FactionJoinGDAButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
-				FactionJoinGDAButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
+				PacketDistributor.sendToServer(new FactionJoinGDAButtonMessage(1, x, y, z));
+				FactionJoinGDAButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 2, this.topPos + 3, 72, 20).build();
 		guistate.put("button:button_decline", button_decline);

@@ -54,6 +54,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.clozynoii.invincibleconquest.procedures.BattleBeastOnEntityTickUpdateProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
 import java.util.List;
@@ -211,6 +212,7 @@ public class BattleBeastEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		BattleBeastOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

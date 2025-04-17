@@ -98,5 +98,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.CECIL.get(), CecilRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.ANISSA.get(), AnissaRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_SMALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
 	}
 }
