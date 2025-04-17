@@ -1,6 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.neoforged.bus.api.Event;
 
 public class LaserDestructionEffectExpiresProcedure {
 	public static void execute(Entity entity) {

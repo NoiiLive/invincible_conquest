@@ -1,29 +1,6 @@
 
 package net.clozynoii.invincibleconquest.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.ItemSupplier;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
-
-import net.clozynoii.invincibleconquest.procedures.ExplosionSmallProjectileHitsBlockProcedure;
-import net.clozynoii.invincibleconquest.procedures.ExplosionFlyingTickProcedure;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
-
-import javax.annotation.Nullable;
-
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ExplosionSmallEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.AIR);
@@ -76,19 +53,19 @@ public class ExplosionSmallEntity extends AbstractArrow implements ItemSupplier 
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		ExplosionSmallProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity(), this);
+		ExplosionSmallProjectileHitsBlockProcedure.execute();
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		ExplosionSmallProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ(), this.getOwner(), this);
+		ExplosionSmallProjectileHitsBlockProcedure.execute();
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		ExplosionFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
+		ExplosionFlyingTickProcedure.execute();
 		if (this.inGround)
 			this.discard();
 	}

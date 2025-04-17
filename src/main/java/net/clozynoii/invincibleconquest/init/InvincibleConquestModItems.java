@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.clozynoii.invincibleconquest.item.ViltrumiteUniformItem;
+import net.clozynoii.invincibleconquest.item.SpaceHelmetItem;
 import net.clozynoii.invincibleconquest.item.SelectionBookItem;
 import net.clozynoii.invincibleconquest.item.RexSplodeSuitItem;
 import net.clozynoii.invincibleconquest.item.OmnivincibleSuitItem;
@@ -124,6 +125,7 @@ public class InvincibleConquestModItems {
 	public static final DeferredItem<Item> CONQUEST_SPAWN_EGG = REGISTRY.register("conquest_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.CONQUEST, -1576451, -6245708, new Item.Properties()));
 	public static final DeferredItem<Item> CECIL_SPAWN_EGG = REGISTRY.register("cecil_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.CECIL, -13222305, -4474953, new Item.Properties()));
 	public static final DeferredItem<Item> ANISSA_SPAWN_EGG = REGISTRY.register("anissa_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.ANISSA, -1641998, -7759976, new Item.Properties()));
+	public static final DeferredItem<Item> SPACE_HELMET_HELMET = REGISTRY.register("space_helmet_helmet", SpaceHelmetItem.Helmet::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

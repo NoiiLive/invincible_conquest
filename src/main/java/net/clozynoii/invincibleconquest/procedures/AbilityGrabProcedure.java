@@ -140,10 +140,35 @@ public class AbilityGrabProcedure {
 				}
 			}
 		} else if (!(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).GrabbedEntity).equals("")) {
+			magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
+			vecX = entity.getLookAngle().x / magnitude;
+			vecY = entity.getLookAngle().y / magnitude;
+			vecZ = entity.getLookAngle().z / magnitude;
+			vecX = vecX * (1
+					+ ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost) / (50 / (double) InvincibleConfigConfiguration.STRKNOCKBACK.get()))
+							* outputModifier);
+			vecY = vecY * (1
+					+ ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost) / (50 / (double) InvincibleConfigConfiguration.STRKNOCKBACK.get()))
+							* outputModifier);
+			vecZ = vecZ * (1
+					+ ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost) / (50 / (double) InvincibleConfigConfiguration.STRKNOCKBACK.get()))
+							* outputModifier);
 			{
-				InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
-				_vars.GrabbedEntity = "";
-				_vars.syncPlayerVariables(entity);
+				final Vec3 _center = new Vec3(x, y, z);
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				for (Entity entityiterator : _entfound) {
+					if (!(entityiterator == entity)) {
+						if ((entityiterator.getStringUUID()).equals(entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).GrabbedEntity)) {
+							entityiterator.push(vecX, vecY, vecZ);
+							entityiterator.setNoGravity(false);
+							{
+								InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
+								_vars.GrabbedEntity = "";
+								_vars.syncPlayerVariables(entity);
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -114,6 +114,7 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.SELECTION_BOOK.get());
 				tabData.accept(InvincibleConquestModItems.FLAXAN_GUN.get());
 				tabData.accept(InvincibleConquestModItems.GALACTIC_MAP.get());
+				tabData.accept(InvincibleConquestModItems.SPACE_HELMET_HELMET.get());
 			}).withTabsBefore(INVINCIBLE_MOBS.getId()).build());
 
 	@SubscribeEvent
