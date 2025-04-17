@@ -52,6 +52,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.clozynoii.invincibleconquest.procedures.RexSplodeOnEntityTickUpdateProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModItems;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
@@ -178,6 +179,7 @@ public class RexSplodeEntity extends TamableAnimal implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		RexSplodeOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

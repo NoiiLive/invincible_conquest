@@ -47,6 +47,7 @@ import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanGunmanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanBulletEntity;
+import net.clozynoii.invincibleconquest.entity.ExplosionSmallEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
@@ -168,6 +169,8 @@ public class InvincibleConquestModEntities {
 					.sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AnissaEntity>> ANISSA = register("anissa",
 			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionSmallEntity>> EXPLOSION_SMALL = register("explosion_small",
+			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
