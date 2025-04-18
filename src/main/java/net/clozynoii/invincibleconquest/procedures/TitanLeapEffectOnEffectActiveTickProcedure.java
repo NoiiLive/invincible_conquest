@@ -13,7 +13,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
 
 public class TitanLeapEffectOnEffectActiveTickProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (world.isClientSide()) {
@@ -33,6 +33,8 @@ public class TitanLeapEffectOnEffectActiveTickProcedure {
 		if (entity.getPersistentData().getDouble("titanleap") >= 200) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(InvincibleConquestModMobEffects.TITAN_LEAP_EFFECT);
+			TitanLeapEffectEffectExpiresProcedure.execute(world, x, y, z, entity);
+			LeapProcedureProcedure.execute(entity);
 			entity.getPersistentData().putDouble("titanleap", 0);
 		}
 		if (entity.getPersistentData().getDouble("titanleapfx") >= 10) {

@@ -618,6 +618,252 @@
           "y": 73,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_web_shooter",
+          "text": {
+            "fixedValue": "Web Shooter - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_web_pull",
+          "text": {
+            "fixedValue": "Web Pull - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_invisibility",
+          "text": {
+            "fixedValue": "Invisibility - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_venom_punch",
+          "text": {
+            "fixedValue": "Venom Punch - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockWebShooter"
+          },
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x1",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockWebPull"
+          },
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x2",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockInvisibility"
+          },
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x3",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockVenomPunch"
+          },
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockWebShooter"
+          },
+          "x": 142,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockWebPull"
+          },
+          "x": 168,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockInvisibility"
+          },
+          "x": 194,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockVenomPunch"
+          },
+          "x": 221,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_spider.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockWebShooter"
+          },
+          "x": 139,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_spider.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockWebPull"
+          },
+          "x": 165,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_spider.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockInvisibility"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_spider.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockVenomPunch"
+          },
+          "x": 218,
+          "y": 76,
+          "locked": false
+        }
       }
     ],
     "onClosed": {

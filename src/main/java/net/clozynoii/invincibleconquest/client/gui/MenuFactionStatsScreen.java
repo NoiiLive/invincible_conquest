@@ -17,6 +17,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.MenuFactionStatsMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnPlayerEntityProcedure;
@@ -25,12 +26,13 @@ import net.clozynoii.invincibleconquest.procedures.ReturnFactionReputationProced
 import net.clozynoii.invincibleconquest.procedures.ReturnFactionRankProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnFactionNameProcedure;
 import net.clozynoii.invincibleconquest.network.MenuFactionStatsButtonMessage;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionStatsMenu> {
+public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionStatsMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = MenuFactionStatsMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -48,6 +50,18 @@ public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionS
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
+	}
+
+	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
+		HashMap<String, String> textstate = new HashMap<>();
+		if (Minecraft.getInstance().screen instanceof MenuFactionStatsScreen sc) {
+
+		}
+		return textstate;
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/menu_faction_stats.png");
@@ -129,8 +143,8 @@ public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionS
 		imagebutton_tab_top_unselected = new ImageButton(this.leftPos + -64, this.topPos + -109, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_top_unselected.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(0, x, y, z));
-						MenuFactionStatsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuFactionStatsButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -143,8 +157,8 @@ public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionS
 		imagebutton_tab_bottom_unselected = new ImageButton(this.leftPos + -89, this.topPos + 80, 26, 32,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png"), ResourceLocation.parse("invincible_conquest:textures/screens/tab_bottom_unselected.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(1, x, y, z));
-						MenuFactionStatsButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuFactionStatsButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -157,8 +171,8 @@ public class MenuFactionStatsScreen extends AbstractContainerScreen<MenuFactionS
 		imagebutton_icon_flag = new ImageButton(this.leftPos + 62, this.topPos + 57, 16, 16,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/icon_flag.png"), ResourceLocation.parse("invincible_conquest:textures/screens/icon_flag.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(2, x, y, z));
-						MenuFactionStatsButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.sendToServer(new MenuFactionStatsButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
+						MenuFactionStatsButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override

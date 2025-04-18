@@ -618,6 +618,252 @@
           "y": 73,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_titan_leap",
+          "text": {
+            "fixedValue": "Titan Leap - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_claws",
+          "text": {
+            "fixedValue": "Claws - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_constant_claws",
+          "text": {
+            "fixedValue": "Constant Claws - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_drag",
+          "text": {
+            "fixedValue": "Drag - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockTitanLeap"
+          },
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x1",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockClaws"
+          },
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x2",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockConstantClaws"
+          },
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x3",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockDrag"
+          },
+          "x": 215,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockTitanLeap"
+          },
+          "x": 142,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockClaws"
+          },
+          "x": 168,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockConstantClaws"
+          },
+          "x": 194,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockDrag"
+          },
+          "x": 221,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_battlebeast.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockTitanLeap"
+          },
+          "x": 139,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_battlebeast.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockClaws"
+          },
+          "x": 165,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_battlebeast.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockConstantClaws"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_battlebeast.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockDrag"
+          },
+          "x": 218,
+          "y": 76,
+          "locked": false
+        }
       }
     ],
     "onClosed": {

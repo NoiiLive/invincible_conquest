@@ -618,6 +618,188 @@
           "y": 73,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blank_slot.png",
+          "use1Xscale": false,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_multi_hit",
+          "text": {
+            "fixedValue": "Multi Hit - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_flash_time",
+          "text": {
+            "fixedValue": "Flash Time - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_time_stop",
+          "text": {
+            "fixedValue": "Time Stop - 1 SP"
+          },
+          "width": 22,
+          "height": 22,
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockMultiHit"
+          },
+          "x": 136,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x1",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockFlashTime"
+          },
+          "x": 162,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blank22x2",
+          "image": "blank22x.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "UnlockTimeStop"
+          },
+          "x": 188,
+          "y": 73,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockMultiHit"
+          },
+          "x": 142,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockFlashTime"
+          },
+          "x": 168,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ability_lock.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLockTimeStop"
+          },
+          "x": 194,
+          "y": 77,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_speedster.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockMultiHit"
+          },
+          "x": 139,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_speedster.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockFlashTime"
+          },
+          "x": 165,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_speedster.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockTimeStop"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": true
+        }
       }
     ],
     "onClosed": {

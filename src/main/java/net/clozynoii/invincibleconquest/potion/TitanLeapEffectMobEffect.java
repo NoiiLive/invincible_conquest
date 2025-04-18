@@ -36,7 +36,7 @@ public class TitanLeapEffectMobEffect extends MobEffect {
 
 	@Override
 	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		TitanLeapEffectOnEffectActiveTickProcedure.execute(entity.level(), entity);
+		TitanLeapEffectOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		return super.applyEffectTick(entity, amplifier);
 	}
 

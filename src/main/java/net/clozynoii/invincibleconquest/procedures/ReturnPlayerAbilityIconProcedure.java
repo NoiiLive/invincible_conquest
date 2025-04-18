@@ -38,6 +38,9 @@ public class ReturnPlayerAbilityIconProcedure {
 		if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Robot")) {
 			return 10;
 		}
+		if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Tech Jacket")) {
+			return 11;
+		}
 		return 0;
 	}
 }
