@@ -171,7 +171,7 @@
         "type": "sprite",
         "data": {
           "sprite": "icons_sprite.png",
-          "spritesCount": 11,
+          "spritesCount": 12,
           "spriteIndex": {
             "fixedValue": 0.0,
             "name": "ReturnPlayerAbilityIcon"
