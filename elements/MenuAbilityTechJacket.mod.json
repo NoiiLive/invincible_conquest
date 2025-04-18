@@ -812,6 +812,58 @@
           "y": 77,
           "locked": true
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_tech_jacket.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockEnergyProjection"
+          },
+          "x": 139,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_tech_jacket.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockTechJab"
+          },
+          "x": 165,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_tech_jacket.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockNanoSlam"
+          },
+          "x": 191,
+          "y": 76,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "icon_tech_jacket.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnUnlockTechUppercut"
+          },
+          "x": 218,
+          "y": 76,
+          "locked": true
+        }
       }
     ],
     "onClosed": {

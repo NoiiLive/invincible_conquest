@@ -15,6 +15,10 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.MenuAbilityTechJacketMenu;
+import net.clozynoii.invincibleconquest.procedures.ReturnUnlockTechUppercutProcedure;
+import net.clozynoii.invincibleconquest.procedures.ReturnUnlockTechJabProcedure;
+import net.clozynoii.invincibleconquest.procedures.ReturnUnlockNanoSlamProcedure;
+import net.clozynoii.invincibleconquest.procedures.ReturnUnlockEnergyProjectionProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnSlot9Procedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnSlot8Procedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnSlot7Procedure;
@@ -165,6 +169,18 @@ public class MenuAbilityTechJacketScreen extends AbstractContainerScreen<MenuAbi
 		}
 		if (ReturnLockTechUppercutProcedure.execute(entity)) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/ability_lock.png"), this.leftPos + 7, this.topPos + -43, 0, 0, 10, 14, 10, 14);
+		}
+		if (ReturnUnlockEnergyProjectionProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_tech_jacket.png"), this.leftPos + -75, this.topPos + -44, 0, 0, 16, 16, 16, 16);
+		}
+		if (ReturnUnlockTechJabProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_tech_jacket.png"), this.leftPos + -49, this.topPos + -44, 0, 0, 16, 16, 16, 16);
+		}
+		if (ReturnUnlockNanoSlamProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_tech_jacket.png"), this.leftPos + -23, this.topPos + -44, 0, 0, 16, 16, 16, 16);
+		}
+		if (ReturnUnlockTechUppercutProcedure.execute(entity)) {
+			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_tech_jacket.png"), this.leftPos + 4, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
 
 		guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/abilities_sprite.png"), this.leftPos + 95, this.topPos + -43, Mth.clamp((int) ReturnSlot1Procedure.execute(entity) * 18, 0, 94), 0, 18, 16, 112, 16);
