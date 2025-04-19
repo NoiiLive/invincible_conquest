@@ -32,6 +32,12 @@ public class UseAbilitySlot5bProcedure {
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability5b).equals("Barrage")) {
 				AbilityBarrageProcedure.execute(world, entity);
 			}
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite")) {
+				VIltrumiteAbilities5bProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Beast")) {
+				BeastMoves5bProcedure.execute(world, x, y, z, entity);
+			}
 		} else {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).KeyHeld == true) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
