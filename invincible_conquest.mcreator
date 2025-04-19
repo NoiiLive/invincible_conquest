@@ -212,8 +212,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/client/gui/MenuStatsScreen.java",
-          "src/main/java/net/clozynoii/invincibleconquest/network/MenuStatsButtonMessage.java",
-          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuStatsMenu.java"
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/MenuStatsMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/MenuStatsButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -12010,14 +12010,19 @@
     {
       "name": "ReturnLockedDesert",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "return_locked_desert",
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnLockedDesertProcedure.java"
         ],
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12105,14 +12110,19 @@
     {
       "name": "ReturnLockedEnd",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "return_locked_end",
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnLockedEndProcedure.java"
         ],
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12180,14 +12190,19 @@
     {
       "name": "ReturnUnlockedSnow",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "return_unlocked_snow",
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnUnlockedSnowProcedure.java"
         ],
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12295,14 +12310,19 @@
     {
       "name": "ReturnNameApocalyptic",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "return_name_apocalyptic",
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnNameApocalypticProcedure.java"
         ],
-        "dependencies": [],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
         "return_type": "string"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -13135,6 +13155,582 @@
         ]
       },
       "path": "~/Entities/Misc"
+    },
+    {
+      "name": "RedElectricty",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_electricty",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/particles/red_electricty.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/RedElectrictyParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "MultiHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multi_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/MultiHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Speedster"
+    },
+    {
+      "name": "MultiHitPush",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multi_hit_push",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/MultiHitPushProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Speedster"
+    },
+    {
+      "name": "MultiHitAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multi_hit_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/MultiHitAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Speedster"
+    },
+    {
+      "name": "DimensionSelector",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dimension_selector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/DimensionSelectorMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/DimensionSelectorScreen.java",
+          "src/main/java/net/clozynoii/invincibleconquest/network/DimensionSelectorButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SmokingOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoking_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SmokingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Smoking",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/SmokingMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "BackwardsTumbleOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backwards_tumble_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BackwardsTumbleOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "BackwardsTumble",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backwards_tumble",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/BackwardsTumbleMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "StrongPunchAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_punch_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/StrongPunchAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "ViltrumiteAbilities",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_abilities",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ViltrumiteAbilitiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "SpeedsterMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedster_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpeedsterMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Speedster"
+    },
+    {
+      "name": "PortalMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/PortalMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Portal"
+    },
+    {
+      "name": "BeastMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "AtomicMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomicMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "TechJacketMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tech_jacket_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TechJacketMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Tech Jacket"
+    },
+    {
+      "name": "SpidermanMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiderman_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpidermanMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
+    },
+    {
+      "name": "ReplicateMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "replicate_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ReplicateMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Replicate"
+    },
+    {
+      "name": "RexSplodeMoves",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/RexSplodeMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
     }
   ],
   "variable_elements": [
@@ -14390,6 +14986,7 @@
       "gui.invincible_conquest.menu_ability_selection.tooltip_human": "Human",
       "gui.invincible_conquest.faction_join_viltrum.button_decline": "Decline",
       "entity.invincible_conquest.invincible": "Invincible",
+      "gui.invincible_conquest.dimension_selector.label_dimension_seleciton": "Dimension Selection",
       "item.invincible_conquest.invincible_suit_veil_helmet": "Invincible\u0027s Mask (Veil)",
       "gui.invincible_conquest.menu_ability_selection.tooltip_spider": "Spider",
       "entity.invincible_conquest.martian": "Martian",
@@ -14472,6 +15069,7 @@
       "item.invincible_conquest.invincible_suit_mohawk_chestplate": "Invincible\u0027s Suit (Mohawk)",
       "gui.invincible_conquest.menu_planet_takeover.button_passive": "Passive",
       "item.invincible_conquest.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
+      "gui.invincible_conquest.dimension_selector.label_dimension_selection": "Dimension Selection",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_time_stop": "Time Stop - 1 SP",
@@ -14483,6 +15081,7 @@
       "item.invincible_conquest.multi_paul_spawn_egg": "Multi-Paul Spawn Egg",
       "gui.invincible_conquest.menu_ability_selection.label_ability_selection1": "Ability Selection",
       "gui.invincible_conquest.galactic_map_gui.tooltip_moon_x150_y150": "Moon : x150, y150",
+      "gui.invincible_conquest.dimension_selector.tooltip_the_overworld": "The Overworld",
       "entity.invincible_conquest.atom_eve": "Atom-Eve",
       "gui.invincible_conquest.menu_ability_atom.tooltip_basic_abilities": "Basic Abilities",
       "item.invincible_conquest.viltrumite_male_spawn_egg": "Viltrumite (Male) Spawn Egg",
@@ -14566,6 +15165,7 @@
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_2": "Slot 2",
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_3": "Slot 3",
+      "gui.invincible_conquest.dimension_selector.tooltip_random": "Random",
       "subtitles.thehammer": "",
       "item.invincible_conquest.angstrom_outfit_chestplate": "Angstrom\u0027s Chestplate",
       "item.invincible_conquest.white_sun_spawn_egg": "Sun Spawn Egg",
@@ -14617,6 +15217,8 @@
       "item.invincible_conquest.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible_conquest.angstrom_outfit_boots": "Angstrom\u0027s Shoes",
       "item.invincible_conquest.mauler_twin_suit_leggings": "Mauler Twin\u0027s Pants",
+      "effect.invincible_conquest.backwards_tumble": "Backwards Tumble",
+      "effect.invincible_conquest.smoking": "Smoking",
       "item.invincible_conquest.mauler_twin_spawn_egg": "Mauler Twin Spawn Egg",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_10": "Slot 10",
       "item.invincible_conquest.invincible_suit_blue_helmet": "Invincible\u0027s Mask (Blue)",
@@ -14816,6 +15418,34 @@
               },
               {
                 "name": "Portal",
+                "children": []
+              },
+              {
+                "name": "Speedster",
+                "children": []
+              },
+              {
+                "name": "Atomic",
+                "children": []
+              },
+              {
+                "name": "Tech Jacket",
+                "children": []
+              },
+              {
+                "name": "Robot",
+                "children": []
+              },
+              {
+                "name": "Spiderman",
+                "children": []
+              },
+              {
+                "name": "Replicate",
+                "children": []
+              },
+              {
+                "name": "Rex Splode",
                 "children": []
               }
             ]

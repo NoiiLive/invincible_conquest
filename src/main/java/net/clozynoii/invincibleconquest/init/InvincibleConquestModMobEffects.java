@@ -20,6 +20,7 @@ import net.clozynoii.invincibleconquest.procedures.LaserDestructionEffectExpires
 import net.clozynoii.invincibleconquest.procedures.CloudCircleEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.potion.TitanLeapEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.StunMobEffect;
+import net.clozynoii.invincibleconquest.potion.SmokingMobEffect;
 import net.clozynoii.invincibleconquest.potion.SmokeCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.SlicingCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.RobotBallControlMobEffect;
@@ -39,6 +40,7 @@ import net.clozynoii.invincibleconquest.potion.BulletSlamMobEffect;
 import net.clozynoii.invincibleconquest.potion.BleedingMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastSlicesMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastMobTimersMobEffect;
+import net.clozynoii.invincibleconquest.potion.BackwardsTumbleMobEffect;
 import net.clozynoii.invincibleconquest.potion.ActiveAirSlamClawMobEffect;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
@@ -67,6 +69,8 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> BULLET_SLAM = REGISTRY.register("bullet_slam", () -> new BulletSlamMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> INSTANT_CRATOR = REGISTRY.register("instant_crator", () -> new InstantCratorMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> ROBOT_BALL_CONTROL = REGISTRY.register("robot_ball_control", () -> new RobotBallControlMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SMOKING = REGISTRY.register("smoking", () -> new SmokingMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BACKWARDS_TUMBLE = REGISTRY.register("backwards_tumble", () -> new BackwardsTumbleMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

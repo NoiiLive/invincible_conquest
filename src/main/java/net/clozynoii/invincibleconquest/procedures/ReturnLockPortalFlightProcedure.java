@@ -9,7 +9,7 @@ public class ReturnLockPortalFlightProcedure {
 		if (entity == null)
 			return false;
 		boolean gate = false;
-		if (!entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).UnlockedSkills.contains("Portal Flight" + ", ")) {
+		if (!entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).UnlockedSkills.contains("Portal Grab" + ", ")) {
 			return true;
 		}
 		return false;

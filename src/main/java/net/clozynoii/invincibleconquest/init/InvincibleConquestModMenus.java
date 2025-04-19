@@ -31,6 +31,7 @@ import net.clozynoii.invincibleconquest.world.inventory.GalacticMapGUIMenu;
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinViltrumMenu;
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinGDAMenu;
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinCOPMenu;
+import net.clozynoii.invincibleconquest.world.inventory.DimensionSelectorMenu;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 public class InvincibleConquestModMenus {
@@ -55,4 +56,5 @@ public class InvincibleConquestModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<GalacticMapGUIMenu>> GALACTIC_MAP_GUI = REGISTRY.register("galactic_map_gui", () -> IMenuTypeExtension.create(GalacticMapGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<MenuAbilityTechJacketMenu>> MENU_ABILITY_TECH_JACKET = REGISTRY.register("menu_ability_tech_jacket", () -> IMenuTypeExtension.create(MenuAbilityTechJacketMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<MENUABILITYBLANKMenu>> MENUABILITYBLANK = REGISTRY.register("menuabilityblank", () -> IMenuTypeExtension.create(MENUABILITYBLANKMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<DimensionSelectorMenu>> DIMENSION_SELECTOR = REGISTRY.register("dimension_selector", () -> IMenuTypeExtension.create(DimensionSelectorMenu::new));
 }

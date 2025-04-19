@@ -29,6 +29,7 @@ import net.clozynoii.invincibleconquest.client.gui.GalacticMapGUIScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinViltrumScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinGDAScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinCOPScreen;
+import net.clozynoii.invincibleconquest.client.gui.DimensionSelectorScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class InvincibleConquestModScreens {
@@ -54,5 +55,6 @@ public class InvincibleConquestModScreens {
 		event.register(InvincibleConquestModMenus.GALACTIC_MAP_GUI.get(), GalacticMapGUIScreen::new);
 		event.register(InvincibleConquestModMenus.MENU_ABILITY_TECH_JACKET.get(), MenuAbilityTechJacketScreen::new);
 		event.register(InvincibleConquestModMenus.MENUABILITYBLANK.get(), MENUABILITYBLANKScreen::new);
+		event.register(InvincibleConquestModMenus.DIMENSION_SELECTOR.get(), DimensionSelectorScreen::new);
 	}
 }
