@@ -104,6 +104,7 @@ public class InvincibleConquestModVariables {
 			clone.PlayerFactionRank = original.PlayerFactionRank;
 			clone.PlayerReputation = original.PlayerReputation;
 			clone.FactionInvites = original.FactionInvites;
+			clone.DimensionList = original.DimensionList;
 			if (!event.isWasDeath()) {
 				clone.Cooldown1a = original.Cooldown1a;
 				clone.Cooldown2a = original.Cooldown2a;
@@ -381,6 +382,7 @@ public class InvincibleConquestModVariables {
 		public double PlayerReputation = 0.0;
 		public String FactionInvites = ", ";
 		public String GrabbedEntity = "";
+		public String DimensionList = "\"\"";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -444,6 +446,7 @@ public class InvincibleConquestModVariables {
 			nbt.putDouble("PlayerReputation", PlayerReputation);
 			nbt.putString("FactionInvites", FactionInvites);
 			nbt.putString("GrabbedEntity", GrabbedEntity);
+			nbt.putString("DimensionList", DimensionList);
 			return nbt;
 		}
 
@@ -508,6 +511,7 @@ public class InvincibleConquestModVariables {
 			PlayerReputation = nbt.getDouble("PlayerReputation");
 			FactionInvites = nbt.getString("FactionInvites");
 			GrabbedEntity = nbt.getString("GrabbedEntity");
+			DimensionList = nbt.getString("DimensionList");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

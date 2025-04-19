@@ -7,6 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
@@ -15,6 +16,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
@@ -27,14 +31,14 @@ import javax.annotation.Nullable;
 public class PlayerFlyingTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
-		execute(event, event.getEntity().level(), event.getEntity());
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world, Entity entity) {
-		execute(null, world, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		boolean creativeFlight = false;
@@ -45,6 +49,11 @@ public class PlayerFlyingTickProcedure {
 				+ ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAgility + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost) / (100 / (double) InvincibleConfigConfiguration.AGLMOVEMENTSPEED.get())) * 2
 						* outputModifier;
 		if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying == true) {
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Portal")) {
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y - 1), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							"particle dust 0.09 0.76 0.95 2 ~ ~ ~ 0.5 0 0.5 0 5");
+			}
 			if (entity.isSprinting()) {
 				creativeFlight = false;
 				if (entity instanceof Player _plr && !(_plr.isFallFlying())) {
@@ -57,7 +66,7 @@ public class PlayerFlyingTickProcedure {
 					if (entity instanceof Player)
 						PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.InvincibleConquestModAnimationMessage("fly_fast", entity.getId(), true));
 				}
-				if (entity instanceof LivingEntity _livEnt4 && _livEnt4.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
+				if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
 					flightSpeed = flightSpeed * 2.25;
 				} else {
 					if (entity.onGround()) {
@@ -107,7 +116,7 @@ public class PlayerFlyingTickProcedure {
 							PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new SetupAnimationsProcedure.InvincibleConquestModAnimationMessage("fly_idle", entity.getId(), true));
 					}
 				}
-				if (entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
+				if (entity instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT)) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT);
 				}

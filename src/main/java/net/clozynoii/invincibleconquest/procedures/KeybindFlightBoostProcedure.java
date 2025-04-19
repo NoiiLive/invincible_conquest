@@ -13,14 +13,16 @@ public class KeybindFlightBoostProcedure {
 			return;
 		double flightSpeed = 0;
 		if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying == true) {
-			if (entity.isSprinting()) {
-				if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength >= 25) {
-					if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT))) {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT, 999999, 0, false, false));
-					} else {
-						if (entity instanceof LivingEntity _entity)
-							_entity.removeEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT);
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite")) {
+				if (entity.isSprinting()) {
+					if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength >= 25) {
+						if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT))) {
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT, 999999, 0, false, false));
+						} else {
+							if (entity instanceof LivingEntity _entity)
+								_entity.removeEffect(InvincibleConquestModMobEffects.DESTRUCTIVE_FLIGHT);
+						}
 					}
 				}
 			}

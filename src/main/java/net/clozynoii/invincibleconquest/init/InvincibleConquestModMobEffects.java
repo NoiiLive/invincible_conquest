@@ -22,6 +22,7 @@ import net.clozynoii.invincibleconquest.potion.TitanLeapEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.StunMobEffect;
 import net.clozynoii.invincibleconquest.potion.SmokeCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.SlicingCircleMobEffect;
+import net.clozynoii.invincibleconquest.potion.RobotBallControlMobEffect;
 import net.clozynoii.invincibleconquest.potion.NoFallMobEffect;
 import net.clozynoii.invincibleconquest.potion.LaserKnockbackMobEffect;
 import net.clozynoii.invincibleconquest.potion.LaserDestructionMobEffect;
@@ -65,6 +66,7 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> TITAN_LEAP_EFFECT = REGISTRY.register("titan_leap_effect", () -> new TitanLeapEffectMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BULLET_SLAM = REGISTRY.register("bullet_slam", () -> new BulletSlamMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> INSTANT_CRATOR = REGISTRY.register("instant_crator", () -> new InstantCratorMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> ROBOT_BALL_CONTROL = REGISTRY.register("robot_ball_control", () -> new RobotBallControlMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

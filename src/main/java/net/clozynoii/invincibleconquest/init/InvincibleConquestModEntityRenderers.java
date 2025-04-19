@@ -19,6 +19,7 @@ import net.clozynoii.invincibleconquest.client.renderer.ViltrumRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TheHammerRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TalescriaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.SunRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.RoboBallRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.RexSplodeRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.RedSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.OrangeSunRenderer;
@@ -44,6 +45,7 @@ import net.clozynoii.invincibleconquest.client.renderer.FlaxanGunmanRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.DimensionalPortalRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.CecilRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
@@ -99,5 +101,7 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.ANISSA.get(), AnissaRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_SMALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ROBO_BALL.get(), RoboBallRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
 	}
 }

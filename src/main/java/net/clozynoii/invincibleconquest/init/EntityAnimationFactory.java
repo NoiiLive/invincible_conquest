@@ -36,6 +36,7 @@ import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
+import net.clozynoii.invincibleconquest.entity.DimensionalPortalEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
@@ -316,6 +317,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof AnissaEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DimensionalPortalEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

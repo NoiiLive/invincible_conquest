@@ -32,7 +32,7 @@ public class AbilityTitanLeapProcedure {
 					* ((((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFocus + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).AgeBoost) / 100) * (double) InvincibleConfigConfiguration.FOCCDREDUCE.get())
 							/ 100);
 			outputModifier = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerOutput / 100;
-			cooldown = 60 - reduction;
+			cooldown = 40 - reduction;
 			targets = 0;
 			magnitude = 0;
 			ability = "Titan Leap";

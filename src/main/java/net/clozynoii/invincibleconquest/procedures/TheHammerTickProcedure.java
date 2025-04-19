@@ -63,11 +63,7 @@ public class TheHammerTickProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.ELECTRICITY.get()), x, y, z, 50, 3, 25, 3, 0);
-		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.STEAM_SMOKE.get()), x, y, z, 25, 3, 25, 3, 0);
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.LASER_KNOCKBACK, 40, 0, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.LASER_DESTRUCTION, 40, 0, false, false));
 		entity.getPersistentData().putDouble("thehammertimer", (entity.getPersistentData().getDouble("thehammertimer") + 1));

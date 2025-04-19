@@ -25,6 +25,7 @@ import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
 import net.clozynoii.invincibleconquest.entity.SonicClapEntity;
+import net.clozynoii.invincibleconquest.entity.RoboBallEntity;
 import net.clozynoii.invincibleconquest.entity.RexSplodeEntity;
 import net.clozynoii.invincibleconquest.entity.RedSunEntity;
 import net.clozynoii.invincibleconquest.entity.OrangeSunEntity;
@@ -52,6 +53,7 @@ import net.clozynoii.invincibleconquest.entity.ExplosionSmallEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
+import net.clozynoii.invincibleconquest.entity.DimensionalPortalEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
@@ -174,6 +176,12 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SonicClapEntity>> SONIC_CLAP = register("sonic_clap",
 			EntityType.Builder.<SonicClapEntity>of(SonicClapEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RoboBallEntity>> ROBO_BALL = register("robo_ball",
+			EntityType.Builder.<RoboBallEntity>of(RoboBallEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<DimensionalPortalEntity>> DIMENSIONAL_PORTAL = register("dimensional_portal",
+			EntityType.Builder.<DimensionalPortalEntity>of(DimensionalPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -223,6 +231,8 @@ public class InvincibleConquestModEntities {
 		HammerSpawnerEntity.init(event);
 		CecilEntity.init(event);
 		AnissaEntity.init(event);
+		RoboBallEntity.init(event);
+		DimensionalPortalEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -267,5 +277,7 @@ public class InvincibleConquestModEntities {
 		event.put(HAMMER_SPAWNER.get(), HammerSpawnerEntity.createAttributes().build());
 		event.put(CECIL.get(), CecilEntity.createAttributes().build());
 		event.put(ANISSA.get(), AnissaEntity.createAttributes().build());
+		event.put(ROBO_BALL.get(), RoboBallEntity.createAttributes().build());
+		event.put(DIMENSIONAL_PORTAL.get(), DimensionalPortalEntity.createAttributes().build());
 	}
 }

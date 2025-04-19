@@ -106,7 +106,7 @@ public class DimensionTickProcedure {
 					if (!(entityiterator.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite") && !(entityiterator.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Beast")
 							&& !(entityiterator.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Atom") && !(entityiterator.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Robot")) {
 						if (!((entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == InvincibleConquestModItems.SPACE_HELMET_HELMET.get())) {
-							entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.DROWN)), 50);
+							entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.DROWN)), 5);
 						}
 					}
 				}
