@@ -1,49 +1,13 @@
 package net.clozynoii.invincibleconquest.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.WidgetSprites;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.clozynoii.invincibleconquest.world.inventory.DimensionSelectorMenu;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedSnowProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedPreHistoricProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedNetherProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedFlaxanProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedEndProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedDesertProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameSnowProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNamePreHistoricProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameNetherProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameFlaxanProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameEndProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameDesertProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnNameApocalypticProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedSnowProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedPreHistoricProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedNetherProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedFlaxanProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedEndProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedDesertProcedure;
-import net.clozynoii.invincibleconquest.procedures.ReturnLockedApocalypticProcedure;
-import net.clozynoii.invincibleconquest.network.DimensionSelectorButtonMessage;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSelectorMenu> {
+
 	private final static HashMap<String, Object> guistate = DimensionSelectorMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	ImageButton imagebutton_blank;
 	ImageButton imagebutton_blank1;
 	ImageButton imagebutton_blank2;
@@ -70,26 +34,43 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 		if (mouseX > leftPos + -52 && mouseX < leftPos + -30 && mouseY > topPos + -47 && mouseY < topPos + -25)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible_conquest.dimension_selector.tooltip_overworld"), mouseX, mouseY);
 		if (mouseX > leftPos + -78 && mouseX < leftPos + -56 && mouseY > topPos + -47 && mouseY < topPos + -25)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.invincible_conquest.dimension_selector.tooltip_random"), mouseX, mouseY);
 		if (mouseX > leftPos + -26 && mouseX < leftPos + -4 && mouseY > topPos + -47 && mouseY < topPos + -25)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameNetherProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameNetherProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 1 && mouseX < leftPos + 23 && mouseY > topPos + -47 && mouseY < topPos + -25)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameEndProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameEndProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 27 && mouseX < leftPos + 49 && mouseY > topPos + -47 && mouseY < topPos + -25)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameApocalypticProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameApocalypticProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 53 && mouseX < leftPos + 75 && mouseY > topPos + -47 && mouseY < topPos + -25)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameDesertProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameDesertProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + -78 && mouseX < leftPos + -56 && mouseY > topPos + -22 && mouseY < topPos + 0)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameSnowProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameSnowProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + -52 && mouseX < leftPos + -30 && mouseY > topPos + -22 && mouseY < topPos + 0)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNameFlaxanProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNameFlaxanProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + -27 && mouseX < leftPos + -3 && mouseY > topPos + -24 && mouseY < topPos + 0)
-			guiGraphics.renderTooltip(font, Component.literal(ReturnNamePreHistoricProcedure.execute(entity)), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.literal(
+
+					ReturnNamePreHistoricProcedure.execute()), mouseX, mouseY);
 	}
 
 	@Override
@@ -97,6 +78,7 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/selection_menu.png"), this.leftPos + -214, this.topPos + -120, 0, 0, -1, -1, -1, -1);
@@ -121,49 +103,105 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 
 		guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + -49, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 
-		if (ReturnUnlockedNetherProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedNetherProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + -23, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnUnlockedEndProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedEndProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + 4, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnUnlockedApocalytpicProcedure.execute()) {
+		if (
+
+		ReturnUnlockedApocalytpicProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + 30, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnUnlockedDesertProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedDesertProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + 56, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnUnlockedSnowProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedSnowProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + -75, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnUnlockedFlaxanProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedFlaxanProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + -49, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedNetherProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedNetherProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + -23, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedEndProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedEndProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + 4, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedApocalypticProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedApocalypticProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + 30, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedDesertProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedDesertProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + 56, this.topPos + -44, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedSnowProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedSnowProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + -75, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedFlaxanProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedFlaxanProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + -49, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
 
 		guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/slot.png"), this.leftPos + -26, this.topPos + -22, 0, 0, -1, -1, -1, -1);
 
-		if (ReturnUnlockedPreHistoricProcedure.execute(entity)) {
+		if (
+
+		ReturnUnlockedPreHistoricProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_portal.png"), this.leftPos + -23, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
-		if (ReturnLockedPreHistoricProcedure.execute(entity)) {
+		if (
+
+		ReturnLockedPreHistoricProcedure.execute()
+
+		) {
 			guiGraphics.blit(ResourceLocation.parse("invincible_conquest:textures/screens/icon_question.png"), this.leftPos + -23, this.topPos + -19, 0, 0, 16, 16, 16, 16);
 		}
 
@@ -178,6 +216,7 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -190,6 +229,7 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 	@Override
 	public void init() {
 		super.init();
+
 		imagebutton_blank = new ImageButton(this.leftPos + -78, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -202,8 +242,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank", imagebutton_blank);
 		this.addRenderableWidget(imagebutton_blank);
+
 		imagebutton_blank1 = new ImageButton(this.leftPos + -52, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -216,8 +258,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank1", imagebutton_blank1);
 		this.addRenderableWidget(imagebutton_blank1);
+
 		imagebutton_blank2 = new ImageButton(this.leftPos + -26, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -230,8 +274,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank2", imagebutton_blank2);
 		this.addRenderableWidget(imagebutton_blank2);
+
 		imagebutton_blank3 = new ImageButton(this.leftPos + 1, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -244,8 +290,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank3", imagebutton_blank3);
 		this.addRenderableWidget(imagebutton_blank3);
+
 		imagebutton_blank4 = new ImageButton(this.leftPos + 27, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -258,8 +306,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank4", imagebutton_blank4);
 		this.addRenderableWidget(imagebutton_blank4);
+
 		imagebutton_blank5 = new ImageButton(this.leftPos + 53, this.topPos + -47, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -272,8 +322,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank5", imagebutton_blank5);
 		this.addRenderableWidget(imagebutton_blank5);
+
 		imagebutton_blank6 = new ImageButton(this.leftPos + -78, this.topPos + -22, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -286,8 +338,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank6", imagebutton_blank6);
 		this.addRenderableWidget(imagebutton_blank6);
+
 		imagebutton_blank7 = new ImageButton(this.leftPos + -52, this.topPos + -22, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -300,8 +354,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank7", imagebutton_blank7);
 		this.addRenderableWidget(imagebutton_blank7);
+
 		imagebutton_blank8 = new ImageButton(this.leftPos + -26, this.topPos + -22, -1, -1,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank.png")), e -> {
 					if (true) {
@@ -314,7 +370,10 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
+
 		guistate.put("button:imagebutton_blank8", imagebutton_blank8);
 		this.addRenderableWidget(imagebutton_blank8);
+
 	}
+
 }

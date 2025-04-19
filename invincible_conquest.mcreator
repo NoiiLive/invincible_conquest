@@ -12017,12 +12017,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnLockedDesertProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
+        "dependencies": [],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12117,12 +12112,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnLockedEndProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
+        "dependencies": [],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12197,12 +12187,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnUnlockedSnowProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
+        "dependencies": [],
         "return_type": "logic"
       },
       "path": "~/Procedures/GUI/Dimensions"
@@ -12317,12 +12302,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/ReturnNameApocalypticProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
+        "dependencies": [],
         "return_type": "string"
       },
       "path": "~/Procedures/GUI/Dimensions"
