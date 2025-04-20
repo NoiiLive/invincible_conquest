@@ -7467,10 +7467,6 @@
         ],
         "dependencies": [
           {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
             "name": "entity",
             "type": "entity"
           },
@@ -13422,216 +13418,6 @@
       "path": "~/Procedures/Abilities/Viltrumite"
     },
     {
-      "name": "ViltrumiteAbilities",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "viltrumite_abilities",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/ViltrumiteAbilitiesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Viltrumite"
-    },
-    {
-      "name": "SpeedsterMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speedster_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpeedsterMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Speedster"
-    },
-    {
-      "name": "PortalMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "portal_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/PortalMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Portal"
-    },
-    {
-      "name": "BeastMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "beast_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Beast"
-    },
-    {
-      "name": "AtomicMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "atomic_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomicMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Atomic"
-    },
-    {
-      "name": "TechJacketMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tech_jacket_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/TechJacketMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Tech Jacket"
-    },
-    {
       "name": "SpidermanMoves",
       "type": "procedure",
       "compiles": true,
@@ -13665,41 +13451,6 @@
         ]
       },
       "path": "~/Procedures/Abilities/Spiderman"
-    },
-    {
-      "name": "ReplicateMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "replicate_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/ReplicateMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Replicate"
     },
     {
       "name": "RexSplodeMoves",
@@ -13772,19 +13523,100 @@
       "path": "~/Procedures/Abilities/Rex Splode"
     },
     {
-      "name": "ExplodeEverywhere",
+      "name": "WebShooterAbility",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "explode_everywhere",
+      "registry_name": "web_shooter_ability",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/ExplodeEverywhereProcedure.java"
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebShooterAbilityProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
+    },
+    {
+      "name": "WebActiveOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Detonate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detonate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DetonateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -13799,6 +13631,60 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/RexSplodeForwardProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "KleidersRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kleiders_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/KleidersRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "FireworkAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkAbilityProcedure.java"
         ],
         "dependencies": [
           {
@@ -13865,19 +13751,6 @@
       "path": "~/Procedures/Effects"
     },
     {
-      "name": "ExplosionLarge",
-      "type": "projectile",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "explosion_large",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/ExplosionLargeEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
       "name": "ChargedTossAbility",
       "type": "procedure",
       "compiles": true,
@@ -13895,228 +13768,6 @@
         ]
       },
       "path": "~/Procedures/Abilities/Rex Splode"
-    },
-    {
-      "name": "ScatterTossAbility",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "scatter_toss_ability",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/ScatterTossAbilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
-    },
-    {
-      "name": "FireworkMob",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "firework_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/FireworkMobEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FireworkMobRenderer.java"
-        ]
-      },
-      "path": "~/Entities/Misc"
-    },
-    {
-      "name": "FireworkMobOnEntityTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "firework_mob_on_entity_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkMobOnEntityTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Entities/Misc"
-    },
-    {
-      "name": "FireworkAbility",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "firework_ability",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkAbilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
-    },
-    {
-      "name": "IgniteAbility",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ignite_ability",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/IgniteAbilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
-    },
-    {
-      "name": "Detonate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "detonate",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/DetonateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
-    },
-    {
-      "name": "KleidersRender",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "kleiders_render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/KleidersRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Player"
-    },
-    {
-      "name": "WebActiveOnEffectActiveTick",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "web_active_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebActiveOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "WebActive",
@@ -14198,6 +13849,20 @@
       "path": "~/Procedures/Abilities/Spiderman"
     },
     {
+      "name": "FireworkMob",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FireworkMobEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FireworkMobRenderer.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
       "name": "SpiderGlobalTick",
       "type": "procedure",
       "compiles": true,
@@ -14233,14 +13898,46 @@
       "path": "~/Procedures/Abilities/Spiderman"
     },
     {
-      "name": "WebShooterAbility",
+      "name": "ExplosionLarge",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_large",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/ExplosionLargeEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "ScatterTossAbility",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "web_shooter_ability",
+      "registry_name": "scatter_toss_ability",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebShooterAbilityProcedure.java"
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ScatterTossAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "FireworkMobOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkMobOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
           {
@@ -14265,7 +13962,1006 @@
           }
         ]
       },
-      "path": "~/Procedures/Abilities/Spiderman"
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "IgniteAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignite_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/IgniteAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "ExplodeEverywhere",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_everywhere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ExplodeEverywhereProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "SpiderMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpiderMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spider"
+    },
+    {
+      "name": "VIltrumiteAbilities3a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_3a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities3aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves4b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_4b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves4bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "VIltrumiteAbilities5b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_5b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities5bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves4a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_4a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves4aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "VIltrumiteAbilities5a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_5a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities5aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves2b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_2b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves2bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "BeastMoves2a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_2a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves2aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "VIltrumiteAbilities1b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_1b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities1bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "VIltrumiteAbilities1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "VIltrumiteAbilities3b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_3b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities3bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "SpeedsterMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speedster_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpeedsterMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Speedster"
+    },
+    {
+      "name": "VIltrumiteAbilities4b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_4b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities4bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves3a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_3a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves3aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "VIltrumiteAbilities4a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_4a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities4aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves5b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_5b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves5bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "BeastMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "BeastMoves3b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_3b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves3bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "BeastMoves1b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_1b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves1bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "CloningMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cloning_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/CloningMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Cloning"
+    },
+    {
+      "name": "VIltrumiteAbilities2b",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_2b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities2bProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "VIltrumiteAbilities2a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_iltrumite_abilities_2a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/VIltrumiteAbilities2aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Viltrumite"
+    },
+    {
+      "name": "BeastMoves5a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "beast_moves_5a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BeastMoves5aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Beast"
+    },
+    {
+      "name": "AtomicMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomicMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "ExplodeMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ExplodeMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Explode"
+    },
+    {
+      "name": "PortalMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/PortalMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Portal"
+    },
+    {
+      "name": "TechJacketMoves1a",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tech_jacket_moves_1a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TechJacketMoves1aProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Tech Jacket"
     }
   ],
   "variable_elements": [
@@ -15873,6 +16569,10 @@
                 "children": []
               },
               {
+                "name": "Dimensions",
+                "children": []
+              },
+              {
                 "name": "Stats",
                 "children": [
                   {
@@ -15889,35 +16589,11 @@
                 "name": "Abilities",
                 "children": [
                   {
-                    "name": "Basic",
-                    "children": []
-                  },
-                  {
-                    "name": "Beast",
-                    "children": []
-                  },
-                  {
                     "name": "Viltrumite",
                     "children": []
                   },
                   {
-                    "name": "Explode",
-                    "children": []
-                  },
-                  {
-                    "name": "Cloning",
-                    "children": []
-                  },
-                  {
-                    "name": "Portal",
-                    "children": []
-                  },
-                  {
-                    "name": "Spider",
-                    "children": []
-                  },
-                  {
-                    "name": "Speedster",
+                    "name": "Robot",
                     "children": []
                   },
                   {
@@ -15929,14 +16605,34 @@
                     "children": []
                   },
                   {
-                    "name": "Robot",
+                    "name": "Speedster",
+                    "children": []
+                  },
+                  {
+                    "name": "Explode",
+                    "children": []
+                  },
+                  {
+                    "name": "Beast",
+                    "children": []
+                  },
+                  {
+                    "name": "Cloning",
+                    "children": []
+                  },
+                  {
+                    "name": "Portal",
+                    "children": []
+                  },
+                  {
+                    "name": "Basic",
+                    "children": []
+                  },
+                  {
+                    "name": "Spider",
                     "children": []
                   }
                 ]
-              },
-              {
-                "name": "Dimensions",
-                "children": []
               }
             ]
           },
@@ -15952,22 +16648,6 @@
                 "children": []
               },
               {
-                "name": "Basic",
-                "children": []
-              },
-              {
-                "name": "Beast",
-                "children": []
-              },
-              {
-                "name": "Portal",
-                "children": []
-              },
-              {
-                "name": "Speedster",
-                "children": []
-              },
-              {
                 "name": "Atomic",
                 "children": []
               },
@@ -15976,19 +16656,35 @@
                 "children": []
               },
               {
+                "name": "Portal",
+                "children": []
+              },
+              {
+                "name": "Spider",
+                "children": []
+              },
+              {
+                "name": "Basic",
+                "children": []
+              },
+              {
+                "name": "Cloning",
+                "children": []
+              },
+              {
+                "name": "Speedster",
+                "children": []
+              },
+              {
+                "name": "Beast",
+                "children": []
+              },
+              {
+                "name": "Explode",
+                "children": []
+              },
+              {
                 "name": "Robot",
-                "children": []
-              },
-              {
-                "name": "Spiderman",
-                "children": []
-              },
-              {
-                "name": "Replicate",
-                "children": []
-              },
-              {
-                "name": "Rex Splode",
                 "children": []
               }
             ]

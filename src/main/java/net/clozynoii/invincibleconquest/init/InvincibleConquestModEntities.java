@@ -184,10 +184,10 @@ public class InvincibleConquestModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<DimensionalPortalEntity>> DIMENSIONAL_PORTAL = register("dimensional_portal",
 			EntityType.Builder.<DimensionalPortalEntity>of(DimensionalPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
-			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FireworkMobEntity>> FIREWORK_MOB = register("firework_mob",
 			EntityType.Builder.<FireworkMobEntity>of(FireworkMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
+			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

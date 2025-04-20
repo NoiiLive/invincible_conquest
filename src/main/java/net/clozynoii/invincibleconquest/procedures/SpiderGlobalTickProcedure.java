@@ -1,10 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.neoforged.bus.api.Event;
 
 public class SpiderGlobalTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -24,17 +20,7 @@ public class SpiderGlobalTickProcedure {
 								+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 						if (distanceSq <= 1.0) {
 							if (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).canOcclude()) {
-								{
-									InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
-									_vars.VerticalMovement = 2;
-									_vars.syncPlayerVariables(entity);
-								}
 							} else {
-								{
-									InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
-									_vars.VerticalMovement = 0;
-									_vars.syncPlayerVariables(entity);
-								}
 							}
 						}
 					}

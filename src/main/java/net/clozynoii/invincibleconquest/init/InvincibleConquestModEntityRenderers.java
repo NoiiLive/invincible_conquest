@@ -104,7 +104,7 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.ROBO_BALL.get(), RoboBallRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
-		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.FIREWORK_MOB.get(), FireworkMobRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
 	}
 }

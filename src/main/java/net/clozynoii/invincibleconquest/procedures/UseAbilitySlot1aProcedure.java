@@ -33,31 +33,31 @@ public class UseAbilitySlot1aProcedure {
 				AbilityBarrageProcedure.execute(world, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Viltrumite")) {
-				ViltrumiteAbilitiesProcedure.execute(world, x, y, z, entity);
+				VIltrumiteAbilities1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Portal")) {
-				PortalMovesProcedure.execute(world, x, y, z, entity);
+				PortalMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Speedster")) {
-				SpeedsterMovesProcedure.execute(world, x, y, z, entity);
+				SpeedsterMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Beast")) {
-				BeastMovesProcedure.execute(world, x, y, z, entity);
+				BeastMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Atom")) {
-				AtomicMovesProcedure.execute(world, x, y, z, entity);
+				AtomicMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Spider")) {
-				SpidermanMovesProcedure.execute(world, x, y, z, entity);
+				SpiderMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Explode")) {
-				RexSplodeMovesProcedure.execute(world, x, y, z, entity);
+				ExplodeMoves1aProcedure.execute(world, x, y, z, entity);
 			}
-			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Duplicate")) {
-				ReplicateMovesProcedure.execute(world, x, y, z, entity);
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Cloning")) {
+				CloningMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Tech Jacket")) {
-				TechJacketMovesProcedure.execute(world, x, y, z, entity);
+				TechJacketMoves1aProcedure.execute(world, x, y, z, entity);
 			}
 		} else {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).KeyHeld == true) {
