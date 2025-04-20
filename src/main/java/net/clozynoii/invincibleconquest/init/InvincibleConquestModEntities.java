@@ -49,7 +49,9 @@ import net.clozynoii.invincibleconquest.entity.FlaxanPortalEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanGunmanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanEntity;
 import net.clozynoii.invincibleconquest.entity.FlaxanBulletEntity;
+import net.clozynoii.invincibleconquest.entity.FireworkMobEntity;
 import net.clozynoii.invincibleconquest.entity.ExplosionSmallEntity;
+import net.clozynoii.invincibleconquest.entity.ExplosionLargeEntity;
 import net.clozynoii.invincibleconquest.entity.EarthEntity;
 import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
@@ -182,6 +184,10 @@ public class InvincibleConquestModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<DimensionalPortalEntity>> DIMENSIONAL_PORTAL = register("dimensional_portal",
 			EntityType.Builder.<DimensionalPortalEntity>of(DimensionalPortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
+			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FireworkMobEntity>> FIREWORK_MOB = register("firework_mob",
+			EntityType.Builder.<FireworkMobEntity>of(FireworkMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -233,6 +239,7 @@ public class InvincibleConquestModEntities {
 		AnissaEntity.init(event);
 		RoboBallEntity.init(event);
 		DimensionalPortalEntity.init(event);
+		FireworkMobEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -279,5 +286,6 @@ public class InvincibleConquestModEntities {
 		event.put(ANISSA.get(), AnissaEntity.createAttributes().build());
 		event.put(ROBO_BALL.get(), RoboBallEntity.createAttributes().build());
 		event.put(DIMENSIONAL_PORTAL.get(), DimensionalPortalEntity.createAttributes().build());
+		event.put(FIREWORK_MOB.get(), FireworkMobEntity.createAttributes().build());
 	}
 }

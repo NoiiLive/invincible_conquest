@@ -42,6 +42,7 @@ import net.clozynoii.invincibleconquest.client.renderer.HammerSpawnerRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanPortalRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.FlaxanGunmanRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.FireworkMobRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.EarthRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DupliKateRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.DinosaurRenderer;
@@ -103,5 +104,7 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.SONIC_CLAP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.ROBO_BALL.get(), RoboBallRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.FIREWORK_MOB.get(), FireworkMobRenderer::new);
 	}
 }

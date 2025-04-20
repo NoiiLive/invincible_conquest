@@ -18,6 +18,7 @@ import net.minecraft.core.registries.Registries;
 import net.clozynoii.invincibleconquest.procedures.TitanLeapEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.LaserDestructionEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.CloudCircleEffectExpiresProcedure;
+import net.clozynoii.invincibleconquest.potion.WebActiveMobEffect;
 import net.clozynoii.invincibleconquest.potion.TitanLeapEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.StunMobEffect;
 import net.clozynoii.invincibleconquest.potion.SmokingMobEffect;
@@ -71,6 +72,7 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> ROBOT_BALL_CONTROL = REGISTRY.register("robot_ball_control", () -> new RobotBallControlMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKING = REGISTRY.register("smoking", () -> new SmokingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BACKWARDS_TUMBLE = REGISTRY.register("backwards_tumble", () -> new BackwardsTumbleMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> WEB_ACTIVE = REGISTRY.register("web_active", () -> new WebActiveMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

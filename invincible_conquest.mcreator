@@ -7467,6 +7467,10 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -13731,6 +13735,537 @@
         ]
       },
       "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "ExplodeSelf",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_self",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ExplodeSelfProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "ExplodeEverywhere",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_everywhere",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ExplodeEverywhereProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "RexSplodeForward",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rex_splode_forward",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/RexSplodeForwardProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "LargeExplosionHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "large_explosion_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/LargeExplosionHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "ExplosionLarge",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_large",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/ExplosionLargeEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "ChargedTossAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_toss_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ChargedTossAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "ScatterTossAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scatter_toss_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ScatterTossAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "FireworkMob",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/FireworkMobEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/FireworkMobRenderer.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "FireworkMobOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_mob_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkMobOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "FireworkAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firework_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/FireworkAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "IgniteAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignite_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/IgniteAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "Detonate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detonate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/DetonateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Rex Splode"
+    },
+    {
+      "name": "KleidersRender",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kleiders_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/KleidersRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "WebActiveOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WebActive",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/WebActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "WebSwing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_swing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebSwingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
+    },
+    {
+      "name": "SpiderVector",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_vector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpiderVectorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
+    },
+    {
+      "name": "SpiderGlobalTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_global_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpiderGlobalTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
+    },
+    {
+      "name": "WebShooterAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "web_shooter_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/WebShooterAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Spiderman"
     }
   ],
   "variable_elements": [
@@ -14213,6 +14748,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "VerticalMovement",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -14826,15 +15367,15 @@
   },
   "language_map": {
     "en_us": {
-      "entity.invincible_conquest.orange_sun": "Sun",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_5": "Slot 5",
+      "entity.invincible_conquest.orange_sun": "Sun",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_4": "Slot 4",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_3": "Slot 3",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_explode": "Explode",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_2": "Slot 2",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_explode": "Explode",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_1": "Slot 1",
-      "gui.invincible_conquest.menu_ability_selection.tooltip_viltrumite": "Viltrumite",
       "gui.invincible_conquest.menu_ability_beast.tooltip_titan_leap": "Titan Leap - 1 SP",
+      "gui.invincible_conquest.menu_ability_selection.tooltip_viltrumite": "Viltrumite",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_10": "Slot 10",
       "item.invincible_conquest.omnivincible_suit_helmet": "Invincible\u0027s Mask (Omni)",
       "gui.invincible_conquest.menu_ability_selection.tooltip_portal": "Portal",
@@ -14845,21 +15386,21 @@
       "item.invincible_conquest.viltrumite_female_spawn_egg": "Viltrumite (Female) Spawn Egg",
       "entity.invincible_conquest.red_sun": "Sun",
       "item.invincible_conquest.invincible_suit_veil_leggings": "Invincible\u0027s Pants (Veil)",
-      "key.invincible_conquest.follow_up": "Follow Up",
       "gui.invincible_conquest.menu_ability_selection.tooltip_beast": "Beast",
+      "key.invincible_conquest.follow_up": "Follow Up",
       "item.invincible_conquest.space_helmet_helmet": "Space Helmet",
       "entity.invincible_conquest.martian_spearman": "Martian Spearman",
       "gui.invincible_conquest.menu_ability_explode.tooltip_ignite": "Ignite - 1 SP",
       "item.invincible_conquest.anissa_spawn_egg": "Anissa Spawn Egg",
-      "item.invincible_conquest.selection_book": "Selection Book",
-      "entity.invincible_conquest.invincible_mohawk": "Invincible (Mohawk)",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_bullet_slam": "Bullet Slam - 1 SP",
+      "entity.invincible_conquest.invincible_mohawk": "Invincible (Mohawk)",
+      "item.invincible_conquest.selection_book": "Selection Book",
       "entity.invincible_conquest.flaxan_gunman": "Flaxan Gunman",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_6": "Slot 6",
-      "gui.invincible_conquest.menu_ability_portal.tooltip_slot_3": "Slot 3",
       "item.invincible_conquest.omnivincible_suit_leggings": "Invincible\u0027s Pants (Omni)",
+      "gui.invincible_conquest.menu_ability_portal.tooltip_slot_3": "Slot 3",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_4": "Slot 4",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_2": "Slot 2",
@@ -14868,29 +15409,29 @@
       "gui.invincible_conquest.menu_ability_speedster.tooltip_basic_abilities": "Basic Abilities",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_9": "Slot 9",
       "entity.invincible_conquest.dinosaur": "Dinosaur",
-      "item.invincible_conquest.invincible_suit_mohawk_boots": "Invincible\u0027s Boots (Mohawk)",
       "effect.invincible_conquest.robot_ball_control": "Robot Ball Control",
+      "item.invincible_conquest.invincible_suit_mohawk_boots": "Invincible\u0027s Boots (Mohawk)",
       "item.invincible_conquest.viltrum_spawn_egg": "Viltrum Spawn Egg",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_2": "Slot 2",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_4": "Slot 4",
       "item.invincible_conquest.orange_sun_spawn_egg": "Sun Spawn Egg",
-      "gui.invincible_conquest.menu_ability_basic.tooltip_dash": "Dash - 1 SP",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_3": "Slot 3",
+      "gui.invincible_conquest.menu_ability_basic.tooltip_dash": "Dash - 1 SP",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_6": "Slot 6",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_8": "Slot 8",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_7": "Slot 7",
       "effect.invincible_conquest.damage_destruction": "Damage Destruction",
-      "item.invincible_conquest.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "item.invincible_conquest.battle_beast_spawn_egg": "Battle Beast Spawn Egg",
+      "item.invincible_conquest.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "entity.invincible_conquest.earth": "Earth",
       "effect.invincible_conquest.crater": "Crater",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_basic_abilities": "Basic Abilities",
-      "item.invincible_conquest.viltrumite_uniform_leggings": "Viltrumite Pants",
-      "item.invincible_conquest.invincible_suit_dark_chestplate": "Invincible\u0027s Suit (Dark)",
       "biome.invincible_conquest.flaxan_plains": "Flaxan Plains",
+      "item.invincible_conquest.invincible_suit_dark_chestplate": "Invincible\u0027s Suit (Dark)",
+      "item.invincible_conquest.viltrumite_uniform_leggings": "Viltrumite Pants",
       "effect.invincible_conquest.bullet_slam": "Bullet Slam",
       "entity.invincible_conquest.sun": "Sun",
       "item.invincible_conquest.conquest_spawn_egg": "Conquest Spawn Egg",
@@ -14899,8 +15440,8 @@
       "item.invincible_conquest.dupli_kate_spawn_egg": "Dupli-Kate Spawn Egg",
       "item.invincible_conquest.cecil_spawn_egg": "Cecil Spawn Egg",
       "gui.invincible_conquest.menu_stats.tooltip_stat_menu": "Stat Menu",
-      "item.invincible_conquest.omnivincible_suit_chestplate": "Invincible\u0027s Suit (Omni)",
       "death.attack.bleed.player": "%1$s bled out to %2$s",
+      "item.invincible_conquest.omnivincible_suit_chestplate": "Invincible\u0027s Suit (Omni)",
       "entity.invincible_conquest.moon": "Moon",
       "item_group.invincible_conquest.invincible_mobs": "Invincible: Mobs",
       "entity.invincible_conquest.mauler_twin": "Mauler Twin",
@@ -14908,16 +15449,16 @@
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_energy_projection": "Energy Projection",
       "gui.invincible_conquest.menu_ability_atom.tooltip_ability_menu": "Ability Menu",
       "item.invincible_conquest.omni_man_suit_boots": "Omni-Man\u0027s Boots",
-      "gui.invincible_conquest.menu_ability_cloning.tooltip_transfer": "Transfer - 1 SP",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_ability_menu": "Ability Menu",
+      "gui.invincible_conquest.menu_ability_cloning.tooltip_transfer": "Transfer - 1 SP",
       "effect.invincible_conquest.titan_leap_effect": "Titan Leap Effect",
       "gui.invincible_conquest.menuabilityblank.tooltip_basic_abilities": "Basic Abilities",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_9": "Slot 9",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_7": "Slot 7",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_8": "Slot 8",
       "key.invincible_conquest.toggle_output": "Toggle Output",
-      "gui.invincible_conquest.menu_ability_beast.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_sonic_clap": "Sonic Clap - 1 SP",
+      "gui.invincible_conquest.menu_ability_beast.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_4": "Slot 4",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_3": "Slot 3",
@@ -14929,9 +15470,9 @@
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_3": "Slot 3",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_7": "Slot 7",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_2": "Slot 2",
-      "gui.invincible_conquest.menu_ability_robot.tooltip_slot_1": "Slot 1",
-      "gui.invincible_conquest.menu_ability_beast.tooltip_slot_6": "Slot 6",
       "effect.invincible_conquest.beast_mob_timers": "Beast Mob Timers",
+      "gui.invincible_conquest.menu_ability_beast.tooltip_slot_6": "Slot 6",
+      "gui.invincible_conquest.menu_ability_robot.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_8": "Slot 8",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_7": "Slot 7",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_6": "Slot 6",
@@ -15088,6 +15629,7 @@
       "effect.invincible_conquest.drag": "Drag",
       "item.invincible_conquest.blue_sun_spawn_egg": "Sun Spawn Egg",
       "item.invincible_conquest.multi_paul_suit_leggings": "Multi-Paul\u0027s Pants",
+      "effect.invincible_conquest.web_active": "Web Active",
       "gui.invincible_conquest.menu_ability_atom.tooltip_telekinesis": "Telekinesis - 1 SP",
       "entity.invincible_conquest.flaxan": "Flaxan",
       "death.attack.bleed.item": "%1$s bled out to %2$s using %3$s",
@@ -15268,6 +15810,7 @@
       "effect.invincible_conquest.laser_destruction": "Laser Destruction",
       "item.invincible_conquest.invincible_suit_veil_boots": "Invincible\u0027s Boots (Veil)",
       "gui.invincible_conquest.menuabilityblank.tooltip_slot_10": "Slot 10",
+      "entity.invincible_conquest.firework_mob": "Firework Mob",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_slot_10": "Slot 10",
       "gui.invincible_conquest.menu_ability_spider.tooltip_web_shooter": "Web Shooter - 1 SP",
       "effect.invincible_conquest.stun": "Stun",
