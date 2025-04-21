@@ -1,6 +1,11 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+
+import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
 
 public class PortalMoves1aProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -13,9 +18,6 @@ public class PortalMoves1aProcedure {
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Robot Portals")) {
 					PortalRobotsAbilityProcedure.execute(world, x, y, z, entity);
-				}
-				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Portal Grab")) {
-					AbilityGrabProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		} else {

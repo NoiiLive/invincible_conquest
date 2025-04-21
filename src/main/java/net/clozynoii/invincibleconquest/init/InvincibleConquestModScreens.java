@@ -9,6 +9,11 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.Minecraft;
+
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModMenus.GuiSyncMessage;
 import net.clozynoii.invincibleconquest.client.gui.MenuStatsScreen;
 import net.clozynoii.invincibleconquest.client.gui.MenuPlanetTakeoverScreen;
 import net.clozynoii.invincibleconquest.client.gui.MenuFactionStatsScreen;
@@ -30,6 +35,8 @@ import net.clozynoii.invincibleconquest.client.gui.FactionJoinViltrumScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinGDAScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinCOPScreen;
 import net.clozynoii.invincibleconquest.client.gui.DimensionSelectorScreen;
+
+import java.util.HashMap;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class InvincibleConquestModScreens {
@@ -56,5 +63,22 @@ public class InvincibleConquestModScreens {
 		event.register(InvincibleConquestModMenus.MENU_ABILITY_TECH_JACKET.get(), MenuAbilityTechJacketScreen::new);
 		event.register(InvincibleConquestModMenus.MENUABILITYBLANK.get(), MENUABILITYBLANKScreen::new);
 		event.register(InvincibleConquestModMenus.DIMENSION_SELECTOR.get(), DimensionSelectorScreen::new);
+	}
+
+	static void handleTextBoxMessage(GuiSyncMessage message) {
+		String editbox = message.editbox();
+		String value = message.value();
+		Screen currentScreen = Minecraft.getInstance().screen;
+		if (currentScreen instanceof WidgetScreen sc) {
+			HashMap<String, Object> widgets = sc.getWidgets();
+			Object obj = widgets.get("text:" + editbox);
+			if (obj instanceof EditBox box) {
+				box.setValue(value);
+			}
+		}
+	}
+
+	public interface WidgetScreen {
+		HashMap<String, Object> getWidgets();
 	}
 }

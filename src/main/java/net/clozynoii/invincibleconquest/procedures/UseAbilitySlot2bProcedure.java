@@ -38,6 +38,12 @@ public class UseAbilitySlot2bProcedure {
 			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Beast")) {
 				BeastMoves2bProcedure.execute(world, x, y, z, entity);
 			}
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Portal")) {
+				PortalMoves2bProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerAbility).equals("Explode")) {
+				ExplodeMoves2bProcedure.execute(world, x, y, z, entity);
+			}
 		} else {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).KeyHeld == true) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
