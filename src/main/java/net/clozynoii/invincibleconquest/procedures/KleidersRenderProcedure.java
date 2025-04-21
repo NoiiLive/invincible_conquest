@@ -56,8 +56,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 20 && entity.getPersistentData().getDouble("rexSPLODE") > 18) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_1.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_1.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_1.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_1.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -66,8 +66,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 18 && entity.getPersistentData().getDouble("rexSPLODE") > 16) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_2.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_2.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_2.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_2.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -76,8 +76,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 16 && entity.getPersistentData().getDouble("rexSPLODE") > 14) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_3.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_3.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_3.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_3.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -86,8 +86,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 14 && entity.getPersistentData().getDouble("rexSPLODE") > 12) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_4.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_4.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_4.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_4.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -96,8 +96,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 12 && entity.getPersistentData().getDouble("rexSPLODE") > 10) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_5.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_5.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_5.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_5.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -106,8 +106,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 10 && entity.getPersistentData().getDouble("rexSPLODE") > 8) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_6.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_6.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_6.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_6.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -116,8 +116,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 8 && entity.getPersistentData().getDouble("rexSPLODE") > 6) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_7.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_7.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_7.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_7.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -126,8 +126,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 6 && entity.getPersistentData().getDouble("rexSPLODE") > 4) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_8.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_8.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_8.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_8.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -136,8 +136,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 4 && entity.getPersistentData().getDouble("rexSPLODE") > 2) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_9.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_9.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_9.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_9.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -146,8 +146,8 @@ public class KleidersRenderProcedure {
 			if (entity.getPersistentData().getDouble("rexSPLODE") <= 2 && entity.getPersistentData().getDouble("rexSPLODE") >= 1) {
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = ResourceLocation.parse("kleiders_custom_renderer:textures/entities/default.png");
-					if (ResourceLocation.tryParse("invincible:textures/entities/explode_10.png") != null) {
-						_texture = ResourceLocation.parse("invincible:textures/entities/explode_10.png");
+					if (ResourceLocation.tryParse("invincible_conquest:textures/entities/explode_10.png") != null) {
+						_texture = ResourceLocation.parse("invincible_conquest:textures/entities/explode_10.png");
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context, false, _texture).render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(),
 							_evt.getMultiBufferSource(), _evt.getPackedLight());

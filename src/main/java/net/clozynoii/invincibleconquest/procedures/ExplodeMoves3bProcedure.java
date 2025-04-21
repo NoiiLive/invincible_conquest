@@ -14,7 +14,7 @@ public class ExplodeMoves3bProcedure {
 		if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Cooldown3a == 0) {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).KeyHeld == false && entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).InputDelay == 0) {
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability3b).equals("Charged Toss")) {
-					UnlockChargedTossProcedure.execute(world, x, y, z, entity);
+					ChargedTossAbilityProcedure.execute(entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability3b).equals("Scatter Toss")) {
 					ScatterTossAbilityProcedure.execute(entity);
