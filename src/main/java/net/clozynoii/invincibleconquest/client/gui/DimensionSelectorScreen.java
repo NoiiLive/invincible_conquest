@@ -11,7 +11,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.DimensionSelectorMenu;
 import net.clozynoii.invincibleconquest.procedures.ReturnUnlockedSnowProcedure;
@@ -36,13 +35,12 @@ import net.clozynoii.invincibleconquest.procedures.ReturnLockedEndProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnLockedDesertProcedure;
 import net.clozynoii.invincibleconquest.procedures.ReturnLockedApocalypticProcedure;
 import net.clozynoii.invincibleconquest.network.DimensionSelectorButtonMessage;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSelectorMenu> implements WidgetScreen {
+public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSelectorMenu> {
 	private final static HashMap<String, Object> guistate = DimensionSelectorMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -66,18 +64,6 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 166;
-	}
-
-	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
-		HashMap<String, String> textstate = new HashMap<>();
-		if (Minecraft.getInstance().screen instanceof DimensionSelectorScreen sc) {
-
-		}
-		return textstate;
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/dimension_selector.png");
@@ -205,8 +191,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank16x = new ImageButton(this.leftPos + -77, this.topPos + 37, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(0, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
@@ -219,8 +205,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x = new ImageButton(this.leftPos + -51, this.topPos + 36, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(1, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -233,8 +219,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x1 = new ImageButton(this.leftPos + -25, this.topPos + 37, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(2, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -247,8 +233,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x2 = new ImageButton(this.leftPos + 1, this.topPos + 37, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(3, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 3, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(3, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
@@ -261,8 +247,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x3 = new ImageButton(this.leftPos + 27, this.topPos + 36, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(4, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 4, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(4, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
@@ -275,8 +261,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x4 = new ImageButton(this.leftPos + 53, this.topPos + 37, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(5, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 5, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(5, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
@@ -289,8 +275,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x5 = new ImageButton(this.leftPos + -77, this.topPos + 61, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(6, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
@@ -303,8 +289,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x6 = new ImageButton(this.leftPos + -51, this.topPos + 61, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(7, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 7, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(7, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -317,8 +303,8 @@ public class DimensionSelectorScreen extends AbstractContainerScreen<DimensionSe
 		imagebutton_blank22x7 = new ImageButton(this.leftPos + -25, this.topPos + 62, 22, 22,
 				new WidgetSprites(ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png"), ResourceLocation.parse("invincible_conquest:textures/screens/blank22x.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(8, x, y, z, getEditBoxAndCheckBoxValues()));
-						DimensionSelectorButtonMessage.handleButtonAction(entity, 8, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new DimensionSelectorButtonMessage(8, x, y, z));
+						DimensionSelectorButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override

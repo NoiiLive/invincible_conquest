@@ -1,11 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.neoforged.bus.api.Event;
 
 public class PortalMoves2bProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

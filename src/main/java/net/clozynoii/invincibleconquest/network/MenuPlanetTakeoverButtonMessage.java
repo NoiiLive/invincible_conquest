@@ -12,7 +12,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -22,11 +21,10 @@ import net.clozynoii.invincibleconquest.procedures.InitiateHostileTakeoverProced
 import net.clozynoii.invincibleconquest.procedures.CloseGUIButtonProcedure;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
-import java.util.Map;
 import java.util.HashMap;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z, HashMap<String, String> textstate) implements CustomPacketPayload {
+public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<MenuPlanetTakeoverButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(InvincibleConquestMod.MODID, "menu_planet_takeover_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, MenuPlanetTakeoverButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, MenuPlanetTakeoverButtonMessage message) -> {
@@ -34,8 +32,7 @@ public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z,
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
-		writeTextState(message.textstate, buffer);
-	}, (RegistryFriendlyByteBuf buffer) -> new MenuPlanetTakeoverButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), readTextState(buffer)));
+	}, (RegistryFriendlyByteBuf buffer) -> new MenuPlanetTakeoverButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 	@Override
 	public Type<MenuPlanetTakeoverButtonMessage> type() {
 		return TYPE;
@@ -49,8 +46,7 @@ public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z,
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
-				HashMap<String, String> textstate = message.textstate;
-				handleButtonAction(entity, buttonID, x, y, z, textstate);
+				handleButtonAction(entity, buttonID, x, y, z);
 			}).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
@@ -58,15 +54,9 @@ public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z,
 		}
 	}
 
-	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z, HashMap<String, String> textstate) {
+	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = MenuPlanetTakeoverMenu.guistate;
-		// connect EditBox and CheckBox to guistate
-		for (Map.Entry<String, String> entry : textstate.entrySet()) {
-			String key = entry.getKey();
-			String value = entry.getValue();
-			guistate.put(key, value);
-		}
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -78,33 +68,6 @@ public record MenuPlanetTakeoverButtonMessage(int buttonID, int x, int y, int z,
 
 			CloseGUIButtonProcedure.execute(entity);
 		}
-	}
-
-	private static void writeTextState(HashMap<String, String> map, RegistryFriendlyByteBuf buffer) {
-		buffer.writeInt(map.size());
-		for (Map.Entry<String, String> entry : map.entrySet()) {
-			writeComponent(buffer, Component.literal(entry.getKey()));
-			writeComponent(buffer, Component.literal(entry.getValue()));
-		}
-	}
-
-	private static HashMap<String, String> readTextState(RegistryFriendlyByteBuf buffer) {
-		int size = buffer.readInt();
-		HashMap<String, String> map = new HashMap<>();
-		for (int i = 0; i < size; i++) {
-			String key = readComponent(buffer).getString();
-			String value = readComponent(buffer).getString();
-			map.put(key, value);
-		}
-		return map;
-	}
-
-	private static Component readComponent(RegistryFriendlyByteBuf buffer) {
-		return ComponentSerialization.TRUSTED_STREAM_CODEC.decode(buffer);
-	}
-
-	private static void writeComponent(RegistryFriendlyByteBuf buffer, Component component) {
-		ComponentSerialization.TRUSTED_STREAM_CODEC.encode(buffer, component);
 	}
 
 	@SubscribeEvent
