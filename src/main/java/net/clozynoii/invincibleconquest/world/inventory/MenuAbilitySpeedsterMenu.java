@@ -1,6 +1,7 @@
 
 package net.clozynoii.invincibleconquest.world.inventory;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandler;
 
@@ -16,8 +17,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.clozynoii.invincibleconquest.procedures.GUISelectedResetProcedure;
+import net.clozynoii.invincibleconquest.network.MenuAbilitySpeedsterButtonMessage;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModMenus;
+import net.clozynoii.invincibleconquest.client.gui.MenuAbilitySpeedsterScreen;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -72,7 +74,14 @@ public class MenuAbilitySpeedsterMenu extends AbstractContainerMenu implements S
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
-		GUISelectedResetProcedure.execute(entity);
+		removeAction();
+	}
+
+	private void removeAction() {
+		if (this.world != null && this.world.isClientSide()) {
+			PacketDistributor.sendToServer(new MenuAbilitySpeedsterButtonMessage(-2, x, y, z, MenuAbilitySpeedsterScreen.getEditBoxAndCheckBoxValues()));
+			MenuAbilitySpeedsterButtonMessage.handleButtonAction(entity, -2, x, y, z, MenuAbilitySpeedsterScreen.getEditBoxAndCheckBoxValues());
+		}
 	}
 
 	public Map<Integer, Slot> get() {

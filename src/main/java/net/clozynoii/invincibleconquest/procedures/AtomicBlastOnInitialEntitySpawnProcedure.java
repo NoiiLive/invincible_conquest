@@ -1,6 +1,9 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
+
+import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 public class AtomicBlastOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
