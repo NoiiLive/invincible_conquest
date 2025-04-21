@@ -7467,6 +7467,10 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -13450,7 +13454,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Abilities/Spiderman"
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "RexSplodeMoves",
@@ -13484,8 +13488,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "ExplodeSelf",
@@ -13519,8 +13522,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "WebShooterAbility",
@@ -13555,7 +13557,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Abilities/Spiderman"
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "WebActiveOnEffectActiveTick",
@@ -13585,7 +13587,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "Detonate",
@@ -13619,8 +13622,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "RexSplodeForward",
@@ -13654,8 +13656,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "KleidersRender",
@@ -13708,8 +13709,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "LargeExplosionHit",
@@ -13766,8 +13766,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "WebActive",
@@ -13815,7 +13814,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Abilities/Spiderman"
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "SpiderVector",
@@ -13846,7 +13845,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Abilities/Spiderman"
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "FireworkMob",
@@ -13894,8 +13893,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Spiderman"
+      }
     },
     {
       "name": "ExplosionLarge",
@@ -13926,8 +13924,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "FireworkMobOnEntityTickUpdate",
@@ -13996,8 +13993,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "ExplodeEverywhere",
@@ -14015,8 +14011,7 @@
             "type": "entity"
           }
         ]
-      },
-      "path": "~/Procedures/Abilities/Rex Splode"
+      }
     },
     {
       "name": "SpiderMoves1a",
@@ -14962,6 +14957,190 @@
         ]
       },
       "path": "~/Procedures/Abilities/Tech Jacket"
+    },
+    {
+      "name": "AtomicBlastOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_blast_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomicBlastOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "AtomicBlast",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_blast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/AtomicBlastEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomicBlastRenderer.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "PinkBurstCircle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_burst_circle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/particles/pink_burst_circle.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/PinkBurstCircleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PinkSmoke",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_smoke",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/particles/pink_smoke.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/PinkSmokeParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BlastAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BlastAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "AtomicBlastOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_blast_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomicBlastOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "TestItemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TestItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TestItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/item/TestItemItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/test_item.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -16432,6 +16611,7 @@
       "gui.invincible_conquest.menu_ability_portal.tooltip_stat_menu": "Stat Menu",
       "item.invincible_conquest.angstrom_outfit_helmet": "Angstrom\u0027s Helmet",
       "gui.invincible_conquest.faction_join_gda.button_join": "Join",
+      "item.invincible_conquest.test_item": "Test Item",
       "key.invincible_conquest.flight": "Flight",
       "item.invincible_conquest.galactic_map": "Galactic Map",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_2": "Slot 2",
@@ -16470,6 +16650,7 @@
       "item.invincible_conquest.angstrom_outfit_leggings": "Angstrom\u0027s Pants",
       "item.invincible_conquest.invincible_suit_sinister_helmet": "Invincible\u0027s Mask (Sinister)",
       "entity.invincible_conquest.hammer_spawner": "Hammer Spawner",
+      "entity.invincible_conquest.atomic_blast": "Atomic Blast",
       "gui.invincible_conquest.menuabilityblank.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_ability_atom.tooltip_atomic_sword": "Atomic Sword - 1 SP",
       "key.invincible_conquest.flight_boost": "Flight Boost",

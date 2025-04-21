@@ -51,6 +51,7 @@ import net.clozynoii.invincibleconquest.client.renderer.ConquestRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.CecilRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.AtomicBlastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AnissaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
@@ -106,5 +107,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.FIREWORK_MOB.get(), FireworkMobRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ATOMIC_BLAST.get(), AtomicBlastRenderer::new);
 	}
 }

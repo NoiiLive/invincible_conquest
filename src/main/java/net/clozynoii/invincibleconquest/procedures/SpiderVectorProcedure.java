@@ -1,6 +1,13 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+
+import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
 
 public class SpiderVectorProcedure {
 	public static void execute(double x, double y, double z, Entity entity) {
