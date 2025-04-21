@@ -1,15 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.core.particles.ParticleTypes;
-
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
+import net.neoforged.bus.api.Event;
 
 public class WebSwingProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

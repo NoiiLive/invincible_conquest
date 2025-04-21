@@ -19,9 +19,6 @@ public class PortalMoves1aProcedure {
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Robot Portals")) {
 					PortalRobotsAbilityProcedure.execute(world, x, y, z, entity);
 				}
-				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Portal Grab")) {
-					AbilityGrabProcedure.execute(world, x, y, z, entity);
-				}
 			}
 		} else {
 			if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).KeyHeld == true) {

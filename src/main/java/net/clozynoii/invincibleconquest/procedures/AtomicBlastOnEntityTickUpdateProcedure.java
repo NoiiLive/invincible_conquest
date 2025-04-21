@@ -1,36 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModParticleTypes;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModMobEffects;
-import net.clozynoii.invincibleconquest.entity.AtomicBlastEntity;
-
-import java.util.List;
-import java.util.Comparator;
+import net.neoforged.bus.api.Event;
 
 public class AtomicBlastOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -77,7 +47,7 @@ public class AtomicBlastOnEntityTickUpdateProcedure {
 								if (!entity.level().isClientSide())
 									entity.discard();
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.PINK_SMOKE.get()), (entityiterator.getX()), (entityiterator.getY() + 1), (entityiterator.getZ()), 5, 0.1, 0.1, 0.1, 0.2);
+									_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.DELETED_MOD_ELEMENT.get()), (entityiterator.getX()), (entityiterator.getY() + 1), (entityiterator.getZ()), 5, 0.1, 0.1, 0.1, 0.2);
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles(ParticleTypes.EXPLOSION, (entityiterator.getX()), (entityiterator.getY() + 1), (entityiterator.getZ()), 3, 0.1, 0.1, 0.1, 0);
 								if (world instanceof Level _level) {
@@ -93,7 +63,7 @@ public class AtomicBlastOnEntityTickUpdateProcedure {
 				}
 			}
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.PINK_BURST_CIRCLE.get()), x, (y + 1), z, 1, 0.1, 0.1, 0.1, 0);
+				_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.DELETED_MOD_ELEMENT.get()), x, (y + 1), z, 1, 0.1, 0.1, 0.1, 0);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 2, 2, 2, 0.2);
 			magnitude = Math.sqrt((entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getLookAngle().x * (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null).getLookAngle().x

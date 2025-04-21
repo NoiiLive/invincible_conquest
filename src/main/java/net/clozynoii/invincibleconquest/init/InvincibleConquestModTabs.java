@@ -78,6 +78,10 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.FLAXAN_ARMOR_CHESTPLATE.get());
 				tabData.accept(InvincibleConquestModItems.FLAXAN_ARMOR_LEGGINGS.get());
 				tabData.accept(InvincibleConquestModItems.FLAXAN_ARMOR_BOOTS.get());
+				tabData.accept(InvincibleConquestModItems.TECH_JACKET_ARMOR_HELMET.get());
+				tabData.accept(InvincibleConquestModItems.TECH_JACKET_ARMOR_CHESTPLATE.get());
+				tabData.accept(InvincibleConquestModItems.TECH_JACKET_ARMOR_LEGGINGS.get());
+				tabData.accept(InvincibleConquestModItems.TECH_JACKET_ARMOR_BOOTS.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> INVINCIBLE_MOBS = REGISTRY.register("invincible_mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible_conquest.invincible_mobs")).icon(() -> new ItemStack(InvincibleConquestModItems.INVINCIBLE_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
@@ -108,6 +112,7 @@ public class InvincibleConquestModTabs {
 				tabData.accept(InvincibleConquestModItems.CONQUEST_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.CECIL_SPAWN_EGG.get());
 				tabData.accept(InvincibleConquestModItems.ANISSA_SPAWN_EGG.get());
+				tabData.accept(InvincibleConquestModItems.TECH_JACKET_SPAWN_EGG.get());
 			}).withTabsBefore(INVINCIBLE_ARMOR.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> INVINCIBLE_ITEMS = REGISTRY.register("invincible_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.invincible_conquest.invincible_items")).icon(() -> new ItemStack(InvincibleConquestModItems.FLAXAN_GUN.get())).displayItems((parameters, tabData) -> {

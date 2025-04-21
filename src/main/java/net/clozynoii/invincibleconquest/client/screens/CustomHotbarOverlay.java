@@ -62,7 +62,7 @@ public class CustomHotbarOverlay {
 				event.getGuiGraphics().blit(ResourceLocation.parse("invincible_conquest:textures/screens/sprite_stamina.png"), -5, 1, Mth.clamp((int) ReturnSpriteStaminaProcedure.execute(entity) * 148, 0, 1184), 0, 148, 44, 1332, 44);
 			}
 
-			event.getGuiGraphics().blit(ResourceLocation.parse("invincible_conquest:textures/screens/icons_sprite.png"), 12, 12, Mth.clamp((int) ReturnPlayerAbilityIconProcedure.execute(entity) * 17, 0, 175), 0, 17, 16, 192, 16);
+			event.getGuiGraphics().blit(ResourceLocation.parse("invincible_conquest:textures/screens/icons_sprite.png"), 12, 12, Mth.clamp((int) ReturnPlayerAbilityIconProcedure.execute(entity) * 16, 0, 176), 0, 16, 16, 192, 16);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "invincible_conquest:tech_jacket_armor_helmet",
     "invincible_conquest:space_helmet_helmet",
     "invincible_conquest:omnivincible_suit_helmet",
     "invincible_conquest:invincible_suit_dark_helmet",

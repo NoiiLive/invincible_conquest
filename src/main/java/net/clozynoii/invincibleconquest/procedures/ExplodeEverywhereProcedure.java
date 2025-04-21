@@ -1,15 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-
-import net.minecraft.world.entity.Entity;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
-
-import javax.annotation.Nullable;
 
 @EventBusSubscriber
 public class ExplodeEverywhereProcedure {

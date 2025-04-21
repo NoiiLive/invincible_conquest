@@ -15,6 +15,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.clozynoii.invincibleconquest.item.ViltrumiteUniformItem;
 import net.clozynoii.invincibleconquest.item.TestItemItem;
+import net.clozynoii.invincibleconquest.item.TechJacketArmorItem;
 import net.clozynoii.invincibleconquest.item.SpaceHelmetItem;
 import net.clozynoii.invincibleconquest.item.SelectionBookItem;
 import net.clozynoii.invincibleconquest.item.RexSplodeSuitItem;
@@ -128,6 +129,11 @@ public class InvincibleConquestModItems {
 	public static final DeferredItem<Item> ANISSA_SPAWN_EGG = REGISTRY.register("anissa_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.ANISSA, -1641998, -7759976, new Item.Properties()));
 	public static final DeferredItem<Item> SPACE_HELMET_HELMET = REGISTRY.register("space_helmet_helmet", SpaceHelmetItem.Helmet::new);
 	public static final DeferredItem<Item> TEST_ITEM = REGISTRY.register("test_item", TestItemItem::new);
+	public static final DeferredItem<Item> TECH_JACKET_SPAWN_EGG = REGISTRY.register("tech_jacket_spawn_egg", () -> new DeferredSpawnEggItem(InvincibleConquestModEntities.TECH_JACKET, -11447177, -6244418, new Item.Properties()));
+	public static final DeferredItem<Item> TECH_JACKET_ARMOR_HELMET = REGISTRY.register("tech_jacket_armor_helmet", TechJacketArmorItem.Helmet::new);
+	public static final DeferredItem<Item> TECH_JACKET_ARMOR_CHESTPLATE = REGISTRY.register("tech_jacket_armor_chestplate", TechJacketArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> TECH_JACKET_ARMOR_LEGGINGS = REGISTRY.register("tech_jacket_armor_leggings", TechJacketArmorItem.Leggings::new);
+	public static final DeferredItem<Item> TECH_JACKET_ARMOR_BOOTS = REGISTRY.register("tech_jacket_armor_boots", TechJacketArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
