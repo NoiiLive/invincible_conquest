@@ -35,6 +35,7 @@ import net.clozynoii.invincibleconquest.client.gui.FactionJoinViltrumScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinGDAScreen;
 import net.clozynoii.invincibleconquest.client.gui.FactionJoinCOPScreen;
 import net.clozynoii.invincibleconquest.client.gui.DimensionSelectorScreen;
+import net.clozynoii.invincibleconquest.client.gui.AtomEveCreationScreen;
 
 import java.util.HashMap;
 
@@ -63,6 +64,7 @@ public class InvincibleConquestModScreens {
 		event.register(InvincibleConquestModMenus.MENU_ABILITY_TECH_JACKET.get(), MenuAbilityTechJacketScreen::new);
 		event.register(InvincibleConquestModMenus.MENUABILITYBLANK.get(), MENUABILITYBLANKScreen::new);
 		event.register(InvincibleConquestModMenus.DIMENSION_SELECTOR.get(), DimensionSelectorScreen::new);
+		event.register(InvincibleConquestModMenus.ATOM_EVE_CREATION.get(), AtomEveCreationScreen::new);
 	}
 
 	static void handleTextBoxMessage(GuiSyncMessage message) {

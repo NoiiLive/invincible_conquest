@@ -248,6 +248,7 @@
   "gui.invincible_conquest.dimension_selector.label_dimension_selection": "Dimension Selection",
   "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
   "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
+  "gui.invincible_conquest.atom_eve_creation.item": "Item ID",
   "gui.invincible_conquest.menu_ability_speedster.tooltip_time_stop": "Time Stop - 1 SP",
   "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",
   "gui.invincible_conquest.menu_ability_beast.tooltip_claws": "Claws - 1 SP",
