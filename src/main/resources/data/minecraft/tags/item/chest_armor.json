@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "invincible_conquest:tech_jacket_armor_chestplate",
     "invincible_conquest:atom_eve_suit_chestplate",
     "invincible_conquest:omnivincible_suit_chestplate",
     "invincible_conquest:invincible_suit_mohawk_chestplate",

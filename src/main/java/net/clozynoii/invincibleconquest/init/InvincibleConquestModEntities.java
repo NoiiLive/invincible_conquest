@@ -22,6 +22,7 @@ import net.clozynoii.invincibleconquest.entity.ViltrumiteMaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumiteFemaleEntity;
 import net.clozynoii.invincibleconquest.entity.ViltrumEntity;
 import net.clozynoii.invincibleconquest.entity.TheHammerEntity;
+import net.clozynoii.invincibleconquest.entity.TechJacketEntity;
 import net.clozynoii.invincibleconquest.entity.TalescriaEntity;
 import net.clozynoii.invincibleconquest.entity.SunEntity;
 import net.clozynoii.invincibleconquest.entity.SonicClapEntity;
@@ -188,6 +189,8 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<FireworkMobEntity>of(FireworkMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
 			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TechJacketEntity>> TECH_JACKET = register("tech_jacket",
+			EntityType.Builder.<TechJacketEntity>of(TechJacketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -240,6 +243,7 @@ public class InvincibleConquestModEntities {
 		RoboBallEntity.init(event);
 		DimensionalPortalEntity.init(event);
 		FireworkMobEntity.init(event);
+		TechJacketEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -287,5 +291,6 @@ public class InvincibleConquestModEntities {
 		event.put(ROBO_BALL.get(), RoboBallEntity.createAttributes().build());
 		event.put(DIMENSIONAL_PORTAL.get(), DimensionalPortalEntity.createAttributes().build());
 		event.put(FIREWORK_MOB.get(), FireworkMobEntity.createAttributes().build());
+		event.put(TECH_JACKET.get(), TechJacketEntity.createAttributes().build());
 	}
 }

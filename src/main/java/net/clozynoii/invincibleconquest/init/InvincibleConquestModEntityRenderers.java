@@ -17,6 +17,7 @@ import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteMaleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumiteFemaleRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.ViltrumRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TheHammerRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.TechJacketRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.TalescriaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.SunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.RoboBallRenderer;
@@ -106,5 +107,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.DIMENSIONAL_PORTAL.get(), DimensionalPortalRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.FIREWORK_MOB.get(), FireworkMobRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.EXPLOSION_LARGE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.TECH_JACKET.get(), TechJacketRenderer::new);
 	}
 }

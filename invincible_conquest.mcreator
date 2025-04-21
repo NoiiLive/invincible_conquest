@@ -15527,6 +15527,40 @@
         ]
       },
       "path": "~/Procedures/Abilities/Explode"
+    },
+    {
+      "name": "TechJacketArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tech_jacket_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/item/TechJacketArmorItem.java",
+          "src/main/resources/assets/invincible_conquest/models/item/tech_jacket_armor_boots.json",
+          "src/main/resources/assets/invincible_conquest/models/item/tech_jacket_armor_leggings.json",
+          "src/main/resources/assets/invincible_conquest/models/item/tech_jacket_armor_helmet.json",
+          "src/main/resources/assets/invincible_conquest/models/item/tech_jacket_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "TechJacket",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tech_jacket",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/TechJacketEntity.java",
+          "src/main/resources/assets/invincible_conquest/models/item/tech_jacket_spawn_egg.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/TechJacketRenderer.java",
+          "src/main/resources/data/invincible_conquest/neoforge/biome_modifier/tech_jacket_biome_modifier.json",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/TechJacketModel.java"
+        ]
+      },
+      "path": "~/Entities/NPCs"
     }
   ],
   "variable_elements": [
@@ -16061,6 +16095,7 @@
   ],
   "tag_elements": {
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:TechJacketArmor.body",
       "~CUSTOM:AtomEveSuit.body",
       "~CUSTOM:OmnivincibleSuit.body",
       "~CUSTOM:InvincibleSuitMohawk.body",
@@ -16528,6 +16563,7 @@
       "~CUSTOM:IceAgeBiome"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:TechJacketArmor.helmet",
       "~CUSTOM:SpaceHelmet.helmet",
       "~CUSTOM:OmnivincibleSuit.helmet",
       "~CUSTOM:InvincibleSuitDark.helmet",
@@ -16539,6 +16575,7 @@
       "~CUSTOM:InvincibleSuit.helmet"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:TechJacketArmor.boots",
       "~CUSTOM:AtomEveSuit.boots",
       "~CUSTOM:OmnivincibleSuit.boots",
       "~CUSTOM:InvincibleSuitMohawk.boots",
@@ -16559,6 +16596,7 @@
       "~CUSTOM:ApocalypticForest"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:TechJacketArmor.legs",
       "~CUSTOM:AtomEveSuit.legs",
       "~CUSTOM:OmnivincibleSuit.legs",
       "~CUSTOM:InvincibleSuitMohawk.legs",
@@ -16588,6 +16626,7 @@
       "OmnivincibleSuit",
       "OmniManSuit",
       "ViltrumiteUniform",
+      "TechJacketArmor",
       "AngstromOutfit",
       "AtomEveSuit",
       "RexSplodeSuit",
@@ -16608,6 +16647,10 @@
       "Omnivincible",
       "OmniMan",
       "BattleBeast",
+      "TechJacket",
+      "Conquest",
+      "Anissa",
+      "Cecil",
       "Angstrom",
       "RexSplode",
       "AtomEve",
@@ -16620,10 +16663,7 @@
       "MartianSpearman",
       "Flaxan",
       "FlaxanGunman",
-      "Dinosaur",
-      "Conquest",
-      "Cecil",
-      "Anissa"
+      "Dinosaur"
     ]
   },
   "language_map": {
@@ -16704,6 +16744,7 @@
       "death.attack.bleed.player": "%1$s bled out to %2$s",
       "item.invincible_conquest.omnivincible_suit_chestplate": "Invincible\u0027s Suit (Omni)",
       "entity.invincible_conquest.moon": "Moon",
+      "item.invincible_conquest.tech_jacket_armor_boots": "Tech Jacket\u0027s Boots",
       "item_group.invincible_conquest.invincible_mobs": "Invincible: Mobs",
       "entity.invincible_conquest.mauler_twin": "Mauler Twin",
       "gamerule.spawnInvincibleMobs": "Spawn Invincible Mobs",
@@ -16718,6 +16759,7 @@
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_7": "Slot 7",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_8": "Slot 8",
       "key.invincible_conquest.toggle_output": "Toggle Output",
+      "item.invincible_conquest.tech_jacket_armor_leggings": "Tech Jacket\u0027s Leggings",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_sonic_clap": "Sonic Clap - 1 SP",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_5": "Slot 5",
@@ -16740,6 +16782,7 @@
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_9": "Slot 9",
       "entity.invincible_conquest.viltrumite_female": "Viltrumite (Female)",
+      "item.invincible_conquest.tech_jacket_armor_chestplate": "Tech Jacket\u0027s Chestplate",
       "gui.invincible_conquest.menu_ability_portal.tooltip_ability_menu": "Ability Menu",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_clone": "Clone - 1 SP",
       "gui.invincible_conquest.menu_faction_stats.tooltip_ability_menu": "Ability Menu",
@@ -16882,6 +16925,7 @@
       "item.invincible_conquest.invincible_mohawk_spawn_egg": "Invincible (Mohawk) Spawn Egg",
       "item.invincible_conquest.multi_paul_spawn_egg": "Multi-Paul Spawn Egg",
       "gui.invincible_conquest.menu_ability_selection.label_ability_selection1": "Ability Selection",
+      "item.invincible_conquest.tech_jacket_spawn_egg": "Tech Jacket Spawn Egg",
       "gui.invincible_conquest.galactic_map_gui.tooltip_moon_x150_y150": "Moon : x150, y150",
       "gui.invincible_conquest.dimension_selector.tooltip_the_overworld": "The Overworld",
       "entity.invincible_conquest.atom_eve": "Atom-Eve",
@@ -16978,6 +17022,7 @@
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_10": "Slot 10",
       "subtitles.basic_hit": "Entity is hit",
       "gui.invincible_conquest.galactic_map_gui.tooltip_mars_x200_y200": "Mars : x200, y200",
+      "item.invincible_conquest.tech_jacket_armor_helmet": "Tech Jacket\u0027s Helmet",
       "item.invincible_conquest.invincible_suit_dark_helmet": "Invincible\u0027s Mask (Dark)",
       "gui.invincible_conquest.menu_ability_portal.tooltip_portal_flight": "Portal Flight - 1 SP",
       "gui.invincible_conquest.menu_faction_stats.tooltip_stat_menu": "Stat Menu",
@@ -17045,6 +17090,7 @@
       "effect.invincible_conquest.impact_frame_effect": "Impact Frame Effect",
       "gui.invincible_conquest.menu_ability_selection.tooltip_cloning": "Cloning",
       "item.invincible_conquest.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
+      "entity.invincible_conquest.tech_jacket": "Tech Jacket",
       "biome.invincible_conquest.space_biome": "Space Biome",
       "gui.invincible_conquest.menu_ability_spider.tooltip_web_pull": "Web Pull - 1 SP",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slam": "Slam - 1 SP",
