@@ -32,6 +32,7 @@ import net.clozynoii.invincibleconquest.world.inventory.FactionJoinViltrumMenu;
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinGDAMenu;
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinCOPMenu;
 import net.clozynoii.invincibleconquest.world.inventory.DimensionSelectorMenu;
+import net.clozynoii.invincibleconquest.world.inventory.AtomEveCreationMenu;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 public class InvincibleConquestModMenus {
@@ -57,4 +58,5 @@ public class InvincibleConquestModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<MenuAbilityTechJacketMenu>> MENU_ABILITY_TECH_JACKET = REGISTRY.register("menu_ability_tech_jacket", () -> IMenuTypeExtension.create(MenuAbilityTechJacketMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<MENUABILITYBLANKMenu>> MENUABILITYBLANK = REGISTRY.register("menuabilityblank", () -> IMenuTypeExtension.create(MENUABILITYBLANKMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DimensionSelectorMenu>> DIMENSION_SELECTOR = REGISTRY.register("dimension_selector", () -> IMenuTypeExtension.create(DimensionSelectorMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<AtomEveCreationMenu>> ATOM_EVE_CREATION = REGISTRY.register("atom_eve_creation", () -> IMenuTypeExtension.create(AtomEveCreationMenu::new));
 }

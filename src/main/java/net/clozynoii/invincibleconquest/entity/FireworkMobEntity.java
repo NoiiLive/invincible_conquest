@@ -1,54 +1,18 @@
 
 package net.clozynoii.invincibleconquest.entity;
 
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.event.EventHooks;
-import net.neoforged.neoforge.common.NeoForgeMod;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.SpawnEggItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AreaEffectCloud;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.registries.BuiltInRegistries;
-
-import net.clozynoii.invincibleconquest.procedures.FireworkMobOnEntityTickUpdateProcedure;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
 public class FireworkMobEntity extends TamableAnimal {
+
 	public static final EntityDataAccessor<Integer> DATA_Despawn = SynchedEntityData.defineId(FireworkMobEntity.class, EntityDataSerializers.INT);
 
 	public FireworkMobEntity(EntityType<FireworkMobEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 	}
 
 	@Override
@@ -136,6 +100,7 @@ public class FireworkMobEntity extends TamableAnimal {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
@@ -166,6 +131,7 @@ public class FireworkMobEntity extends TamableAnimal {
 				} else {
 					this.level().broadcastEntityEvent(this, (byte) 6);
 				}
+
 				this.setPersistenceRequired();
 				retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 			} else {
@@ -174,6 +140,7 @@ public class FireworkMobEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
+
 		return retval;
 	}
 
@@ -218,7 +185,10 @@ public class FireworkMobEntity extends TamableAnimal {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+
 		return builder;
 	}
+
 }

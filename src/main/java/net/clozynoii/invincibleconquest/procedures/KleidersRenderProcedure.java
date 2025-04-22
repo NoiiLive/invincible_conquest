@@ -1,26 +1,6 @@
 package net.clozynoii.invincibleconquest.procedures;
 
-import net.neoforged.neoforge.client.event.RenderLivingEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
-
-import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.resources.PlayerSkin;
-import net.minecraft.client.renderer.entity.player.PlayerRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
-import net.minecraft.client.player.AbstractClientPlayer;
-import net.minecraft.client.Minecraft;
-
-import net.clozynoii.invincibleconquest.network.InvincibleConquestModVariables;
-
-import javax.annotation.Nullable;
-
-import com.mojang.blaze3d.vertex.PoseStack;
 
 @EventBusSubscriber(value = {Dist.CLIENT})
 public class KleidersRenderProcedure {

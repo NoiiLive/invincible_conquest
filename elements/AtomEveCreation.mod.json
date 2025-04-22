@@ -1,0 +1,44 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "atomeve_creation.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Item ID",
+          "name": "item",
+          "width": 190,
+          "height": 20,
+          "x": 119,
+          "y": 107,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

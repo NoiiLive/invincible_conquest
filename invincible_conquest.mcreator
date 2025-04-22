@@ -12756,16 +12756,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/EnterDimensionalPortalProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Entities/Misc"
     },
@@ -12779,12 +12770,7 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/DimensionalPortalTickProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Entities/Misc"
     },
@@ -15746,6 +15732,20 @@
         ]
       },
       "path": "~/Procedures/Abilities/Portal"
+    },
+    {
+      "name": "AtomEveCreation",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_eve_creation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/world/inventory/AtomEveCreationMenu.java",
+          "src/main/java/net/clozynoii/invincibleconquest/client/gui/AtomEveCreationScreen.java"
+        ]
+      },
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [
