@@ -8,9 +8,9 @@
     "width": 0.2,
     "height": 0.2,
     "scale": {
-      "fixedValue": 15.0
+      "fixedValue": 3.0
     },
-    "speedFactor": 0.5,
+    "speedFactor": 1.0,
     "gravity": 0.0,
     "maxAge": 7,
     "maxAgeDiff": 0,

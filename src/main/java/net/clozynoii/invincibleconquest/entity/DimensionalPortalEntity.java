@@ -226,14 +226,14 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 		Entity entity = this;
 		Level world = this.level();
 
-		EnterDimensionalPortalProcedure.execute();
+		EnterDimensionalPortalProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		DimensionalPortalTickProcedure.execute();
+		DimensionalPortalTickProcedure.execute(this);
 		this.refreshDimensions();
 	}
 
@@ -245,7 +245,7 @@ public class DimensionalPortalEntity extends TamableAnimal implements GeoEntity 
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		EnterDimensionalPortalProcedure.execute();
+		EnterDimensionalPortalProcedure.execute(this, sourceentity);
 	}
 
 	@Override

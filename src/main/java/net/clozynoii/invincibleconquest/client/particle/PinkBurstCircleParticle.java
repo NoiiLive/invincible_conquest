@@ -1,6 +1,17 @@
 
 package net.clozynoii.invincibleconquest.client.particle;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.client.particle.TextureSheetParticle;
+import net.minecraft.client.particle.SpriteSet;
+import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.ParticleProvider;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.multiplayer.ClientLevel;
+
 @OnlyIn(Dist.CLIENT)
 public class PinkBurstCircleParticle extends TextureSheetParticle {
 	public static PinkBurstCircleParticleProvider provider(SpriteSet spriteSet) {

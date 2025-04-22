@@ -13,6 +13,7 @@ import net.clozynoii.invincibleconquest.client.model.Modelviltrumite_armor;
 import net.clozynoii.invincibleconquest.client.model.Modelveil_invincible_suit;
 import net.clozynoii.invincibleconquest.client.model.Modeltech_jacket_armor;
 import net.clozynoii.invincibleconquest.client.model.Modelspace_helmet;
+import net.clozynoii.invincibleconquest.client.model.Modelrobo_ball;
 import net.clozynoii.invincibleconquest.client.model.Modelrex_splode_suit;
 import net.clozynoii.invincibleconquest.client.model.Modelomniman_suit;
 import net.clozynoii.invincibleconquest.client.model.Modelmauler_suit;
@@ -34,6 +35,7 @@ public class InvincibleConquestModModels {
 		event.registerLayerDefinition(Modelomniman_suit.LAYER_LOCATION, Modelomniman_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelspace_helmet.LAYER_LOCATION, Modelspace_helmet::createBodyLayer);
 		event.registerLayerDefinition(Modelflaxan_armor.LAYER_LOCATION, Modelflaxan_armor::createBodyLayer);
+		event.registerLayerDefinition(Modelrobo_ball.LAYER_LOCATION, Modelrobo_ball::createBodyLayer);
 		event.registerLayerDefinition(Modelinvincible_suit_sinister.LAYER_LOCATION, Modelinvincible_suit_sinister::createBodyLayer);
 		event.registerLayerDefinition(Modelrex_splode_suit.LAYER_LOCATION, Modelrex_splode_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelviltrumite_armor.LAYER_LOCATION, Modelviltrumite_armor::createBodyLayer);

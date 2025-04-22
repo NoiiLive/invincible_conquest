@@ -7467,6 +7467,10 @@
         ],
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -12752,7 +12756,16 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/EnterDimensionalPortalProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Entities/Misc"
     },
@@ -12766,7 +12779,12 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/DimensionalPortalTickProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Entities/Misc"
     },
@@ -13416,74 +13434,6 @@
         ]
       },
       "path": "~/Procedures/Abilities/Viltrumite"
-    },
-    {
-      "name": "SpidermanMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spiderman_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/SpidermanMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "RexSplodeMoves",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rex_splode_moves",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/procedures/RexSplodeMovesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     },
     {
       "name": "ExplodeSelf",
@@ -15017,7 +14967,28 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/TestItemRightclickedProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Items"
     },
@@ -16958,6 +16929,7 @@
       "item.invincible_conquest.omnivincible_suit_chestplate": "Invincible\u0027s Suit (Omni)",
       "death.attack.bleed.player": "%1$s bled out to %2$s",
       "entity.invincible_conquest.moon": "Moon",
+      "item.invincible_conquest.tech_jacket_armor_boots": "Tech Jacket\u0027s Boots",
       "item_group.invincible_conquest.invincible_mobs": "Invincible: Mobs",
       "entity.invincible_conquest.mauler_twin": "Mauler Twin",
       "gamerule.spawnInvincibleMobs": "Spawn Invincible Mobs",
@@ -16972,6 +16944,7 @@
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_7": "Slot 7",
       "gui.invincible_conquest.menu_ability_portal.tooltip_slot_8": "Slot 8",
       "key.invincible_conquest.toggle_output": "Toggle Output",
+      "item.invincible_conquest.tech_jacket_armor_leggings": "Tech Jacket\u0027s Leggings",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_sonic_clap": "Sonic Clap - 1 SP",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_5": "Slot 5",
@@ -16994,6 +16967,7 @@
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_5": "Slot 5",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_9": "Slot 9",
       "entity.invincible_conquest.viltrumite_female": "Viltrumite (Female)",
+      "item.invincible_conquest.tech_jacket_armor_chestplate": "Tech Jacket\u0027s Chestplate",
       "gui.invincible_conquest.menu_ability_portal.tooltip_ability_menu": "Ability Menu",
       "gui.invincible_conquest.menu_ability_cloning.tooltip_clone": "Clone - 1 SP",
       "gui.invincible_conquest.menu_faction_stats.tooltip_ability_menu": "Ability Menu",
@@ -17136,6 +17110,7 @@
       "item.invincible_conquest.invincible_mohawk_spawn_egg": "Invincible (Mohawk) Spawn Egg",
       "item.invincible_conquest.multi_paul_spawn_egg": "Multi-Paul Spawn Egg",
       "gui.invincible_conquest.menu_ability_selection.label_ability_selection1": "Ability Selection",
+      "item.invincible_conquest.tech_jacket_spawn_egg": "Tech Jacket Spawn Egg",
       "gui.invincible_conquest.galactic_map_gui.tooltip_moon_x150_y150": "Moon : x150, y150",
       "gui.invincible_conquest.dimension_selector.tooltip_the_overworld": "The Overworld",
       "entity.invincible_conquest.atom_eve": "Atom-Eve",
@@ -17232,6 +17207,7 @@
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_10": "Slot 10",
       "subtitles.basic_hit": "Entity is hit",
       "gui.invincible_conquest.galactic_map_gui.tooltip_mars_x200_y200": "Mars : x200, y200",
+      "item.invincible_conquest.tech_jacket_armor_helmet": "Tech Jacket\u0027s Helmet",
       "item.invincible_conquest.invincible_suit_dark_helmet": "Invincible\u0027s Mask (Dark)",
       "gui.invincible_conquest.menu_ability_portal.tooltip_portal_flight": "Portal Flight - 1 SP",
       "gui.invincible_conquest.menu_faction_stats.tooltip_stat_menu": "Stat Menu",
@@ -17251,6 +17227,7 @@
       "gui.invincible_conquest.menu_ability_portal.tooltip_stat_menu": "Stat Menu",
       "item.invincible_conquest.angstrom_outfit_helmet": "Angstrom\u0027s Helmet",
       "gui.invincible_conquest.faction_join_gda.button_join": "Join",
+      "item.invincible_conquest.test_item": "Test Item",
       "key.invincible_conquest.flight": "Flight",
       "item.invincible_conquest.galactic_map": "Galactic Map",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_2": "Slot 2",
@@ -17289,6 +17266,7 @@
       "item.invincible_conquest.angstrom_outfit_leggings": "Angstrom\u0027s Pants",
       "item.invincible_conquest.invincible_suit_sinister_helmet": "Invincible\u0027s Mask (Sinister)",
       "entity.invincible_conquest.hammer_spawner": "Hammer Spawner",
+      "entity.invincible_conquest.atomic_blast": "Atomic Blast",
       "gui.invincible_conquest.menuabilityblank.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_ability_atom.tooltip_atomic_sword": "Atomic Sword - 1 SP",
       "key.invincible_conquest.flight_boost": "Flight Boost",
@@ -17299,6 +17277,7 @@
       "effect.invincible_conquest.impact_frame_effect": "Impact Frame Effect",
       "gui.invincible_conquest.menu_ability_selection.tooltip_cloning": "Cloning",
       "item.invincible_conquest.flaxan_gunman_spawn_egg": "Flaxan Gunman Spawn Egg",
+      "entity.invincible_conquest.tech_jacket": "Tech Jacket",
       "biome.invincible_conquest.space_biome": "Space Biome",
       "gui.invincible_conquest.menu_ability_spider.tooltip_web_pull": "Web Pull - 1 SP",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slam": "Slam - 1 SP",

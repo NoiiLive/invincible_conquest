@@ -36,13 +36,13 @@ public class RedElectrictyParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 15f;
+		this.quadSize *= 3f;
 		this.lifetime = 7;
 		this.gravity = 0f;
 		this.hasPhysics = false;
-		this.xd = vx * 0.5;
-		this.yd = vy * 0.5;
-		this.zd = vz * 0.5;
+		this.xd = vx * 1;
+		this.yd = vy * 1;
+		this.zd = vz * 1;
 		this.setSpriteFromAge(spriteSet);
 	}
 
