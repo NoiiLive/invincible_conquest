@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "id": "invincible_conquest:invincible_suit_helmet"
+    },
+    "title": {
+      "translate": "advancements.invincible_conquest.title"
+    },
+    "description": {
+      "translate": "advancements.invincible_conquest.descr"
+    },
+    "frame": "challenge",
+    "show_toast": false,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "invincible_conquest_0": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:brain_coral"
+    },
+    "title": {
+      "translate": "advancements.trigger_sequence.title"
+    },
+    "description": {
+      "translate": "advancements.trigger_sequence.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trigger_sequence_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:invincible_conquest"
+}

@@ -4,6 +4,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -40,8 +41,8 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.BURST_CIRCLE_LARGE.get()), x, y, z, 5, 0.1, 0.1, 0.1, 0);
 		if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying) {
-			int horizontalRadiusSphere = (int) (4 + vecZ / 100) - 1;
-			int verticalRadiusSphere = (int) (4 + vecZ / 100) - 1;
+			int horizontalRadiusSphere = (int) (4 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 100) - 1;
+			int verticalRadiusSphere = (int) (4 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 100) - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -57,9 +58,9 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 									_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x + xi, y + i, z + zi, 1, 2, 3, 2, 0.2);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explosion")), SoundSource.PLAYERS, (float) 0.06, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explode")), SoundSource.PLAYERS, (float) 0.06, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explosion")), SoundSource.PLAYERS, (float) 0.06, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explode")), SoundSource.PLAYERS, (float) 0.06, 1, false);
 									}
 								}
 								if (world instanceof Level _level) {
@@ -87,9 +88,9 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 								vecX = entity.getLookAngle().x / magnitude;
 								vecY = entity.getLookAngle().y / magnitude;
 								vecZ = entity.getLookAngle().z / magnitude;
-								vecX = vecX * (vecZ / 1.3 - vecZ);
-								vecY = vecY * 0.25;
-								vecZ = vecZ * (vecZ / 1.3 - vecZ);
+								vecX = vecX * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecY = vecY * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecZ = vecZ * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
 								entityiterator.push(vecX, vecY, vecZ);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DAMAGE_DESTRUCTION, 30, 0, false, false));
@@ -104,8 +105,8 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 			});
 		} else if (!entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying) {
 			entity.getPersistentData().putDouble("spherexpand", (entity.getPersistentData().getDouble("spherexpand") + 0.5));
-			int horizontalRadiusSphere = (int) (2 + vecZ / 50 + entity.getPersistentData().getDouble("spherexpand")) - 1;
-			int verticalRadiusSphere = (int) (2 + vecZ / 50 + entity.getPersistentData().getDouble("spherexpand")) - 1;
+			int horizontalRadiusSphere = (int) (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 50 + entity.getPersistentData().getDouble("spherexpand")) - 1;
+			int verticalRadiusSphere = (int) (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 50 + entity.getPersistentData().getDouble("spherexpand")) - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -117,9 +118,9 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 								world.destroyBlock(BlockPos.containing(x + xi, y + i, z + zi), false);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explosion")), SoundSource.PLAYERS, (float) 0.06, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explode")), SoundSource.PLAYERS, (float) 0.06, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explosion")), SoundSource.PLAYERS, (float) 0.06, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:explode")), SoundSource.PLAYERS, (float) 0.06, 1, false);
 									}
 								}
 								if (world instanceof Level _level) {
@@ -142,14 +143,14 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 					if (!(entity == entityiterator)) {
 						if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("invincible_conquest:non_targetable")))) {
 							if (!(immediatesourceentity == entityiterator)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.PLAYER_ATTACK), immediatesourceentity, entity), (float) (10 + vecZ / 20));
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.PLAYER_ATTACK), immediatesourceentity, entity), (float) (10 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 20));
 								magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
 								vecX = entity.getLookAngle().x / magnitude;
 								vecY = entity.getLookAngle().y / magnitude;
 								vecZ = entity.getLookAngle().z / magnitude;
-								vecX = vecX * (vecZ / 1.3 - vecZ);
-								vecY = vecY * 0.25;
-								vecZ = vecZ * (vecZ / 1.3 - vecZ);
+								vecX = vecX * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecY = vecY * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecZ = vecZ * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
 								entityiterator.push(vecX, vecY, vecZ);
 							}
 						}
@@ -160,6 +161,54 @@ public class SonicClapWhileProjectileFlyingTickProcedure {
 				if (!immediatesourceentity.level().isClientSide())
 					immediatesourceentity.discard();
 				entity.getPersistentData().putDouble("spherexpand", 0);
+			});
+		} else if (!(entity instanceof Player)) {
+			int horizontalRadiusSphere = (int) (5 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 100) - 1;
+			int verticalRadiusSphere = (int) (5 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 100) - 1;
+			int yIterationsSphere = verticalRadiusSphere;
+			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+					for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+						if (distanceSq <= 1.0) {
+							if (!(world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).is(BlockTags.create(ResourceLocation.parse("invincible_conquest:unbreakable")))) {
+								world.destroyBlock(BlockPos.containing(x + xi, y + i, z + zi), false);
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.EXPLOSION, x + xi, y + i, z + zi, 1, 0.1, 1, 0.1, 0);
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x + xi, y + i, z + zi, 1, 2, 3, 2, 0.2);
+							}
+						}
+					}
+				}
+			}
+			{
+				final Vec3 _center = new Vec3(x, y, z);
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				for (Entity entityiterator : _entfound) {
+					if (!(entity == entityiterator)) {
+						if (!entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("invincible_conquest:non_targetable")))) {
+							if (!(immediatesourceentity == entityiterator)) {
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.PLAYER_ATTACK), immediatesourceentity, entity), (float) (25 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 20));
+								magnitude = Math.sqrt(entity.getLookAngle().x * entity.getLookAngle().x + entity.getLookAngle().y * entity.getLookAngle().y + entity.getLookAngle().z * entity.getLookAngle().z);
+								vecX = entity.getLookAngle().x / magnitude;
+								vecY = entity.getLookAngle().y / magnitude;
+								vecZ = entity.getLookAngle().z / magnitude;
+								vecX = vecX * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecY = vecY * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								vecZ = vecZ * (2 + entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerStrength / 1.3);
+								entityiterator.push(vecX, vecY, vecZ);
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DAMAGE_DESTRUCTION, 30, 0, false, false));
+							}
+						}
+					}
+				}
+			}
+			InvincibleConquestMod.queueServerWork(15, () -> {
+				if (!immediatesourceentity.level().isClientSide())
+					immediatesourceentity.discard();
 			});
 		}
 	}

@@ -60,9 +60,10 @@ import net.clozynoii.invincibleconquest.entity.DimensionalPortalEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
+import net.clozynoii.invincibleconquest.entity.BlastAtomEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
-import net.clozynoii.invincibleconquest.entity.AtomicBlastEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
+import net.clozynoii.invincibleconquest.entity.AtomBeamEntity;
 import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
@@ -175,7 +176,9 @@ public class InvincibleConquestModEntities {
 
 					.sized(0.6f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AnissaEntity>> ANISSA = register("anissa",
-			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<AnissaEntity>of(AnissaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionSmallEntity>> EXPLOSION_SMALL = register("explosion_small",
 			EntityType.Builder.<ExplosionSmallEntity>of(ExplosionSmallEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SonicClapEntity>> SONIC_CLAP = register("sonic_clap",
@@ -190,10 +193,12 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<FireworkMobEntity>of(FireworkMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ExplosionLargeEntity>> EXPLOSION_LARGE = register("explosion_large",
 			EntityType.Builder.<ExplosionLargeEntity>of(ExplosionLargeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final DeferredHolder<EntityType<?>, EntityType<AtomicBlastEntity>> ATOMIC_BLAST = register("atomic_blast",
-			EntityType.Builder.<AtomicBlastEntity>of(AtomicBlastEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TechJacketEntity>> TECH_JACKET = register("tech_jacket",
 			EntityType.Builder.<TechJacketEntity>of(TechJacketEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(100).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BlastAtomEntity>> BLAST_ATOM = register("blast_atom",
+			EntityType.Builder.<BlastAtomEntity>of(BlastAtomEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<AtomBeamEntity>> ATOM_BEAM = register("atom_beam",
+			EntityType.Builder.<AtomBeamEntity>of(AtomBeamEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -246,8 +251,8 @@ public class InvincibleConquestModEntities {
 		RoboBallEntity.init(event);
 		DimensionalPortalEntity.init(event);
 		FireworkMobEntity.init(event);
-		AtomicBlastEntity.init(event);
 		TechJacketEntity.init(event);
+		AtomBeamEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -295,7 +300,7 @@ public class InvincibleConquestModEntities {
 		event.put(ROBO_BALL.get(), RoboBallEntity.createAttributes().build());
 		event.put(DIMENSIONAL_PORTAL.get(), DimensionalPortalEntity.createAttributes().build());
 		event.put(FIREWORK_MOB.get(), FireworkMobEntity.createAttributes().build());
-		event.put(ATOMIC_BLAST.get(), AtomicBlastEntity.createAttributes().build());
 		event.put(TECH_JACKET.get(), TechJacketEntity.createAttributes().build());
+		event.put(ATOM_BEAM.get(), AtomBeamEntity.createAttributes().build());
 	}
 }

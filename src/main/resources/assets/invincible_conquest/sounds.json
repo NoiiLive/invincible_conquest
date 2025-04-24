@@ -41,5 +41,21 @@
         "stream": false
       }
     ]
+  },
+  "heartbeat": {
+    "sounds": [
+      {
+        "name": "invincible_conquest:heartbeatloop",
+        "stream": false
+      }
+    ]
+  },
+  "explode": {
+    "sounds": [
+      {
+        "name": "invincible_conquest:explode",
+        "stream": false
+      }
+    ]
   }
 }

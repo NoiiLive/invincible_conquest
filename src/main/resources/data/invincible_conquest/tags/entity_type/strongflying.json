@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "invincible_conquest:anissa",
+    "invincible_conquest:conquest",
     "invincible_conquest:invincible",
     "invincible_conquest:invincible_blue",
     "invincible_conquest:invincible_dark",
@@ -8,8 +10,7 @@
     "invincible_conquest:invincible_mohawk",
     "invincible_conquest:invincible_sinister",
     "invincible_conquest:invincible_veil",
-    "invincible_conquest:omni_man",
-    "invincible_conquest:omnivincible",
+    "invincible_conquest:tech_jacket",
     "invincible_conquest:viltrumite_female",
     "invincible_conquest:viltrumite_male",
     "invincible_conquest:viltrumite_mark"

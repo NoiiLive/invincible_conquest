@@ -18,6 +18,7 @@ import net.minecraft.core.registries.Registries;
 import net.clozynoii.invincibleconquest.procedures.TitanLeapEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.LaserDestructionEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.CloudCircleEffectExpiresProcedure;
+import net.clozynoii.invincibleconquest.procedures.AtomControlEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.potion.WebActiveMobEffect;
 import net.clozynoii.invincibleconquest.potion.TitanLeapEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.StunMobEffect;
@@ -25,6 +26,8 @@ import net.clozynoii.invincibleconquest.potion.SmokingMobEffect;
 import net.clozynoii.invincibleconquest.potion.SmokeCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.SlicingCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.RobotBallControlMobEffect;
+import net.clozynoii.invincibleconquest.potion.PostAtomControlMobEffect;
+import net.clozynoii.invincibleconquest.potion.PauseDialogueMobEffect;
 import net.clozynoii.invincibleconquest.potion.NoFallMobEffect;
 import net.clozynoii.invincibleconquest.potion.LaserKnockbackMobEffect;
 import net.clozynoii.invincibleconquest.potion.LaserDestructionMobEffect;
@@ -36,12 +39,17 @@ import net.clozynoii.invincibleconquest.potion.DragMobEffect;
 import net.clozynoii.invincibleconquest.potion.DestructiveFlightMobEffect;
 import net.clozynoii.invincibleconquest.potion.DamageDestructionMobEffect;
 import net.clozynoii.invincibleconquest.potion.CraterMobEffect;
+import net.clozynoii.invincibleconquest.potion.ConstantEffectPunchMobEffect;
 import net.clozynoii.invincibleconquest.potion.CloudCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.BulletSlamMobEffect;
 import net.clozynoii.invincibleconquest.potion.BleedingMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastSlicesMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastMobTimersMobEffect;
 import net.clozynoii.invincibleconquest.potion.BackwardsTumbleMobEffect;
+import net.clozynoii.invincibleconquest.potion.AtomControlEffectMobEffect;
+import net.clozynoii.invincibleconquest.potion.AnissaComboMobEffect;
+import net.clozynoii.invincibleconquest.potion.AirDensityEffectMobEffect;
+import net.clozynoii.invincibleconquest.potion.ActiveBeamAtomMobEffect;
 import net.clozynoii.invincibleconquest.potion.ActiveAirSlamClawMobEffect;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
@@ -73,6 +81,13 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKING = REGISTRY.register("smoking", () -> new SmokingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BACKWARDS_TUMBLE = REGISTRY.register("backwards_tumble", () -> new BackwardsTumbleMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> WEB_ACTIVE = REGISTRY.register("web_active", () -> new WebActiveMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> ATOM_CONTROL_EFFECT = REGISTRY.register("atom_control_effect", () -> new AtomControlEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> POST_ATOM_CONTROL = REGISTRY.register("post_atom_control", () -> new PostAtomControlMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> ACTIVE_BEAM_ATOM = REGISTRY.register("active_beam_atom", () -> new ActiveBeamAtomMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> AIR_DENSITY_EFFECT = REGISTRY.register("air_density_effect", () -> new AirDensityEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> ANISSA_COMBO = REGISTRY.register("anissa_combo", () -> new AnissaComboMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> CONSTANT_EFFECT_PUNCH = REGISTRY.register("constant_effect_punch", () -> new ConstantEffectPunchMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PAUSE_DIALOGUE = REGISTRY.register("pause_dialogue", () -> new PauseDialogueMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -99,6 +114,8 @@ public class InvincibleConquestModMobEffects {
 			CloudCircleEffectExpiresProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(TITAN_LEAP_EFFECT)) {
 			TitanLeapEffectEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(ATOM_CONTROL_EFFECT)) {
+			AtomControlEffectEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

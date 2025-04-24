@@ -37,6 +37,7 @@ import net.clozynoii.invincibleconquest.entity.InvincibleEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleDarkEntity;
 import net.clozynoii.invincibleconquest.entity.InvincibleBlueEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
+import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 import javax.annotation.Nullable;
@@ -62,85 +63,94 @@ public class StrongFlyingMobsCombatProcedure {
 		double vecX = 0;
 		double magnitude = 0;
 		if (sourceentity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("invincible_conquest:strongflying")))) {
-			if (sourceentity instanceof InvincibleEntity) {
+			if (!(sourceentity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(InvincibleConquestModMobEffects.CONSTANT_EFFECT_PUNCH)
+					|| sourceentity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(InvincibleConquestModMobEffects.ANISSA_COMBO))) {
 				if (sourceentity instanceof InvincibleEntity) {
-					((InvincibleEntity) sourceentity).setAnimation("attack");
+					if (sourceentity instanceof InvincibleEntity) {
+						((InvincibleEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof BattleBeastEntity) {
+					if (sourceentity instanceof BattleBeastEntity) {
+						((BattleBeastEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof OmniManEntity) {
+					if (sourceentity instanceof OmniManEntity) {
+						((OmniManEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof ViltrumiteMaleEntity) {
+					if (sourceentity instanceof ViltrumiteMaleEntity) {
+						((ViltrumiteMaleEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof ViltrumiteFemaleEntity) {
+					if (sourceentity instanceof ViltrumiteFemaleEntity) {
+						((ViltrumiteFemaleEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof InvincibleBlueEntity) {
+					if (sourceentity instanceof InvincibleBlueEntity) {
+						((InvincibleBlueEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof InvincibleMohawkEntity) {
+					if (sourceentity instanceof InvincibleMohawkEntity) {
+						((InvincibleMohawkEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof InvincibleSinisterEntity) {
+					if (sourceentity instanceof InvincibleSinisterEntity) {
+						((InvincibleSinisterEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof InvincibleDarkEntity) {
+					if (sourceentity instanceof InvincibleDarkEntity) {
+						((InvincibleDarkEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof InvincibleVeilEntity) {
+					if (sourceentity instanceof InvincibleVeilEntity) {
+						((InvincibleVeilEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof OmnivincibleEntity) {
+					if (sourceentity instanceof OmnivincibleEntity) {
+						((OmnivincibleEntity) sourceentity).setAnimation("attack");
+					}
+				} else if (sourceentity instanceof AnissaEntity) {
+					if (sourceentity instanceof AnissaEntity) {
+						((AnissaEntity) sourceentity).setAnimation("attack");
+					}
 				}
-			} else if (sourceentity instanceof BattleBeastEntity) {
-				if (sourceentity instanceof BattleBeastEntity) {
-					((BattleBeastEntity) sourceentity).setAnimation("attack");
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DAMAGE_DESTRUCTION, 50, 0));
+				entity.getPersistentData().putString("target", (sourceentity.getDisplayName().getString()));
+				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 19);
+				world.levelEvent(2001, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.BURST_CIRCLE_LARGE.get()), (entity.getX()), (entity.getY() + 0.1), (entity.getZ()), 1, 0.1, 0.1, 0.1, 0);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:basic_hit")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:basic_hit")), SoundSource.NEUTRAL, 1, 1, false);
+					}
 				}
-			} else if (sourceentity instanceof OmniManEntity) {
-				if (sourceentity instanceof OmniManEntity) {
-					((OmniManEntity) sourceentity).setAnimation("attack");
+				if (entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerFlying) {
+					{
+						InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
+						_vars.PlayerFlying = false;
+						_vars.syncPlayerVariables(entity);
+					}
+					InvincibleConquestMod.queueServerWork(5, () -> {
+						{
+							InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
+							_vars.PlayerFlying = true;
+							_vars.syncPlayerVariables(entity);
+						}
+					});
 				}
-			} else if (sourceentity instanceof ViltrumiteMaleEntity) {
-				if (sourceentity instanceof ViltrumiteMaleEntity) {
-					((ViltrumiteMaleEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof ViltrumiteFemaleEntity) {
-				if (sourceentity instanceof ViltrumiteFemaleEntity) {
-					((ViltrumiteFemaleEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof InvincibleBlueEntity) {
-				if (sourceentity instanceof InvincibleBlueEntity) {
-					((InvincibleBlueEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof InvincibleMohawkEntity) {
-				if (sourceentity instanceof InvincibleMohawkEntity) {
-					((InvincibleMohawkEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof InvincibleSinisterEntity) {
-				if (sourceentity instanceof InvincibleSinisterEntity) {
-					((InvincibleSinisterEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof InvincibleDarkEntity) {
-				if (sourceentity instanceof InvincibleDarkEntity) {
-					((InvincibleDarkEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof InvincibleVeilEntity) {
-				if (sourceentity instanceof InvincibleVeilEntity) {
-					((InvincibleVeilEntity) sourceentity).setAnimation("attack");
-				}
-			} else if (sourceentity instanceof OmnivincibleEntity) {
-				if (sourceentity instanceof OmnivincibleEntity) {
-					((OmnivincibleEntity) sourceentity).setAnimation("attack");
-				}
+				magnitude = Math.sqrt(sourceentity.getLookAngle().x * sourceentity.getLookAngle().x + sourceentity.getLookAngle().y * sourceentity.getLookAngle().y + sourceentity.getLookAngle().z * sourceentity.getLookAngle().z);
+				vecX = sourceentity.getLookAngle().x / magnitude;
+				vecY = sourceentity.getLookAngle().y / magnitude;
+				vecZ = sourceentity.getLookAngle().z / magnitude;
+				vecX = vecX * (5 - entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability / 40);
+				vecY = vecY * 5;
+				vecZ = vecZ * (5 - entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability / 40);
+				entity.push(vecX, vecY, vecZ);
 			}
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(InvincibleConquestModMobEffects.DAMAGE_DESTRUCTION, 50, 0));
-			entity.getPersistentData().putString("target", (sourceentity.getDisplayName().getString()));
-			entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 19);
-			world.levelEvent(2001, BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (InvincibleConquestModParticleTypes.BURST_CIRCLE_LARGE.get()), (entity.getX()), (entity.getY() + 0.1), (entity.getZ()), 1, 0.1, 0.1, 0.1, 0);
-			if (world instanceof Level _level) {
-				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:basic_hit")), SoundSource.NEUTRAL, 1, 1);
-				} else {
-					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("invincible_conquest:basic_hit")), SoundSource.NEUTRAL, 1, 1, false);
-				}
-			}
-			{
-				InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
-				_vars.PlayerFlying = false;
-				_vars.syncPlayerVariables(entity);
-			}
-			InvincibleConquestMod.queueServerWork(5, () -> {
-				{
-					InvincibleConquestModVariables.PlayerVariables _vars = entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES);
-					_vars.PlayerFlying = true;
-					_vars.syncPlayerVariables(entity);
-				}
-			});
-			magnitude = Math.sqrt(sourceentity.getLookAngle().x * sourceentity.getLookAngle().x + sourceentity.getLookAngle().y * sourceentity.getLookAngle().y + sourceentity.getLookAngle().z * sourceentity.getLookAngle().z);
-			vecX = sourceentity.getLookAngle().x / magnitude;
-			vecY = sourceentity.getLookAngle().y / magnitude;
-			vecZ = sourceentity.getLookAngle().z / magnitude;
-			vecX = vecX * (5 - entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability / 40);
-			vecY = vecY * 5;
-			vecZ = vecZ * (5 - entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).PlayerDurability / 40);
-			entity.push(vecX, vecY, vecZ);
 		}
 	}
 }

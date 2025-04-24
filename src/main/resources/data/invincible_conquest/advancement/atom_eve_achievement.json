@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "invincible_conquest:atom_eve_suit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.atom_eve_achievement.title"
+    },
+    "description": {
+      "translate": "advancements.atom_eve_achievement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "atom_eve_achievement_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:invincible_conquest"
+}

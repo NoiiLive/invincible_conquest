@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "invincible_conquest:viltrumite_uniform_chestplate"
+    },
+    "title": {
+      "translate": "advancements.viltrumite_achievement.title"
+    },
+    "description": {
+      "translate": "advancements.viltrumite_achievement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "viltrumite_achievement_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:invincible_conquest"
+}

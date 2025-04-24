@@ -12756,7 +12756,16 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/EnterDimensionalPortalProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Entities/Misc"
     },
@@ -12770,7 +12779,12 @@
         "files": [
           "src/main/java/net/clozynoii/invincibleconquest/procedures/DimensionalPortalTickProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Entities/Misc"
     },
@@ -13453,7 +13467,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "WebShooterAbility",
@@ -13487,7 +13502,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "WebActiveOnEffectActiveTick",
@@ -13517,7 +13533,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "Detonate",
@@ -13551,7 +13568,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "RexSplodeForward",
@@ -13585,7 +13603,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "KleidersRender",
@@ -13638,7 +13657,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "LargeExplosionHit",
@@ -13695,7 +13715,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "WebActive",
@@ -13742,7 +13763,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "SpiderVector",
@@ -13772,7 +13794,8 @@
             "type": "number"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "FireworkMob",
@@ -13820,7 +13843,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Spider"
     },
     {
       "name": "ExplosionLarge",
@@ -13851,7 +13875,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "FireworkMobOnEntityTickUpdate",
@@ -13920,7 +13945,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "ExplodeEverywhere",
@@ -13938,7 +13964,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/Abilities/Explode"
     },
     {
       "name": "SpiderMoves1a",
@@ -14924,6 +14951,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -14977,20 +15008,6 @@
         ]
       },
       "path": "~/Items"
-    },
-    {
-      "name": "AtomicBlast",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "atomic_blast",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/entity/AtomicBlastEntity.java",
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomicBlastRenderer.java"
-        ]
-      },
-      "path": "~/Entities/Misc"
     },
     {
       "name": "PinkBurstCircle",
@@ -15746,6 +15763,956 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "BlastAtom",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_atom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/entity/BlastAtomEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "BlastAtomProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_atom_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BlastAtomProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Projectiles"
+    },
+    {
+      "name": "PinkElectricity",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_electricity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/particles/pink_electricity.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/PinkElectricityParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ShapeXYZFallingBlocks",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shape_xyz_falling_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ShapeXYZFallingBlocksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "AtomControlEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_control_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/AtomControlEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AtomControlEffectEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_control_effect_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomControlEffectEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "AtomControlEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_control_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomControlEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "AtomControlEffectEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_control_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomControlEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "TelekinesisAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "telekinesis_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TelekinesisAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "AtomBlockDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_block_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomBlockDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "PostAtomControlOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "post_atom_control_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/PostAtomControlOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "PostAtomControl",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "post_atom_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/PostAtomControlMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "InvincibleConquest",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invincible_conquest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/invincible_conquest.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AtomEveAchievement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_eve_achievement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/atom_eve_achievement.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ViltrumiteAchievement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "viltrumite_achievement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/viltrumite_achievement.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ForAGreaterCause",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "for_a_greater_cause",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/for_a_greater_cause.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ThisIsInsane",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "this_is_insane",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/this_is_insane.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "TechJacketAchievement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tech_jacket_achievement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/tech_jacket_achievement.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "YouDontSeemToUnderstand",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "you_dont_seem_to_understand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/you_dont_seem_to_understand.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "TriggerSequence",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trigger_sequence",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/invincible_conquest/advancement/trigger_sequence.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AtomBeamOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_beam_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomBeamOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "AtomBeamOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_beam_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomBeamOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "AtomBeam",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomBeamRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/AtomBeamEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AtomBeamModel.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/layer/AtomBeamLayer.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "ActiveBeamAtomEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_beam_atom_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ActiveBeamAtomEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "ActiveBeamAtom",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_beam_atom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/ActiveBeamAtomMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "ActiveBeamAtomOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_beam_atom_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ActiveBeamAtomOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "AtomEveCreationWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "atom_eve_creation_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomEveCreationWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "ItemCreationAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "item_creation_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ItemCreationAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "AirDensityEffectEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_density_effect_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AirDensityEffectEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "AirDensityEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_density_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/AirDensityEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AirDensityAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_density_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AirDensityAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "AirDensityEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_density_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AirDensityEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
+    },
+    {
+      "name": "AnissaComboEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa_combo_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AnissaComboEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AnissaComboEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa_combo_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AnissaComboEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AnissaCombo",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa_combo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/AnissaComboMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AnissaComboOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa_combo_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AnissaComboOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "AnissaOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anissa_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AnissaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "ConstantEffectPunchOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_effect_punch_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ConstantEffectPunchOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "ConstantEffectPunch",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constant_effect_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/ConstantEffectPunchMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "EntityText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_text",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/EntityTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "PauseDialogue",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pause_dialogue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/PauseDialogueMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "PauseDialogueOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pause_dialogue_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/PauseDialogueOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Effects"
     }
   ],
   "variable_elements": [
@@ -16276,6 +17243,22 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "heartbeat",
+      "files": [
+        "heartbeatloop"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "explode",
+      "files": [
+        "explode"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -16747,6 +17730,21 @@
     "BIOMES:minecraft:has_structure/village_snowy": [
       "~CUSTOM:IceAgeBiome"
     ],
+    "ENTITIES:mod:strongflying": [
+      "CUSTOM:Anissa",
+      "CUSTOM:Conquest",
+      "CUSTOM:Invincible",
+      "CUSTOM:InvincibleBlue",
+      "CUSTOM:InvincibleDark",
+      "CUSTOM:InvincibleMaskless",
+      "CUSTOM:InvincibleMohawk",
+      "CUSTOM:InvincibleSinister",
+      "CUSTOM:InvincibleVeil",
+      "CUSTOM:TechJacket",
+      "CUSTOM:ViltrumiteFemale",
+      "CUSTOM:ViltrumiteMale",
+      "CUSTOM:ViltrumiteMark"
+    ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:TechJacketArmor.helmet",
       "~CUSTOM:SpaceHelmet.helmet",
@@ -16860,6 +17858,7 @@
       "gui.invincible_conquest.menu_ability_selection.tooltip_explode": "Explode",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_2": "Slot 2",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_slot_1": "Slot 1",
+      "advancements.you_dont_seem_to_understand.descr": "Enter The Flaxan Dimension.",
       "gui.invincible_conquest.menu_ability_selection.tooltip_viltrumite": "Viltrumite",
       "gui.invincible_conquest.menu_ability_beast.tooltip_titan_leap": "Titan Leap - 1 SP",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_10": "Slot 10",
@@ -16878,6 +17877,7 @@
       "entity.invincible_conquest.martian_spearman": "Martian Spearman",
       "gui.invincible_conquest.menu_ability_explode.tooltip_ignite": "Ignite - 1 SP",
       "item.invincible_conquest.anissa_spawn_egg": "Anissa Spawn Egg",
+      "advancements.atom_eve_achievement.title": "Atom Manipulation",
       "item.invincible_conquest.selection_book": "Selection Book",
       "entity.invincible_conquest.invincible_mohawk": "Invincible (Mohawk)",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_bullet_slam": "Bullet Slam - 1 SP",
@@ -16913,6 +17913,7 @@
       "item.invincible_conquest.omni_man_suit_chestplate": "Omni-Man\u0027s Suit",
       "item.invincible_conquest.battle_beast_spawn_egg": "Battle Beast Spawn Egg",
       "entity.invincible_conquest.earth": "Earth",
+      "effect.invincible_conquest.constant_effect_punch": "Constant Effect Punch",
       "effect.invincible_conquest.crater": "Crater",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_basic_abilities": "Basic Abilities",
       "item.invincible_conquest.viltrumite_uniform_leggings": "Viltrumite Pants",
@@ -16997,6 +17998,7 @@
       "entity.invincible_conquest.angstrom": "Angstrom Levy",
       "gui.invincible_conquest.menu_ability_explode.tooltip_detonate": "Detonate - 1 SP",
       "gui.invincible_conquest.menu_ability_explode.tooltip_stat_menu": "Stat Menu",
+      "advancements.invincible_conquest.descr": "Thanks For Playing The Mod!",
       "item.invincible_conquest.dupli_kate_suit_chestplate": "Dupli-Kate\u0027s Suit",
       "item.invincible_conquest.angstrom_spawn_egg": "Angstrom Levy Spawn Egg",
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_basic_abilities": "Basic Abilities",
@@ -17020,6 +18022,8 @@
       "item.invincible_conquest.invincible_suit_veil_helmet": "Invincible\u0027s Mask (Veil)",
       "gui.invincible_conquest.menu_ability_selection.tooltip_spider": "Spider",
       "entity.invincible_conquest.martian": "Martian",
+      "effect.invincible_conquest.atom_control_effect": "Atom Control Effect",
+      "effect.invincible_conquest.air_density_effect": "Air Density Effect",
       "gui.invincible_conquest.galactic_map_gui.tooltip_talescria_x700_z900": "Talescria : x700, z900",
       "entity.invincible_conquest.dupli_kate": "Dupli-Kate",
       "effect.invincible_conquest.cloud_circle": "Cloud Circle",
@@ -17050,8 +18054,10 @@
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_ability_menu": "Ability Menu",
       "item.invincible_conquest.dupli_kate_suit_boots": "Dupli-Kate\u0027s Shoes",
       "gui.invincible_conquest.menu_faction_stats.tooltip_faction_stats": "Faction Stats",
+      "advancements.this_is_insane.descr": "Reject The Viltrumite Empire.",
       "item.invincible_conquest.martian_spawn_egg": "Martian Spawn Egg",
       "gui.invincible_conquest.menu_ability_spider.tooltip_invisibility": "Invisibility - 1 SP",
+      "advancements.you_dont_seem_to_understand.title": "You Dont Seem To Understand, Earth Isnt Yours To Conquer.",
       "entity.invincible_conquest.dimensional_portal": "Dimensional Portal",
       "entity.invincible_conquest.invincible_dark": "Invincible (Dark)",
       "gui.invincible_conquest.menu_stats.tooltip_player_stats": "Player Stats",
@@ -17069,9 +18075,11 @@
       "key.invincible_conquest.use_ability_5": "Use Ability 5",
       "key.invincible_conquest.switch_bars": "Switch Ability Bar",
       "item.invincible_conquest.omnivincible_suit_boots": "Invincible\u0027s Boots (Omni)",
+      "advancements.viltrumite_achievement.descr": "Select The Viltrumite Ability.",
       "effect.invincible_conquest.destructive_flight": "Destructive Flight",
       "entity.invincible_conquest.omnivincible": "Invincible (Omni)",
       "item.invincible_conquest.invincible_suit_chestplate": "Invincible\u0027s Suit",
+      "advancements.invincible_conquest.title": "Invincible: Conquest",
       "item.invincible_conquest.mauler_twin_suit_chestplate": "Mauler Twin\u0027s Suit",
       "gui.invincible_conquest.menu_ability_robot.tooltip_slot_10": "Slot 10",
       "entity.invincible_conquest.viltrumite_male": "Viltrumite (Male)",
@@ -17095,13 +18103,16 @@
       "entity.invincible_conquest.invincible_veil": "Invincible (Veil)",
       "block.invincible_conquest.blood": "Blood",
       "gui.invincible_conquest.menu_stats.tooltip_ability_menu": "Ability Menu",
+      "item.invincible_conquest.atom_beam_spawn_egg": "Atom Beam Spawn Egg",
       "gui.invincible_conquest.menu_ability_selection.tooltip_robot": "Robot",
       "item.invincible_conquest.invincible_suit_mohawk_chestplate": "Invincible\u0027s Suit (Mohawk)",
+      "subtitles.explode": "",
       "gui.invincible_conquest.menu_planet_takeover.button_passive": "Passive",
       "item.invincible_conquest.flaxan_portal_spawn_egg": "Flaxan Portal Spawn Egg",
       "gui.invincible_conquest.dimension_selector.label_dimension_selection": "Dimension Selection",
       "gamerule.invincibleAbilityDestruction": "Invincible Ability Destruction",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_slot_10": "Slot 10",
+      "gui.invincible_conquest.atom_eve_creation.item": "Item ID (Press Enter To Submit)",
       "gui.invincible_conquest.menu_ability_speedster.tooltip_time_stop": "Time Stop - 1 SP",
       "gui.invincible_conquest.menu_ability_basic.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_ability_beast.tooltip_claws": "Claws - 1 SP",
@@ -17117,6 +18128,7 @@
       "gui.invincible_conquest.menu_ability_atom.tooltip_basic_abilities": "Basic Abilities",
       "item.invincible_conquest.viltrumite_male_spawn_egg": "Viltrumite (Male) Spawn Egg",
       "effect.invincible_conquest.drag": "Drag",
+      "advancements.for_a_greater_cause.descr": "Faithfully Join The Viltrumite Empire.",
       "item.invincible_conquest.blue_sun_spawn_egg": "Sun Spawn Egg",
       "item.invincible_conquest.multi_paul_suit_leggings": "Multi-Paul\u0027s Pants",
       "effect.invincible_conquest.web_active": "Web Active",
@@ -17135,6 +18147,7 @@
       "gui.invincible_conquest.menu_ability_speedster.tooltip_multi_hit": "Multi Hit - 1 SP",
       "entity.invincible_conquest.invincible_sinister": "Invincible (Sinister)",
       "gui.invincible_conquest.menu_ability_explode.tooltip_ability_menu": "Ability Menu",
+      "effect.invincible_conquest.active_beam_atom": "Active Beam Atom",
       "item.invincible_conquest.invincible_suit_blue_boots": "Invincible\u0027s Boots (Blue)",
       "effect.invincible_conquest.falling_blocks": "Falling Blocks",
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_10": "Slot 10",
@@ -17149,6 +18162,7 @@
       "gui.invincible_conquest.menu_ability_cloning.tooltip_ability_menu": "Ability Menu",
       "item_group.invincible_conquest.invincible_armor": "Invincible: Armor",
       "gui.invincible_conquest.faction_join_viltrum.button_join": "Join",
+      "entity.invincible_conquest.atom_beam": "Atom Beam",
       "gui.invincible_conquest.menu_planet_takeover.button_decline": "Decline",
       "gui.invincible_conquest.menu_ability_basic.label_basic_abilities": "Basic Abilities",
       "subtitles.blood_explosion": "Entity explodes",
@@ -17184,6 +18198,7 @@
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_4": "Slot 4",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_9": "Slot 9",
       "gui.invincible_conquest.menu_ability_explode.tooltip_slot_8": "Slot 8",
+      "effect.invincible_conquest.pause_dialogue": "Pause Dialogue",
       "gui.invincible_conquest.menu_ability_selection.tooltip_atom": "Atom",
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_1": "Slot 1",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_drag": "Drag - 1 SP",
@@ -17199,9 +18214,11 @@
       "gui.invincible_conquest.menu_ability_tech_jacket.tooltip_slot_3": "Slot 3",
       "gui.invincible_conquest.dimension_selector.tooltip_random": "Random",
       "subtitles.thehammer": "",
+      "advancements.viltrumite_achievement.title": "Viltrumite",
       "item.invincible_conquest.angstrom_outfit_chestplate": "Angstrom\u0027s Chestplate",
       "item.invincible_conquest.white_sun_spawn_egg": "Sun Spawn Egg",
       "gui.invincible_conquest.menu_ability_beast.tooltip_constant_claws": "Constant Claws - 1 SP",
+      "advancements.this_is_insane.title": "This Is Insane!",
       "gui.invincible_conquest.menu_ability_viltrumite.tooltip_chop": "Chop - 1 SP",
       "item.invincible_conquest.omni_man_suit_leggings": "Omni-Man\u0027s Pants",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slot_10": "Slot 10",
@@ -17212,6 +18229,8 @@
       "gui.invincible_conquest.menu_ability_portal.tooltip_portal_flight": "Portal Flight - 1 SP",
       "gui.invincible_conquest.menu_faction_stats.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_stats.tooltip_faction_stats": "Faction Stats",
+      "effect.invincible_conquest.post_atom_control": "Post Atom Control",
+      "advancements.tech_jacket_achievement.title": "Tech Jacket",
       "gamerule.spawnInvincibleMobs.description": "Enables/Disables Mob Spawning from Invincible: Conquest",
       "gui.invincible_conquest.menuabilityblank.tooltip_ability_menu": "Ability Menu",
       "gui.invincible_conquest.menu_ability_robot.tooltip_stat_menu": "Stat Menu",
@@ -17230,8 +18249,10 @@
       "item.invincible_conquest.test_item": "Test Item",
       "key.invincible_conquest.flight": "Flight",
       "item.invincible_conquest.galactic_map": "Galactic Map",
+      "subtitles.heartbeat": "",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_2": "Slot 2",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_3": "Slot 3",
+      "advancements.atom_eve_achievement.descr": "Select Atom Eve\u0027s Ability.",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_1": "Slot 1",
       "gamerule.invincibleAbilityBlockDrop": "Invincible Ability Block Drop",
       "gui.invincible_conquest.menu_ability_spider.tooltip_slot_6": "Slot 6",
@@ -17247,6 +18268,8 @@
       "effect.invincible_conquest.laser_knockback": "Laser Knockback",
       "effect.invincible_conquest.instant_crator": "Instant Crator",
       "gamerule.invincibleAbilityBlockDrop.description": "If ability destruction is on, enables/disables blocks dropping from the destruction in Invincible: Conquest",
+      "advancements.trigger_sequence.descr": "Unlock Your Memory.",
+      "advancements.for_a_greater_cause.title": "For A Greater Cause",
       "biome.invincible_conquest.prehistoric_biome": "Prehistoric Biome",
       "item.invincible_conquest.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible_conquest.angstrom_outfit_boots": "Angstrom\u0027s Shoes",
@@ -17266,11 +18289,12 @@
       "item.invincible_conquest.angstrom_outfit_leggings": "Angstrom\u0027s Pants",
       "item.invincible_conquest.invincible_suit_sinister_helmet": "Invincible\u0027s Mask (Sinister)",
       "entity.invincible_conquest.hammer_spawner": "Hammer Spawner",
-      "entity.invincible_conquest.atomic_blast": "Atomic Blast",
       "gui.invincible_conquest.menuabilityblank.tooltip_stat_menu": "Stat Menu",
       "gui.invincible_conquest.menu_ability_atom.tooltip_atomic_sword": "Atomic Sword - 1 SP",
       "key.invincible_conquest.flight_boost": "Flight Boost",
+      "advancements.tech_jacket_achievement.descr": "Select Tech Jacket\u0027s Ability.",
       "gui.invincible_conquest.galactic_map_gui.tooltip_viltrum_x1000_y1000": "Viltrum : x1000, y1000",
+      "effect.invincible_conquest.anissa_combo": "Anissa Combo",
       "entity.invincible_conquest.viltrum": "Viltrum",
       "gui.invincible_conquest.menu_ability_beast.tooltip_slot_10": "Slot 10",
       "death.attack.bleed": "%1$s bled out",
@@ -17280,6 +18304,7 @@
       "entity.invincible_conquest.tech_jacket": "Tech Jacket",
       "biome.invincible_conquest.space_biome": "Space Biome",
       "gui.invincible_conquest.menu_ability_spider.tooltip_web_pull": "Web Pull - 1 SP",
+      "advancements.trigger_sequence.title": "Trigger Sequence",
       "gui.invincible_conquest.menu_ability_basic.tooltip_slam": "Slam - 1 SP",
       "entity.invincible_conquest.anissa": "Anissa",
       "gui.invincible_conquest.menu_ability_basic.tooltip_uppercut": "Uppercut - 1 SP",
@@ -17605,6 +18630,10 @@
       },
       {
         "name": "Effects",
+        "children": []
+      },
+      {
+        "name": "Advancements",
         "children": []
       }
     ]

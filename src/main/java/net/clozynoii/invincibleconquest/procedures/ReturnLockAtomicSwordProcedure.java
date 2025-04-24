@@ -9,7 +9,7 @@ public class ReturnLockAtomicSwordProcedure {
 		if (entity == null)
 			return false;
 		boolean gate = false;
-		if (!entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).UnlockedSkills.contains("Atomic Sword" + ", ")) {
+		if (!entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).UnlockedSkills.contains("Atom Barrier" + ", ")) {
 			return true;
 		}
 		return false;

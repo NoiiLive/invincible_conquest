@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "invincible_conquest:omni_man_suit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.for_a_greater_cause.title"
+    },
+    "description": {
+      "translate": "advancements.for_a_greater_cause.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "for_a_greater_cause_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:viltrumite_achievement"
+}

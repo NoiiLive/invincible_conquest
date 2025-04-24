@@ -36,4 +36,5 @@ public class InvincibleConquestModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> RED_ELECTRICTY = REGISTRY.register("red_electricty", () -> new SimpleParticleType(true));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PINK_BURST_CIRCLE = REGISTRY.register("pink_burst_circle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PINK_SMOKE = REGISTRY.register("pink_smoke", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PINK_ELECTRICITY = REGISTRY.register("pink_electricity", () -> new SimpleParticleType(true));
 }

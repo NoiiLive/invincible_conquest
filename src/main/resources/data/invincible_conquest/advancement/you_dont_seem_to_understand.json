@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "invincible_conquest:flaxan_armor_chestplate"
+    },
+    "title": {
+      "translate": "advancements.you_dont_seem_to_understand.title"
+    },
+    "description": {
+      "translate": "advancements.you_dont_seem_to_understand.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "you_dont_seem_to_understand_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:invincible_conquest"
+}

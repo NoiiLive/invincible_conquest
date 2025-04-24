@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "invincible_conquest:tech_jacket_armor_helmet"
+    },
+    "title": {
+      "translate": "advancements.tech_jacket_achievement.title"
+    },
+    "description": {
+      "translate": "advancements.tech_jacket_achievement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tech_jacket_achievement_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "invincible_conquest:invincible_conquest"
+}

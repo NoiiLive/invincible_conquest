@@ -1,0 +1,24 @@
+{
+  "_fv": 73,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "You Dont Seem To Understand, Earth Isnt Yours To Conquer.",
+    "achievementDescription": "Enter The Flaxan Dimension.",
+    "achievementIcon": {
+      "value": "CUSTOM:FlaxanArmor.body"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardXP": 0,
+    "achievementType": "challenge",
+    "parent": {
+      "value": "CUSTOM:InvincibleConquest"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"121\" y=\"179\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

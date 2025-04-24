@@ -17,16 +17,16 @@ public class AtomicMoves1aProcedure {
 					BlastAbilityProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Telekinesis")) {
-					AbilityUppercutProcedure.execute(world, x, y, z, entity);
+					TelekinesisAbilityProcedure.execute(world, x, y, z, entity);
 				}
-				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Atomic Sword")) {
+				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Atom Barrier")) {
 					AbilitySlamProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Air Density")) {
-					AbilityDashProcedure.execute(world, x, y, z, entity);
+					AirDensityAbilityProcedure.execute(entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Atom Creation")) {
-					AbilityGrabProcedure.execute(world, x, y, z, entity);
+					ItemCreationAbilityProcedure.execute(world, x, y, z, entity);
 				}
 			}
 		} else {
