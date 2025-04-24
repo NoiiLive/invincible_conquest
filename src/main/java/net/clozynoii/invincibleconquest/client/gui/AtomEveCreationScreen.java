@@ -1,5 +1,7 @@
 package net.clozynoii.invincibleconquest.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,12 +13,13 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.AtomEveCreationMenu;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AtomEveCreationScreen extends AbstractContainerScreen<AtomEveCreationMenu> {
+public class AtomEveCreationScreen extends AbstractContainerScreen<AtomEveCreationMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = AtomEveCreationMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -32,6 +35,26 @@ public class AtomEveCreationScreen extends AbstractContainerScreen<AtomEveCreati
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
+	}
+
+	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
+		HashMap<String, String> textstate = new HashMap<>();
+		if (Minecraft.getInstance().screen instanceof AtomEveCreationScreen sc) {
+			textstate.put("textin:item", sc.item.getValue());
+
+		}
+		return textstate;
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
+	}
+
+	@Override
+	public void containerTick() {
+		super.containerTick();
+		PacketDistributor.sendToServer(new AtomEveCreationMenu.AtomEveCreationSyncMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
+		AtomEveCreationMenu.AtomEveCreationSyncMessage.handleSyncAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/atom_eve_creation.png");

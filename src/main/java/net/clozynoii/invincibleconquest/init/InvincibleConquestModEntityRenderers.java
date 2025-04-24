@@ -54,6 +54,7 @@ import net.clozynoii.invincibleconquest.client.renderer.BlueSunRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.BattleBeastRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomEveRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AtomBeamRenderer;
+import net.clozynoii.invincibleconquest.client.renderer.AtomBarrierRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AnissaRenderer;
 import net.clozynoii.invincibleconquest.client.renderer.AngstromRenderer;
 
@@ -111,5 +112,6 @@ public class InvincibleConquestModEntityRenderers {
 		event.registerEntityRenderer(InvincibleConquestModEntities.TECH_JACKET.get(), TechJacketRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.BLAST_ATOM.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(InvincibleConquestModEntities.ATOM_BEAM.get(), AtomBeamRenderer::new);
+		event.registerEntityRenderer(InvincibleConquestModEntities.ATOM_BARRIER.get(), AtomBarrierRenderer::new);
 	}
 }

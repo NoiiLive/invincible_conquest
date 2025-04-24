@@ -52,6 +52,23 @@
     "invincible_conquest:mars",
     "invincible_conquest:moon",
     "invincible_conquest:sun",
-    "invincible_conquest:viltrum"
+    "invincible_conquest:viltrum",
+    "invincible_conquest:atom_barrier",
+    "invincible_conquest:atom_beam",
+    "invincible_conquest:blast_atom",
+    "invincible_conquest:blue_sun",
+    "invincible_conquest:dimensional_portal",
+    "invincible_conquest:explosion_large",
+    "invincible_conquest:explosion_small",
+    "invincible_conquest:firework_mob",
+    "invincible_conquest:flaxan_portal",
+    "invincible_conquest:hammer_spawner",
+    "invincible_conquest:orange_sun",
+    "invincible_conquest:red_sun",
+    "invincible_conquest:robo_ball",
+    "invincible_conquest:sonic_clap",
+    "invincible_conquest:talescria",
+    "invincible_conquest:the_hammer",
+    "invincible_conquest:white_sun"
   ]
 }

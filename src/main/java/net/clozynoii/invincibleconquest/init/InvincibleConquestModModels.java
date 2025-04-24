@@ -22,12 +22,14 @@ import net.clozynoii.invincibleconquest.client.model.Modelinvincible_suit;
 import net.clozynoii.invincibleconquest.client.model.Modelflaxan_armor;
 import net.clozynoii.invincibleconquest.client.model.Modelclone_twin_suit;
 import net.clozynoii.invincibleconquest.client.model.Modelatom_eve_suit;
+import net.clozynoii.invincibleconquest.client.model.Modelatom_barrier;
 import net.clozynoii.invincibleconquest.client.model.Modelangstrom_clothes;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class InvincibleConquestModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelatom_barrier.LAYER_LOCATION, Modelatom_barrier::createBodyLayer);
 		event.registerLayerDefinition(Modelclone_twin_suit.LAYER_LOCATION, Modelclone_twin_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelmauler_suit.LAYER_LOCATION, Modelmauler_suit::createBodyLayer);
 		event.registerLayerDefinition(Modelangstrom_clothes.LAYER_LOCATION, Modelangstrom_clothes::createBodyLayer);
