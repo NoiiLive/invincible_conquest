@@ -63,9 +63,9 @@ import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BlastAtomEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
+import net.clozynoii.invincibleconquest.entity.AtomShieldEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
 import net.clozynoii.invincibleconquest.entity.AtomBeamEntity;
-import net.clozynoii.invincibleconquest.entity.AtomBarrierEntity;
 import net.clozynoii.invincibleconquest.entity.AnissaEntity;
 import net.clozynoii.invincibleconquest.entity.AngstromEntity;
 import net.clozynoii.invincibleconquest.InvincibleConquestMod;
@@ -201,12 +201,14 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<BlastAtomEntity>of(BlastAtomEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AtomBeamEntity>> ATOM_BEAM = register("atom_beam",
 			EntityType.Builder.<AtomBeamEntity>of(AtomBeamEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
-	public static final DeferredHolder<EntityType<?>, EntityType<AtomBarrierEntity>> ATOM_BARRIER = register("atom_barrier",
-			EntityType.Builder.<AtomBarrierEntity>of(AtomBarrierEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CloneEntity>> CLONE = register("clone",
 			EntityType.Builder.<CloneEntity>of(CloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<AtomShieldEntity>> ATOM_SHIELD = register("atom_shield",
+			EntityType.Builder.<AtomShieldEntity>of(AtomShieldEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1.5f, 1.7f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -261,8 +263,8 @@ public class InvincibleConquestModEntities {
 		FireworkMobEntity.init(event);
 		TechJacketEntity.init(event);
 		AtomBeamEntity.init(event);
-		AtomBarrierEntity.init(event);
 		CloneEntity.init(event);
+		AtomShieldEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -312,7 +314,7 @@ public class InvincibleConquestModEntities {
 		event.put(FIREWORK_MOB.get(), FireworkMobEntity.createAttributes().build());
 		event.put(TECH_JACKET.get(), TechJacketEntity.createAttributes().build());
 		event.put(ATOM_BEAM.get(), AtomBeamEntity.createAttributes().build());
-		event.put(ATOM_BARRIER.get(), AtomBarrierEntity.createAttributes().build());
 		event.put(CLONE.get(), CloneEntity.createAttributes().build());
+		event.put(ATOM_SHIELD.get(), AtomShieldEntity.createAttributes().build());
 	}
 }

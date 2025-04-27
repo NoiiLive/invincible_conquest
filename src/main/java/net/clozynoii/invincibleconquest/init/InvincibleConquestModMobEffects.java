@@ -18,6 +18,7 @@ import net.minecraft.core.registries.Registries;
 import net.clozynoii.invincibleconquest.procedures.TitanLeapEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.LaserDestructionEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.CloudCircleEffectExpiresProcedure;
+import net.clozynoii.invincibleconquest.procedures.BarrierEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.procedures.AtomControlEffectEffectExpiresProcedure;
 import net.clozynoii.invincibleconquest.potion.WebActiveMobEffect;
 import net.clozynoii.invincibleconquest.potion.TitanLeapEffectMobEffect;
@@ -39,12 +40,14 @@ import net.clozynoii.invincibleconquest.potion.DragMobEffect;
 import net.clozynoii.invincibleconquest.potion.DestructiveFlightMobEffect;
 import net.clozynoii.invincibleconquest.potion.DamageDestructionMobEffect;
 import net.clozynoii.invincibleconquest.potion.CraterMobEffect;
+import net.clozynoii.invincibleconquest.potion.CounterEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.ConstantEffectPunchMobEffect;
 import net.clozynoii.invincibleconquest.potion.CloudCircleMobEffect;
 import net.clozynoii.invincibleconquest.potion.BulletSlamMobEffect;
 import net.clozynoii.invincibleconquest.potion.BleedingMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastSlicesMobEffect;
 import net.clozynoii.invincibleconquest.potion.BeastMobTimersMobEffect;
+import net.clozynoii.invincibleconquest.potion.BarrierEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.BackwardsTumbleMobEffect;
 import net.clozynoii.invincibleconquest.potion.AtomControlEffectMobEffect;
 import net.clozynoii.invincibleconquest.potion.AnissaComboMobEffect;
@@ -88,6 +91,8 @@ public class InvincibleConquestModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> ANISSA_COMBO = REGISTRY.register("anissa_combo", () -> new AnissaComboMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CONSTANT_EFFECT_PUNCH = REGISTRY.register("constant_effect_punch", () -> new ConstantEffectPunchMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PAUSE_DIALOGUE = REGISTRY.register("pause_dialogue", () -> new PauseDialogueMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BARRIER_EFFECT = REGISTRY.register("barrier_effect", () -> new BarrierEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> COUNTER_EFFECT = REGISTRY.register("counter_effect", () -> new CounterEffectMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -116,6 +121,8 @@ public class InvincibleConquestModMobEffects {
 			TitanLeapEffectEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(ATOM_CONTROL_EFFECT)) {
 			AtomControlEffectEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(BARRIER_EFFECT)) {
+			BarrierEffectEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

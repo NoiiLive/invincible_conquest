@@ -5,13 +5,10 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.item.FallingBlockEntity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraft.core.particles.SimpleParticleType;
+
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModParticleTypes;
 
 import java.util.List;
 import java.util.Comparator;
@@ -35,24 +32,7 @@ public class AtomControlEffectOnEffectActiveTickProcedure {
 									- entityiterator.getY()) / 2),
 							((entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()
 									- entityiterator.getZ()) / 2)));
-					if (!(entityiterator instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(MobEffects.GLOWING))) {
-						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 999999, 0, false, false));
-						{
-							Entity _ent = entityiterator;
-							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team add glowingblock \"glowingblock\"");
-							}
-						}
-						{
-							Entity _ent = entityiterator;
-							if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-										_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team modify glowingblock color dark_purple");
-							}
-						}
-					}
+					world.addParticle((SimpleParticleType) (InvincibleConquestModParticleTypes.SINGULAR_PINK_CIRCLE.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 0, 0, 0);
 				}
 			}
 		}

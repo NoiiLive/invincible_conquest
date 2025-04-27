@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.clozynoii.invincibleconquest.client.particle.SteamSmokeParticle;
+import net.clozynoii.invincibleconquest.client.particle.SingularPinkCircleParticle;
 import net.clozynoii.invincibleconquest.client.particle.SandySmokeParticle;
 import net.clozynoii.invincibleconquest.client.particle.RedSandSmokeParticle;
 import net.clozynoii.invincibleconquest.client.particle.RedElectrictyParticle;
@@ -58,5 +59,6 @@ public class InvincibleConquestModParticles {
 		event.registerSpriteSet(InvincibleConquestModParticleTypes.PINK_BURST_CIRCLE.get(), PinkBurstCircleParticle::provider);
 		event.registerSpriteSet(InvincibleConquestModParticleTypes.PINK_SMOKE.get(), PinkSmokeParticle::provider);
 		event.registerSpriteSet(InvincibleConquestModParticleTypes.PINK_ELECTRICITY.get(), PinkElectricityParticle::provider);
+		event.registerSpriteSet(InvincibleConquestModParticleTypes.SINGULAR_PINK_CIRCLE.get(), SingularPinkCircleParticle::provider);
 	}
 }

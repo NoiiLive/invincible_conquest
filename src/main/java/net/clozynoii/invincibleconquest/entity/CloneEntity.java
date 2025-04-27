@@ -1,50 +1,11 @@
 
 package net.clozynoii.invincibleconquest.entity;
 
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-import net.neoforged.neoforge.event.EventHooks;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.SpawnEggItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.registries.BuiltInRegistries;
-
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
 
 public class CloneEntity extends TamableAnimal {
+
 	public static final EntityDataAccessor<String> DATA_OwnerUUID = SynchedEntityData.defineId(CloneEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> DATA_OwnerUsername = SynchedEntityData.defineId(CloneEntity.class, EntityDataSerializers.STRING);
 
@@ -52,6 +13,7 @@ public class CloneEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 	}
 
 	@Override
@@ -64,19 +26,23 @@ public class CloneEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.targetSelector.addGoal(1, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(2, new OwnerHurtByTargetGoal(this));
 		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false) {
+
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
+
 		});
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
 		this.goalSelector.addGoal(8, new RandomStrollGoal(this, 1));
+
 	}
 
 	@Override
@@ -114,6 +80,7 @@ public class CloneEntity extends TamableAnimal {
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+
 		Item item = itemstack.getItem();
 		if (itemstack.getItem() instanceof SpawnEggItem) {
 			retval = super.mobInteract(sourceentity, hand);
@@ -144,6 +111,7 @@ public class CloneEntity extends TamableAnimal {
 				} else {
 					this.level().broadcastEntityEvent(this, (byte) 6);
 				}
+
 				this.setPersistenceRequired();
 				retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 			} else {
@@ -152,6 +120,7 @@ public class CloneEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
+
 		return retval;
 	}
 
@@ -177,7 +146,10 @@ public class CloneEntity extends TamableAnimal {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 2);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+
 		return builder;
 	}
+
 }

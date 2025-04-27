@@ -16715,20 +16715,6 @@
       "path": "~/Procedures/Effects"
     },
     {
-      "name": "AtomBarrier",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "atom_barrier",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomBarrierRenderer.java",
-          "src/main/java/net/clozynoii/invincibleconquest/entity/AtomBarrierEntity.java"
-        ]
-      },
-      "path": "~/Entities/Misc"
-    },
-    {
       "name": "Clone",
       "type": "livingentity",
       "compiles": true,
@@ -16741,6 +16727,574 @@
         ]
       },
       "path": "~/Entities"
+    },
+    {
+      "name": "AtomBarrierOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_barrier_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomBarrierOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "AtomShield",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_shield",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/client/renderer/AtomShieldRenderer.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/AtomShieldEntity.java",
+          "src/main/java/net/clozynoii/invincibleconquest/entity/model/AtomShieldModel.java"
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "BarrierEffectEffectStartedapplied",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_effect_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BarrierEffectEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "BarrierAbility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BarrierAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Abilities/Atomic"
+    },
+    {
+      "name": "BarrierHitCancel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "barrier_hit_cancel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BarrierHitCancelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "AtomShieldEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_shield_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomShieldEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "BarrierEffectOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BarrierEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "TamedDespawn2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tamed_despawn_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TamedDespawn2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "TamedDespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tamed_despawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TamedDespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "TameHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tame_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/TameHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "AtomBarrierOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_barrier_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomBarrierOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Misc"
+    },
+    {
+      "name": "AttackCounterTrigger",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_counter_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AttackCounterTriggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "ShieldDamaged",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_damaged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/ShieldDamagedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "Counter",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/CounterProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "AtomShieldEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atom_shield_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/AtomShieldEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "BarrierEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/BarrierEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "SingularPinkCircle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "singular_pink_circle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/invincible_conquest/particles/singular_pink_circle.json",
+          "src/main/java/net/clozynoii/invincibleconquest/client/particle/SingularPinkCircleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BarrierEffectEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/BarrierEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "PassiveShieldTargeting",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "passive_shield_targeting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/PassiveShieldTargetingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Entities"
+    },
+    {
+      "name": "CounterEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/potion/CounterEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "CounterTimer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "counter_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/invincibleconquest/procedures/CounterTimerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures/Player"
     }
   ],
   "variable_elements": [
@@ -17226,6 +17780,12 @@
     },
     {
       "name": "VerticalMovement",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "CounterAttack",
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
@@ -18261,7 +18821,6 @@
       "subtitles.thehammer": "",
       "advancements.viltrumite_achievement.title": "Viltrumite",
       "item.invincible_conquest.angstrom_outfit_chestplate": "Angstrom\u0027s Chestplate",
-      "entity.invincible_conquest.atom_barrier": "Atom Barrier",
       "item.invincible_conquest.white_sun_spawn_egg": "Sun Spawn Egg",
       "gui.invincible_conquest.menu_ability_beast.tooltip_constant_claws": "Constant Claws - 1 SP",
       "advancements.this_is_insane.title": "This Is Insane!",
@@ -18320,7 +18879,6 @@
       "item.invincible_conquest.dupli_kate_suit_leggings": "Dupli-Kate\u0027s Pants",
       "item.invincible_conquest.angstrom_outfit_boots": "Angstrom\u0027s Shoes",
       "item.invincible_conquest.mauler_twin_suit_leggings": "Mauler Twin\u0027s Pants",
-      "entity.invincible_conquest.clone": "Clone",
       "effect.invincible_conquest.backwards_tumble": "Backwards Tumble",
       "effect.invincible_conquest.smoking": "Smoking",
       "item.invincible_conquest.mauler_twin_spawn_egg": "Mauler Twin Spawn Egg",
@@ -18599,6 +19157,10 @@
         ]
       },
       {
+        "name": "Advancements",
+        "children": []
+      },
+      {
         "name": "Blocks",
         "children": []
       },
@@ -18677,10 +19239,6 @@
       },
       {
         "name": "Effects",
-        "children": []
-      },
-      {
-        "name": "Advancements",
         "children": []
       }
     ]

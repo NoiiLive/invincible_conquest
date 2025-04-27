@@ -1,42 +1,35 @@
 package net.clozynoii.invincibleconquest.procedures;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
-import net.clozynoii.invincibleconquest.world.inventory.AtomEveCreationMenu;
+import net.clozynoii.invincibleconquest.init.InvincibleConquestModEntities;
+import net.clozynoii.invincibleconquest.entity.AtomShieldEntity;
 
-import io.netty.buffer.Unpooled;
+import java.util.Comparator;
 
 public class TestItemRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof ServerPlayer _ent) {
-			BlockPos _bpos = BlockPos.containing(x, y, z);
-			_ent.openMenu(new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("AtomEveCreation");
-				}
-
-				@Override
-				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-					return false;
-				}
-
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new AtomEveCreationMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-				}
-			}, _bpos);
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = InvincibleConquestModEntities.ATOM_SHIELD.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			if (entityToSpawn != null) {
+				entityToSpawn.setDeltaMovement(0, 0, 0);
+			}
 		}
+		if (((Entity) world.getEntitiesOfClass(AtomShieldEntity.class, AABB.ofSize(new Vec3(x, y, z), 15, 15, 15), e -> true).stream().sorted(new Object() {
+			Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+				return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+			}
+		}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+			_toTame.tame(_owner);
 	}
 }
