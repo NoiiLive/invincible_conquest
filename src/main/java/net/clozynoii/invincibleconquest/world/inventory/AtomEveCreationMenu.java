@@ -1,10 +1,9 @@
 
 package net.clozynoii.invincibleconquest.world.inventory;
 
-import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
@@ -17,24 +16,17 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.ComponentSerialization;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.invincibleconquest.procedures.AtomEveCreationWhileThisGUIIsOpenTickProcedure;
 import net.clozynoii.invincibleconquest.init.InvincibleConquestModMenus;
-import net.clozynoii.invincibleconquest.InvincibleConquestMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+@EventBusSubscriber
 public class AtomEveCreationMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
@@ -85,86 +77,15 @@ public class AtomEveCreationMenu extends AbstractContainerMenu implements Suppli
 		return customSlots;
 	}
 
-	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-	public static record AtomEveCreationSyncMessage(int mode, int x, int y, int z, HashMap<String, String> textstate) implements CustomPacketPayload {
-
-		public static final Type<AtomEveCreationSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(InvincibleConquestMod.MODID, "atom_eve_creation_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, AtomEveCreationSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AtomEveCreationSyncMessage message) -> {
-			buffer.writeInt(message.mode);
-			buffer.writeInt(message.x);
-			buffer.writeInt(message.y);
-			buffer.writeInt(message.z);
-			writeTextState(message.textstate, buffer);
-		}, (RegistryFriendlyByteBuf buffer) -> new AtomEveCreationSyncMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt(), readTextState(buffer)));
-		@Override
-		public Type<AtomEveCreationSyncMessage> type() {
-			return TYPE;
-		}
-
-		public static void handleData(final AtomEveCreationSyncMessage message, final IPayloadContext context) {
-			if (context.flow() == PacketFlow.SERVERBOUND) {
-				context.enqueueWork(() -> {
-					Player entity = context.player();
-					int mode = message.mode;
-					int x = message.x;
-					int y = message.y;
-					int z = message.z;
-					HashMap<String, String> textstate = message.textstate;
-					handleSyncAction(entity, mode, x, y, z, textstate);
-				}).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
-			}
-		}
-
-		public static void handleSyncAction(Player entity, int mode, int x, int y, int z, HashMap<String, String> textstate) {
+	@SubscribeEvent
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		Player entity = event.getEntity();
+		if (entity.containerMenu instanceof AtomEveCreationMenu) {
 			Level world = entity.level();
-			HashMap guistate = AtomEveCreationMenu.guistate;
-			// connect EditBox and CheckBox to guistate
-			for (Map.Entry<String, String> entry : textstate.entrySet()) {
-				String key = entry.getKey();
-				String value = entry.getValue();
-				guistate.put(key, value);
-			}
-			// security measure to prevent arbitrary chunk generation
-			if (!world.hasChunkAt(new BlockPos(x, y, z)))
-				return;
-			//code
-			if (mode == 0)
-				AtomEveCreationWhileThisGUIIsOpenTickProcedure.execute(entity, guistate);
-		}
-
-		private static void writeTextState(HashMap<String, String> map, RegistryFriendlyByteBuf buffer) {
-			buffer.writeInt(map.size());
-			for (Map.Entry<String, String> entry : map.entrySet()) {
-				writeComponent(buffer, Component.literal(entry.getKey()));
-				writeComponent(buffer, Component.literal(entry.getValue()));
-			}
-		}
-
-		private static HashMap<String, String> readTextState(RegistryFriendlyByteBuf buffer) {
-			int size = buffer.readInt();
-			HashMap<String, String> map = new HashMap<>();
-			for (int i = 0; i < size; i++) {
-				String key = readComponent(buffer).getString();
-				String value = readComponent(buffer).getString();
-				map.put(key, value);
-			}
-			return map;
-		}
-
-		private static Component readComponent(RegistryFriendlyByteBuf buffer) {
-			return ComponentSerialization.TRUSTED_STREAM_CODEC.decode(buffer);
-		}
-
-		private static void writeComponent(RegistryFriendlyByteBuf buffer, Component component) {
-			ComponentSerialization.TRUSTED_STREAM_CODEC.encode(buffer, component);
-		}
-
-		@SubscribeEvent
-		public static void registerMessage(FMLCommonSetupEvent event) {
-			InvincibleConquestMod.addNetworkMessage(AtomEveCreationSyncMessage.TYPE, AtomEveCreationSyncMessage.STREAM_CODEC, AtomEveCreationSyncMessage::handleData);
+			double x = entity.getX();
+			double y = entity.getY();
+			double z = entity.getZ();
+			AtomEveCreationWhileThisGUIIsOpenTickProcedure.execute(entity, guistate);
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class AtomicMoves1aProcedure {
 					TelekinesisAbilityProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Atom Barrier")) {
-					AbilitySlamProcedure.execute(world, x, y, z, entity);
+					BarrierAbilityProcedure.execute(entity);
 				}
 				if ((entity.getData(InvincibleConquestModVariables.PLAYER_VARIABLES).Ability1a).equals("Air Density")) {
 					AirDensityAbilityProcedure.execute(entity);

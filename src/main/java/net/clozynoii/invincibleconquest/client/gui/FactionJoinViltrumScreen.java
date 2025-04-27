@@ -10,17 +10,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.Minecraft;
 
 import net.clozynoii.invincibleconquest.world.inventory.FactionJoinViltrumMenu;
 import net.clozynoii.invincibleconquest.network.FactionJoinViltrumButtonMessage;
-import net.clozynoii.invincibleconquest.init.InvincibleConquestModScreens.WidgetScreen;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FactionJoinViltrumScreen extends AbstractContainerScreen<FactionJoinViltrumMenu> implements WidgetScreen {
+public class FactionJoinViltrumScreen extends AbstractContainerScreen<FactionJoinViltrumMenu> {
 	private final static HashMap<String, Object> guistate = FactionJoinViltrumMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
@@ -37,18 +35,6 @@ public class FactionJoinViltrumScreen extends AbstractContainerScreen<FactionJoi
 		this.entity = container.entity;
 		this.imageWidth = 0;
 		this.imageHeight = 0;
-	}
-
-	public static HashMap<String, String> getEditBoxAndCheckBoxValues() {
-		HashMap<String, String> textstate = new HashMap<>();
-		if (Minecraft.getInstance().screen instanceof FactionJoinViltrumScreen sc) {
-
-		}
-		return textstate;
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	private static final ResourceLocation texture = ResourceLocation.parse("invincible_conquest:textures/screens/faction_join_viltrum.png");
@@ -90,16 +76,16 @@ public class FactionJoinViltrumScreen extends AbstractContainerScreen<FactionJoi
 		super.init();
 		button_join = Button.builder(Component.translatable("gui.invincible_conquest.faction_join_viltrum.button_join"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new FactionJoinViltrumButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
-				FactionJoinViltrumButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
+				PacketDistributor.sendToServer(new FactionJoinViltrumButtonMessage(0, x, y, z));
+				FactionJoinViltrumButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + -75, this.topPos + 3, 71, 20).build();
 		guistate.put("button:button_join", button_join);
 		this.addRenderableWidget(button_join);
 		button_decline = Button.builder(Component.translatable("gui.invincible_conquest.faction_join_viltrum.button_decline"), e -> {
 			if (true) {
-				PacketDistributor.sendToServer(new FactionJoinViltrumButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
-				FactionJoinViltrumButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
+				PacketDistributor.sendToServer(new FactionJoinViltrumButtonMessage(1, x, y, z));
+				FactionJoinViltrumButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 2, this.topPos + 3, 72, 20).build();
 		guistate.put("button:button_decline", button_decline);

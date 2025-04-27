@@ -42,6 +42,7 @@ import net.clozynoii.invincibleconquest.entity.ConquestEntity;
 import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BattleBeastEntity;
+import net.clozynoii.invincibleconquest.entity.AtomShieldEntity;
 import net.clozynoii.invincibleconquest.entity.AtomEveEntity;
 import net.clozynoii.invincibleconquest.entity.AtomBeamEntity;
 import net.clozynoii.invincibleconquest.entity.AnissaEntity;
@@ -340,6 +341,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof AtomBeamEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AtomShieldEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

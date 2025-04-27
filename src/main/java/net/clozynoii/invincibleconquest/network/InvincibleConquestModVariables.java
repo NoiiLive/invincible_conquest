@@ -129,6 +129,7 @@ public class InvincibleConquestModVariables {
 				clone.Barraging = original.Barraging;
 				clone.GrabbedEntity = original.GrabbedEntity;
 				clone.VerticalMovement = original.VerticalMovement;
+				clone.CounterAttack = original.CounterAttack;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -385,6 +386,7 @@ public class InvincibleConquestModVariables {
 		public String GrabbedEntity = "";
 		public String DimensionList = "\"\"";
 		public double VerticalMovement = 0;
+		public double CounterAttack = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -450,6 +452,7 @@ public class InvincibleConquestModVariables {
 			nbt.putString("GrabbedEntity", GrabbedEntity);
 			nbt.putString("DimensionList", DimensionList);
 			nbt.putDouble("VerticalMovement", VerticalMovement);
+			nbt.putDouble("CounterAttack", CounterAttack);
 			return nbt;
 		}
 
@@ -516,6 +519,7 @@ public class InvincibleConquestModVariables {
 			GrabbedEntity = nbt.getString("GrabbedEntity");
 			DimensionList = nbt.getString("DimensionList");
 			VerticalMovement = nbt.getDouble("VerticalMovement");
+			CounterAttack = nbt.getDouble("CounterAttack");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
