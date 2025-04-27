@@ -58,6 +58,7 @@ import net.clozynoii.invincibleconquest.entity.DupliKateEntity;
 import net.clozynoii.invincibleconquest.entity.DinosaurEntity;
 import net.clozynoii.invincibleconquest.entity.DimensionalPortalEntity;
 import net.clozynoii.invincibleconquest.entity.ConquestEntity;
+import net.clozynoii.invincibleconquest.entity.CloneEntity;
 import net.clozynoii.invincibleconquest.entity.CecilEntity;
 import net.clozynoii.invincibleconquest.entity.BlueSunEntity;
 import net.clozynoii.invincibleconquest.entity.BlastAtomEntity;
@@ -202,6 +203,10 @@ public class InvincibleConquestModEntities {
 			EntityType.Builder.<AtomBeamEntity>of(AtomBeamEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AtomBarrierEntity>> ATOM_BARRIER = register("atom_barrier",
 			EntityType.Builder.<AtomBarrierEntity>of(AtomBarrierEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(2f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CloneEntity>> CLONE = register("clone",
+			EntityType.Builder.<CloneEntity>of(CloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -257,6 +262,7 @@ public class InvincibleConquestModEntities {
 		TechJacketEntity.init(event);
 		AtomBeamEntity.init(event);
 		AtomBarrierEntity.init(event);
+		CloneEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -307,5 +313,6 @@ public class InvincibleConquestModEntities {
 		event.put(TECH_JACKET.get(), TechJacketEntity.createAttributes().build());
 		event.put(ATOM_BEAM.get(), AtomBeamEntity.createAttributes().build());
 		event.put(ATOM_BARRIER.get(), AtomBarrierEntity.createAttributes().build());
+		event.put(CLONE.get(), CloneEntity.createAttributes().build());
 	}
 }
